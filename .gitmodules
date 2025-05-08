@@ -1,0 +1,42 @@
+[submodule "Repos_Eleves/UnMoutonPerdu"]
+	path = Repos_Eleves/UnMoutonPerdu
+	url = https://github.com/ClaraFanget/UnMoutonPerdu.git
+[submodule "Repos_Eleves/EtienneCollin"]
+	path = Repos_Eleves/EtienneCollin
+	url = https://github.com/ClaraFanget/EtienneCollin.git
+[submodule "Repos_Eleves/LuchinoAllix"]
+	path = Repos_Eleves/LuchinoAllix
+	url = https://github.com/ClaraFanget/LuchinoAllix.git
+[submodule "Repos_Eleves/Yogya"]
+	path = Repos_Eleves/Yogya
+	url = https://github.com/ClaraFanget/Yogya.git
+[submodule "Repos_Eleves/GabrielBeaudoin"]
+	path = Repos_Eleves/GabrielBeaudoin
+	url = https://github.com/ClaraFanget/GabrielBeaudoin.git
+[submodule "Repos_Eleves/Nadia"]
+	path = Repos_Eleves/Nadia
+	url = https://github.com/ClaraFanget/Nadia.git
+[submodule "Repos_Eleves/Neokoldstudio"]
+	path = Repos_Eleves/Neokoldstudio
+	url = https://github.com/ClaraFanget/Neokoldstudio.git
+[submodule "Repos_Eleves/Sorensorel"]
+	path = Repos_Eleves/Sorensorel
+	url = https://github.com/ClaraFanget/sorensorel.git
+[submodule "Repos_Eleves/Leandreisk"]
+	path = Repos_Eleves/Leandreisk
+	url = https://github.com/ClaraFanget/leandreisk.git
+[submodule "Repos_Eleves/CestJeanEnGros"]
+	path = Repos_Eleves/CestJeanEnGros
+	url = https://github.com/ClaraFanget/CestJeanEnGros.git
+[submodule "Repos_Eleves/Iamjdio"]
+	path = Repos_Eleves/Iamjdio
+	url = https://github.com/ClaraFanget/iamjdio.git
+[submodule "Repos_Eleves/Famasmili"]
+	path = Repos_Eleves/Famasmili
+	url = https://github.com/ClaraFanget/Famasmili.git
+[submodule "Repos_Eleves/Kiruthika"]
+	path = Repos_Eleves/Kiruthika
+	url = https://github.com/ClaraFanget/Kiruthika.git
+[submodule "Repos_Eleves/Houda"]
+	path = Repos_Eleves/Houda
+	url = https://github.com/ClaraFanget/Houda.git
