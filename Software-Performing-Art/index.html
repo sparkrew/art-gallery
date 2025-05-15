@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Software Performing Art</title>
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
   </head>
   <body>
     <header>
@@ -23,6 +25,65 @@
           <li><a href="convert/html/test.html">Test Pandoc</a></li>
         </ul>
       </nav>
+      <p class="artwork" data-path="art/UnMoutonPerdu/clouds/sketch.js">
+        Oeuvre 1
+      </p>
+      <p class="artwork" data-path="art/UnMoutonPerdu/cubes/sketch.js">
+        Oeuvre 2
+      </p>
+      <p class="artwork" data-path="art/UnMoutonPerdu/physarum/sketch.js">
+        Oeuvre 3
+      </p>
+      <p class="artwork" data-path="art/UnMoutonPerdu/trees/sketch2.js">
+        Oeuvre 4
+      </p>
+      <p class="artwork" data-path="art/UnMoutonPerdu/tunnel/sketch.js">
+        Oeuvre 5
+      </p>
+      <div
+        id="art-container"
+        style="position: absolute; width: 50vw; height: 50vh"
+      ></div>
+      <script>
+        let currentP5Instance = null;
+
+        document.querySelectorAll(".artwork").forEach((el) => {
+          el.addEventListener("mouseover", () => {
+            const path = el.dataset.path;
+
+            if (currentP5Instance) {
+              currentP5Instance.remove();
+              currentP5Instance = null;
+            }
+
+            const oldScript = document.getElementById("dynamic-script");
+            if (oldScript) {
+              oldScript.remove();
+            }
+
+            const script = document.createElement("script");
+            script.src = path;
+            script.id = "dynamic-script";
+            script.type = "text/javascript";
+
+            // Quand le script est chargé, on crée une nouvelle instance p5
+            script.onload = () => {
+              if (typeof sketch === "function") {
+                currentP5Instance = new p5(
+                  sketch,
+                  document.getElementById("art-container")
+                );
+              } else {
+                console.error(
+                  "Le fichier chargé ne contient pas de fonction 'sketch'"
+                );
+              }
+            };
+
+            document.body.appendChild(script);
+          });
+        });
+      </script>
     </main>
     <footer>
       <p>Footer</p>
