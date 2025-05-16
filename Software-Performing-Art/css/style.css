@@ -14,6 +14,7 @@
 
 :root {
   --orange: #FB2E0F;
+  --blue: #16358E;
   --white: #FCF8EA;
   --title-font: 'Kolbano';
   --fs-0: 10rem;
@@ -58,3 +59,17 @@ footer {
   color: var(--orange);
 }
 
+ul{
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  font-family: var(--title-font);
+  font-size: var(--fs-2);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: var(--orange);
+}
