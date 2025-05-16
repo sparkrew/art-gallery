@@ -10,9 +10,9 @@
   </head>
   <body>
     <header>
-      <h1 id="SPA-title">SOFTWARE</h1>
-      <h1 id="SPA-title">PERFORMING</h1>
-      <h1 id="SPA-title">ART</h1>
+      <h1 id="SPA-title">Software</h1>
+      <h1 id="SPA-title">Performing</h1>
+      <h1 id="SPA-title">Art</h1>
     </header>
     <main>
       <p>Main</p>
@@ -22,28 +22,30 @@
           <li><a href="pages/publications.html">Publications</a></li>
           <li><a href="pages/art-history.html">Art History</a></li>
           <li><a href="pages/contact.html">Contact</a></li>
-          <li><a href="convert/html/test.html">Test Pandoc</a></li>
+          <li><a href="convert/html/test.html">Pandoc</a></li>
         </ul>
       </nav>
-      <p class="artwork" data-path="art/UnMoutonPerdu/clouds/sketch.js">
-        Oeuvre 1
-      </p>
-      <p class="artwork" data-path="art/UnMoutonPerdu/cubes/sketch.js">
-        Oeuvre 2
-      </p>
-      <p class="artwork" data-path="art/UnMoutonPerdu/physarum/sketch.js">
-        Oeuvre 3
-      </p>
-      <p class="artwork" data-path="art/UnMoutonPerdu/trees/sketch2.js">
-        Oeuvre 4
-      </p>
-      <p class="artwork" data-path="art/UnMoutonPerdu/tunnel/sketch.js">
-        Oeuvre 5
-      </p>
-      <div
-        id="art-container"
-        style="position: absolute; width: 50vw; height: 50vh"
-      ></div>
+      <div id="art-container">
+        <div id="artwork-container"></div>
+        <div id="artist-container">
+          <p class="artwork" data-path="art/UnMoutonPerdu/clouds/sketch.js">
+            clouds - Un Mouton Perdu
+          </p>
+          <p class="artwork" data-path="art/UnMoutonPerdu/cubes/sketch.js">
+            cubes - Un Mouton Perdu
+          </p>
+          <p class="artwork" data-path="art/UnMoutonPerdu/physarum/sketch.js">
+            physarum - Un Mouton Perdu
+          </p>
+          <p class="artwork" data-path="art/UnMoutonPerdu/trees/sketch2.js">
+            trees - Un Mouton Perdu
+          </p>
+          <p class="artwork" data-path="art/UnMoutonPerdu/tunnel/sketch.js">
+            tunnels - Un Mouton Perdu
+          </p>
+        </div>
+      </div>
+
       <script>
         let currentP5Instance = null;
 
@@ -66,12 +68,11 @@
             script.id = "dynamic-script";
             script.type = "text/javascript";
 
-            // Quand le script est chargé, on crée une nouvelle instance p5
             script.onload = () => {
               if (typeof sketch === "function") {
                 currentP5Instance = new p5(
                   sketch,
-                  document.getElementById("art-container")
+                  document.getElementById("artwork-container")
                 );
               } else {
                 console.error(
