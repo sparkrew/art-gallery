@@ -55,6 +55,7 @@ footer {
 }
 .artwork{
   font-size: var(--fs-2);
+  font-family: var(--title-font);
   
 }
 .artwork:hover {
