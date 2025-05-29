@@ -97,12 +97,12 @@
           <p class="artwork" data-path="art/Nadia/4_flow_field_with_letters.js">
             flow field with letters - Nadia
           </p>
-          <p
+          <!-- <p
             class="artwork"
             data-path="art/CestJeanEnGros/Mind Duplication/sketch3.js"
           >
             NOT WORKING mind duplication - Cest Jean En Gros
-          </p>
+          </p> -->
           <p
             class="artwork"
             data-path="art/CestJeanEnGros/Singularity/sketch6.js"
@@ -176,6 +176,18 @@
           <p class="artwork" data-path="art/Yogya/theo/theo.js">theo - Yogya</p>
         </div>
       </div>
+      <script>
+        const container = document.getElementById("artist-container");
+        const artworks = Array.from(container.querySelectorAll(".artwork"));
+
+        for (let i = artworks.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [artworks[i], artworks[j]] = [artworks[j], artworks[i]];
+        }
+
+        container.innerHTML = "";
+        artworks.forEach((el) => container.appendChild(el));
+      </script>
 
       <script>
         let currentP5Instance = null;
