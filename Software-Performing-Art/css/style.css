@@ -47,10 +47,13 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+nav{
+  height: 6vh;
+}
 #art-container {
   display: flex;
   justify-content: center;
-  gap : 50rem;
+  gap : 5rem;
   
 }
 .artwork{
@@ -78,8 +81,7 @@ a:hover {
 }
 
 #artwork-container{
-  width: 30vw;
-  height: 50vh;
-  margin-bottom: 100px;
+  width: 80vw;
+  height: 90vh;
 }
 
