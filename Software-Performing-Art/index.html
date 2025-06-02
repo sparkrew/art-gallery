@@ -41,9 +41,20 @@
         </ul>
       </nav>
       <div id="art-container">
-        <div id="bouton-container">
-          <button id="code-button">Afficher le code</button>
+        <div id="cartel">
+          <div id="bouton-container">
+            <button id="code-button">
+              <img
+                id="bouton-icon"
+                src="assets/svg/code.svg"
+                alt="icon code"
+                height="20px"
+                width="20px"
+              />
+            </button>
+          </div>
         </div>
+
         <div id="artwork-container"></div>
         <div id="artist-container">
           <p class="artwork" data-path="art/UnMoutonPerdu/clouds/sketch.js">
@@ -214,6 +225,8 @@
                 }
                 artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
                 codeAffiche = true;
+                document.getElementById("bouton-icon").src =
+                  "assets/svg/art.svg";
               });
           } else {
             artworkContainer.innerHTML = "";
@@ -229,6 +242,8 @@
                 currentP5Instance = new p5(sketch, artworkContainer);
               }
               codeAffiche = false;
+              document.getElementById("bouton-icon").src =
+                "assets/svg/code.svg";
             };
             document.body.appendChild(script);
           }
