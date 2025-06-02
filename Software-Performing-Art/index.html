@@ -41,6 +41,9 @@
         </ul>
       </nav>
       <div id="art-container">
+        <div id="bouton-container">
+          <button id="code-button">Afficher le code</button>
+        </div>
         <div id="artwork-container"></div>
         <div id="artist-container">
           <p class="artwork" data-path="art/UnMoutonPerdu/clouds/sketch.js">
@@ -168,7 +171,7 @@
             data-path="art/Sorensorel/Project2-l-system/cooltruc.js"
           >
             cooltruc - Sorensorel
-          </p> -->
+          </p>  -->
           <p class="artwork" data-path="art/Yogya/glass/glass-bw.js">
             glass - Yogya
           </p>
@@ -190,11 +193,53 @@
       </script>
 
       <script>
+        let codeAffiche = false;
         let currentP5Instance = null;
+        let currentSketchPath = null;
+        const artworkContainer = document.getElementById("artwork-container");
+
+        document.getElementById("code-button").addEventListener("click", () => {
+          if (!currentSketchPath) {
+            alert("Aucune œuvre sélectionnée !");
+            return;
+          }
+
+          if (!codeAffiche) {
+            fetch(currentSketchPath)
+              .then((res) => res.text())
+              .then((code) => {
+                if (currentP5Instance) {
+                  currentP5Instance.remove();
+                  currentP5Instance = null;
+                }
+                artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
+                codeAffiche = true;
+              });
+          } else {
+            artworkContainer.innerHTML = "";
+
+            const oldScript = document.getElementById("dynamic-script");
+            if (oldScript) oldScript.remove();
+
+            const script = document.createElement("script");
+            script.src = currentSketchPath;
+            script.id = "dynamic-script";
+            script.onload = () => {
+              if (typeof sketch === "function") {
+                currentP5Instance = new p5(sketch, artworkContainer);
+              }
+              codeAffiche = false;
+            };
+            document.body.appendChild(script);
+          }
+        });
 
         document.querySelectorAll(".artwork").forEach((el) => {
           el.addEventListener("mouseover", () => {
             const path = el.dataset.path;
+            currentSketchPath = path;
+
+            if (codeAffiche) return;
 
             if (currentP5Instance) {
               currentP5Instance.remove();
@@ -202,9 +247,7 @@
             }
 
             const oldScript = document.getElementById("dynamic-script");
-            if (oldScript) {
-              oldScript.remove();
-            }
+            if (oldScript) oldScript.remove();
 
             const script = document.createElement("script");
             script.src = path;
@@ -213,13 +256,10 @@
 
             script.onload = () => {
               if (typeof sketch === "function") {
-                currentP5Instance = new p5(
-                  sketch,
-                  document.getElementById("artwork-container")
-                );
+                currentP5Instance = new p5(sketch, artworkContainer);
               } else {
                 console.error(
-                  "Le fichier chargé ne contient pas de fonction 'sketch'"
+                  "Le fichier ne contient pas de fonction 'sketch'"
                 );
               }
             };
@@ -228,6 +268,19 @@
           });
         });
       </script>
+
+      <!-- <script>
+        document.getElementById("code-button").addEventListener("click", () => {
+          fetch("art/UnMoutonPerdu/clouds/sketch.js")
+            .then((response) => response.text())
+            .then((data) => {
+              let div = document.getElementById("artwork-container"); 
+              div.innerHTML = ""; 
+              div.innerHTML += `<pre><code>${data}</code></pre>`; 
+            })
+            .catch((error) => console.error("Error fetching code:", error));
+        });
+        </script> -->
     </main>
     <!-- <footer>
       <p>Footer</p>
