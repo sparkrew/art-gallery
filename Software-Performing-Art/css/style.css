@@ -90,6 +90,11 @@ color: var(--orange);
 #artwork-container{
 width: 90vh;
 height: 90vh;
+overflow-y: auto;
+
+}
+#artwork-container::-webkit-scrollbar {
+display: none;
 }
 #artist-container{
 overflow-y: auto;
