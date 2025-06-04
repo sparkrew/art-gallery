@@ -42,10 +42,11 @@
       </nav>
       <div id="art-container">
         <div id="cartel">
-          <div id="bouton-container">
+          <div id="artist-name-container"></div>
+          <div id="button-container">
             <button id="code-button">
               <img
-                id="bouton-icon"
+                id="button-icon"
                 src="assets/svg/code.svg"
                 alt="icon code"
                 height="20px"
@@ -328,7 +329,9 @@
         let currentSketchPath = null;
         let artistName = null;
         const artworkContainer = document.getElementById("artwork-container");
-        const cartelContainer = document.getElementById("cartel");
+        const artistNameContainer = document.getElementById(
+          "artist-name-container"
+        );
 
         document.getElementById("code-button").addEventListener("click", () => {
           if (!currentSketchPath) {
@@ -346,7 +349,7 @@
                 }
                 artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
                 codeAffiche = true;
-                document.getElementById("bouton-icon").src =
+                document.getElementById("button-icon").src =
                   "assets/svg/art.svg";
               });
           } else {
@@ -363,7 +366,7 @@
                 currentP5Instance = new p5(sketch, artworkContainer);
               }
               codeAffiche = false;
-              document.getElementById("bouton-icon").src =
+              document.getElementById("button-icon").src =
                 "assets/svg/code.svg";
             };
             document.body.appendChild(script);
@@ -375,7 +378,7 @@
             const path = el.dataset.path;
             currentSketchPath = path;
             artistName = el.dataset.artist;
-            cartelContainer.textContent = artistName;
+            artistNameContainer.textContent = artistName;
 
             if (artistName == null) {
               artistName = el.dataset.artist;
