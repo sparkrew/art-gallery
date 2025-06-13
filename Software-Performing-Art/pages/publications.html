@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Software Performing Art</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   </head>
   <body>
     <header>
@@ -21,9 +22,46 @@
           <li><a href="../convert/html/test.html">Test Pandoc</a></li>
         </ul>
       </nav>
+      <div id="essai" style="height: 800px; width: 800px"></div>
+      <script>
+        let data;
+        let currentP5Instance;
+        async function setData() {
+          try {
+            console.log("Setting data...");
+            const response = await fetch("../art/artworks.json");
+            data = await response.json();
+            console.log("Data loaded", data);
+          } catch (error) {
+            console.error("Erreur lors du chargement des données :", error);
+          }
+        }
+
+        function afficherData() {
+          for (let i = 0; i < data.length; i++) {
+            console.log("data:", data[i].name);
+            const script = document.createElement("script");
+
+            script.src = data[i].src;
+            script.id = "dynamic-script";
+            script.type = "text/javascript";
+            script.onload = () => {
+              if (typeof sketch === "function") {
+                console.log("c", currentP5Instance);
+                let container = document.getElementById("essai");
+                currentP5Instance = new p5(sketch, container);
+              }
+            };
+            document.body.appendChild(script);
+          }
+        }
+        setData().then(() => {
+          afficherData();
+        });
+      </script>
     </main>
-    <footer>
+    <!-- <footer>
       <p>Footer</p>
-    </footer>
+    </footer> -->
   </body>
 </html>

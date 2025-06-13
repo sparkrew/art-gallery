@@ -98,12 +98,12 @@ overflow-y: auto;
 display: none;
 }
 
-#artist-container{
+#artwork-name-container{
 overflow-y: auto;
 height: 90vh;
 }
 
-#artist-container::-webkit-scrollbar {
+#artwork-name-container::-webkit-scrollbar {
 display: none;
 }
 #cartel {
