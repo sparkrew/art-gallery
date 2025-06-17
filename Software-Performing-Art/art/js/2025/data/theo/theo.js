@@ -34,8 +34,8 @@ var sketch = function (p) {
   let currentRecordIndex2 = 0;
 
   p.preload = function () {
-    jsonData1 = p.loadJSON("art/js/data/theo/data/pdf-test.json");
-    jsonData2 = p.loadJSON("art/js/data/theo/data/pdf-prod.json");
+    jsonData1 = p.loadJSON("art/js/2025/data/theo/data/pdf-test.json");
+    jsonData2 = p.loadJSON("art/js/2025/data/theo/data/pdf-prod.json");
   };
 
   p.setup = function () {

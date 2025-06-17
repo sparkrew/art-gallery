@@ -10,8 +10,8 @@ var sketch = function (p) {
 
   p.preload = function () {
     myShader = p.loadShader(
-      "art/js/algo/game-of-life/shaders/shader.vert",
-      "art/js/algo/game-of-life/shaders/shader.frag"
+      "art/js/2025/algo/game-of-life/shaders/shader.vert",
+      "art/js/2025/algo/game-of-life/shaders/shader.frag"
     );
   };
 

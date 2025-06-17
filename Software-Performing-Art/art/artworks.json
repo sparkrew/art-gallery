@@ -5,7 +5,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_1",
-    "src": "../art/js/genuary/arrow2.js"
+    "src": "../art/js/2025/genuary/arrow2.js"
   },
   {
     "name": "Hex Grid",
@@ -13,7 +13,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_grid",
-    "src": "../art/js/genuary/hex_grid.js"
+    "src": "../art/js/2025/genuary/hex_grid.js"
   },
   {
     "name": "Ink Mountains",
@@ -21,7 +21,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/ink-mountains",
-    "src": "../art/js/genuary/ink_mountains.js"
+    "src": "../art/js/2025/genuary/ink_mountains.js"
   },
   {
     "name": "Lines",
@@ -29,7 +29,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/sorensorel/algo-art/tree/main/lines-genuary",
-    "src": "../art/js/genuary/lines.js"
+    "src": "../art/js/2025/genuary/lines.js"
   },
   {
     "name": "Artwork 1",
@@ -37,7 +37,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%231",
-    "src": "../art/js/genuary/artwork_1.js"
+    "src": "../art/js/2025/genuary/artwork_1.js"
   },
   {
     "name": "Singularity",
@@ -45,7 +45,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/JeanBrrt/ArtAlgo/tree/main/Singularity",
-    "src": "../art/js/genuary/singularity.js"
+    "src": "../art/js/2025/genuary/singularity.js"
   },
   {
     "name": "Fireworks",
@@ -53,7 +53,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/houda1999/Fire_Work_Project",
-    "src": "../art/js/genuary/fireworks.js"
+    "src": "../art/js/2025/genuary/fireworks.js"
   },
   {
     "name": "Turing",
@@ -61,7 +61,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_2",
-    "src": "../art/js/algo/turing.js"
+    "src": "../art/js/2025/algo/turing.js"
   },
   {
     "name": "Hex Life",
@@ -69,7 +69,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_life",
-    "src": "../art/js/algo/hex_life.js"
+    "src": "../art/js/2025/algo/hex_life.js"
   },
   {
     "name": "Cornfield Flow",
@@ -77,7 +77,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/nala7/cornfield_flow",
-    "src": "../art/js/algo/cornfield_flow.js"
+    "src": "../art/js/2025/algo/cornfield_flow.js"
   },
   {
     "name": "Glass",
@@ -85,7 +85,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/glass",
-    "src": "../art/js/algo/glass-bw.js"
+    "src": "../art/js/2025/algo/glass-bw.js"
   },
   {
     "name": "Game Of Life",
@@ -93,7 +93,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/Neokoldstudio/p5-Game-Of-Life",
-    "src": "../art/js/algo/game-of-life/game-of-life.js"
+    "src": "../art/js/2025/algo/game-of-life/game-of-life.js"
   },
   {
     "name": "Artwork 2",
@@ -101,7 +101,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%232",
-    "src": "../art/js/algo/artwork_2/artwork_2.js"
+    "src": "../art/js/2025/algo/artwork_2/artwork_2.js"
   },
   {
     "name": "Trees",
@@ -109,7 +109,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/trees",
-    "src": "../art/js/algo/trees.js"
+    "src": "../art/js/2025/algo/trees.js"
   },
   {
     "name": "Meteo",
@@ -118,7 +118,7 @@
     "type": "Data Based",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/météo²",
     "data": "https://open-meteo.com",
-    "src": "../art/js/data/meteo.js"
+    "src": "../art/js/2025/data/meteo.js"
   },
   {
     "name": "Watchman",
@@ -127,7 +127,7 @@
     "type": "Data Based",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_3",
     "data": "https://github.com/sharmaroshan/WHO-Suicide-Statistics",
-    "src": "../art/js/data/watchman/watchman.js"
+    "src": "../art/js/2025/data/watchman/watchman.js"
   },
   {
     "name": "Theo",
@@ -136,7 +136,7 @@
     "type": "Data Based",
     "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/theo",
     "data": "https://github.com/chains-project/theo",
-    "src": "../art/js/data/theo/theo.js"
+    "src": "../art/js/2025/data/theo/theo.js"
   },
   {
     "name": "Flow Field With Letters",
@@ -145,7 +145,7 @@
     "type": "Data Based",
     "repo": "https://github.com/nala7/Data-representation-with-Flow-Fields",
     "data": "https://github.com/nala7/besu_teku_ssc",
-    "src": "../art/js/data/flow_field_with_letters/4_flow_field_with_letters.js"
+    "src": "../art/js/2025/data/flow_field_with_letters/4_flow_field_with_letters.js"
   },
   {
     "name": "Artwork 3",
@@ -154,7 +154,7 @@
     "type": "Data Based",
     "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%233",
     "data": " ",
-    "src": "../art/js/data/artwork_3/artwork_3.js"
+    "src": "../art/js/2025/data/artwork_3/artwork_3.js"
   },
   {
     "name": "Flow Lake",
@@ -163,7 +163,7 @@
     "type": "Data Based",
     "repo": "https://github.com/Neokoldstudio/p5-waves",
     "data": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter",
-    "src": "../art/js/data/flow_lake.js"
+    "src": "../art/js/2025/data/flow_lake.js"
   },
   {
     "name": "Pissenlit",
@@ -172,6 +172,6 @@
     "type": "Data Based",
     "repo": "https://github.com/sorensorel/algo-art/tree/main/Projet3-Datart",
     "data": " ",
-    "src": "../art/js/data/pissenlit/pissenlit.js"
+    "src": "../art/js/2025/data/pissenlit/pissenlit.js"
   }
 ]

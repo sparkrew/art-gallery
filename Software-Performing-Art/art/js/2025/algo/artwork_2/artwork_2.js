@@ -22,14 +22,14 @@ var sketch = function (p) {
   let height;
 
   p.preload = function () {
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/01.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/1.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/2.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/3.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/4.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/5.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/6.mp3"));
-    samples.push(p.loadSound("art/Leandreisk/Artwork2/samples/7.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/0.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/1.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/2.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/3.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/4.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/5.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/6.mp3"));
+    samples.push(p.loadSound("art/js/2025/algo/artwork_2/samples/7.mp3"));
   };
 
   p.setup = function () {

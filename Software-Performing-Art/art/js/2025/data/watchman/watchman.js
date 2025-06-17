@@ -7,9 +7,9 @@ var sketch = function (p) {
   let i = 0;
 
   p.preload = function () {
-    music = p.loadSound("art/js/data/watchman/data/MoonlightSonata.mp3");
+    music = p.loadSound("art/js/2025/data/watchman/data/MoonlightSonata.mp3");
     csv = p.loadTable(
-      "art/js/data/watchman/data/suicides_stats_clean.csv",
+      "art/js/2025/data/watchman/data/suicides_stats_clean.csv",
       "csv",
       "header"
     );
