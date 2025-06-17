@@ -1,0 +1,4726 @@
+{
+  "main" : [ {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFile<init>", "RandomAccessReadBufferedFile<init>" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "1487",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "0",
+      "endOfFile" : "true"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFileread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/Users/yogyagamage/.sdkman/candidates/java/22.0.2-tem/conf/security/policy/unlimited/default_US_export.policy",
+      "bytesRead" : "146",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/Users/yogyagamage/.sdkman/candidates/java/22.0.2-tem/conf/security/policy/unlimited/default_US_export.policy",
+      "bytesRead" : "0",
+      "endOfFile" : "true"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/Users/yogyagamage/.sdkman/candidates/java/22.0.2-tem/conf/security/policy/unlimited/default_local.policy",
+      "bytesRead" : "193",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/Users/yogyagamage/.sdkman/candidates/java/22.0.2-tem/conf/security/policy/unlimited/default_local.policy",
+      "bytesRead" : "0",
+      "endOfFile" : "true"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/dev/urandom",
+      "bytesRead" : "20",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/dev/urandom",
+      "bytesRead" : "256",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadBufferedFile<init>", "RandomAccessReadBufferedFilecreateView" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/dev/urandom",
+      "bytesRead" : "256",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "/dev/urandom",
+      "bytesRead" : "256",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "4096",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "1487",
+      "endOfFile" : "false"
+    } ]
+  }, {
+    "detectorCategory" : "FileRead",
+    "events" : [ {
+      "type" : "fileRead",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ {
+        "dependency" : "org.apache.pdfbox:pdfbox-io:4.0.0-SNAPSHOT",
+        "methods" : [ "RandomAccessReadBufferedFilereadPage", "RandomAccessReadBufferedFileseek", "RandomAccessReadViewseek", "RandomAccessInputStreamrestorePosition", "RandomAccessInputStreamread" ]
+      } ],
+      "filePath" : "./workload/000817.pdf",
+      "bytesRead" : "0",
+      "endOfFile" : "true"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  }, {
+    "detectorCategory" : "FileWrite",
+    "events" : [ {
+      "type" : "fileWrite",
+      "method" : "main",
+      "className" : null,
+      "calledBy" : [ ],
+      "filePath" : "./workload/000817-locked.pdf"
+    } ]
+  } ]
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Arrow 2",
+    "artist": "Gabriel Beaudoin",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_1",
+    "src": "../art/js/genuary/arrow2.js"
+  },
+  {
+    "name": "Hex Grid",
+    "artist": "Luchino Allix-Lastrego",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_grid",
+    "src": "../art/js/genuary/hex_grid.js"
+  },
+  {
+    "name": "Ink Mountains",
+    "artist": "Hugo Mouton",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/ink-mountains",
+    "src": "../art/js/genuary/ink_mountains.js"
+  },
+  {
+    "name": "Lines",
+    "artist": "Taha Skiredj",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/sorensorel/algo-art/tree/main/lines-genuary",
+    "src": "../art/js/genuary/lines.js"
+  },
+  {
+    "name": "Artwork 1",
+    "artist": "Leandreisk",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%231",
+    "src": "../art/js/genuary/artwork_1.js"
+  },
+  {
+    "name": "Singularity",
+    "artist": "Jean Barreto",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/JeanBrrt/ArtAlgo/tree/main/Singularity",
+    "src": "../art/js/genuary/singularity.js"
+  },
+  {
+    "name": "Fireworks",
+    "artist": "Houda Fatih",
+    "year": "2025",
+    "type": "Genuary",
+    "repo": "https://github.com/houda1999/Fire_Work_Project",
+    "src": "../art/js/genuary/fireworks.js"
+  },
+  {
+    "name": "Turing",
+    "artist": "Gabriel Beaudoin",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_2",
+    "src": "../art/js/algo/turing.js"
+  },
+  {
+    "name": "Hex Life",
+    "artist": "Luchino Allix-Lastrego",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_life",
+    "src": "../art/js/algo/hex_life.js"
+  },
+  {
+    "name": "Cornfield Flow",
+    "artist": "Nadia González Fernández",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/nala7/cornfield_flow",
+    "src": "../art/js/algo/cornfield_flow.js"
+  },
+  {
+    "name": "Glass",
+    "artist": "Yogya Tulip Gamage",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/glass",
+    "src": "../art/js/algo/glass-bw.js"
+  },
+  {
+    "name": "Game Of Life",
+    "artist": "Paul Godbert",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/Neokoldstudio/p5-Game-Of-Life",
+    "src": "../art/js/algo/game-of-life/game-of-life.js"
+  },
+  {
+    "name": "Artwork 2",
+    "artist": "Leandreisk",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%232",
+    "src": "../art/js/algo/artwork_2/artwork_2.js"
+  },
+  {
+    "name": "Trees",
+    "artist": "Hugo Mouton",
+    "year": "2025",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/trees",
+    "src": "../art/js/algo/trees.js"
+  },
+  {
+    "name": "Meteo",
+    "artist": "Luchino Allix-Lastrego",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/météo²",
+    "data": "https://open-meteo.com",
+    "src": "../art/js/data/meteo.js"
+  },
+  {
+    "name": "Watchman",
+    "artist": "Gabriel Beaudoin",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_3",
+    "data": "https://github.com/sharmaroshan/WHO-Suicide-Statistics",
+    "src": "../art/js/data/watchman/watchman.js"
+  },
+  {
+    "name": "Theo",
+    "artist": "Yogya Tulip Gamage",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/theo",
+    "data": "https://github.com/chains-project/theo",
+    "src": "../art/js/data/theo/theo.js"
+  },
+  {
+    "name": "Flow Field With Letters",
+    "artist": "Nadia González Fernández",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/nala7/Data-representation-with-Flow-Fields",
+    "data": "https://github.com/nala7/besu_teku_ssc",
+    "src": "../art/js/data/flow_field_with_letters/4_flow_field_with_letters.js"
+  },
+  {
+    "name": "Artwork 3",
+    "artist": "Leandreisk",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%233",
+    "data": " ",
+    "src": "../art/js/data/artwork_3/artwork_3.js"
+  },
+  {
+    "name": "Flow Lake",
+    "artist": "Paul Godbert",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/Neokoldstudio/p5-waves",
+    "data": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter",
+    "src": "../art/js/data/flow_lake.js"
+  },
+  {
+    "name": "Pissenlit",
+    "artist": "Taha Skiredj",
+    "year": "2025",
+    "type": "Data Based",
+    "repo": "https://github.com/sorensorel/algo-art/tree/main/Projet3-Datart",
+    "data": " ",
+    "src": "../art/js/data/pissenlit/pissenlit.js"
+  }
+]

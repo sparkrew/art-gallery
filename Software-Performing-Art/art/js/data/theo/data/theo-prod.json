@@ -1,0 +1,94 @@
+{
+    "org.example:hello-world:1.0-SNAPSHOT" : [ {
+      "detectorCategory" : "FileRead",
+      "events" : [ {
+        "type" : "fileRead",
+        "method" : "readFile",
+        "className" : "HelloApi.java",
+        "calledBy" : [ {
+          "dependency" : "org.example:hello-world:1.0",
+          "methods" : [ "HelloApireadFile" ]
+        }],
+        "filePath" : "/Users/yogyagamage/Documents/KTH/theo/hello-world/input.txt",
+        "bytesRead" : "0",
+        "endOfFile" : "true"
+        }, 
+        {
+            "type" : "fileRead",
+            "method" : "readFile",
+            "className" : "HelloApi.java",
+            "calledBy" : [ {
+            "dependency" : "org.example:hello-world:1.0",
+            "methods" : [ "HelloApireadFile" ]
+            }],
+            "filePath" : "/Users/yogyagamage/Documents/KTH/theo/hello-world/input.txt",
+            "bytesRead" : "0",
+            "endOfFile" : "true"
+        }, 
+        {
+            "type" : "fileRead",
+            "method" : "readFile",
+            "className" : "HelloApi.java",
+            "calledBy" : [ {
+            "dependency" : "org.example:hello-world:1.0",
+            "methods" : [ "HelloApireadFile" ]
+            }],
+            "filePath" : "/Users/yogyagamage/Documents/KTH/theo/hello-world/input.txt",
+            "bytesRead" : "0",
+            "endOfFile" : "true"
+        }, 
+        {
+            "type" : "fileRead",
+            "method" : "readFile",
+            "className" : "HelloApi.java",
+            "calledBy" : [ {
+            "dependency" : "org.example:hello-world:1.0",
+            "methods" : [ "HelloApireadFile" ]
+            },
+            {
+            "dependency" : "org.orange:orange:3.0",
+            "methods" : [ "HelloApireadFile" ]
+            } ],
+            "filePath" : "/Users/yogyagamage/Documents/KTH/theo/hello-world/input.txt",
+            "bytesRead" : "0",
+            "endOfFile" : "true"
+        } ]
+    }, {
+      "detectorCategory" : "FileWrite",
+      "events" : [ {
+        "type" : "fileWrite",
+        "method" : "readFile",
+        "className" : "HelloApi.java",
+        "calledBy" : [ {
+          "dependency" : "org.purple:purple:1.0",
+          "methods" : [ "HelloApireadFile" ]
+        }],
+        "filePath" : "/Users/yogyagamage/Documents/KTH/theo/hello-world/output.txt"
+      } ]
+    }, {
+      "detectorCategory" : "ProcessStart",
+      "events" : [ {
+        "type" : "processStart",
+        "method" : "readFile",
+        "className" : "HelloApi.java",
+        "calledBy" : [ {
+          "dependency" : "org.yellow:hello:1.0",
+          "methods" : [ "HelloApireadFile" ]
+        }],
+        "directory" : null,
+        "command" : "ls"
+      } ]
+    }, {
+      "detectorCategory" : "NetworkAccess",
+      "events" : [ {
+        "type" : "networkAccess",
+        "method" : "readFile",
+        "className" : "HelloApi.java",
+        "calledBy" : [ {
+          "dependency" : "org.yellow:hello:1.0",
+          "methods" : [ "HelloApireadFile" ]
+        }],
+        "exitCode" : "0"
+      } ]
+    } ]
+  }
