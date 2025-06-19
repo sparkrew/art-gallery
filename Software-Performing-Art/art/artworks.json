@@ -53,7 +53,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/houda1999/Fire_Work_Project",
-    "src": "../art/js/2025/genuary/fireworks.js"
+    "src": "../art/js/2025/genuary/fireworks/fireworks.js"
   },
   {
     "name": "Turing",
@@ -61,7 +61,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_2",
-    "src": "../art/js/2025/algo/turing.js"
+    "src": "../art/js/2025/algo/turing/turing.js"
   },
   {
     "name": "Hex Life",

@@ -16,11 +16,15 @@ var sketch = function (p) {
   let height;
 
   p.preload = function () {
-    besuText = p.loadStrings("art/Nadia/data/besu_filtered_dependencies.txt");
-    commonText = p.loadStrings(
-      "art/Nadia/data/overlap_with_version-25.1.0.txt"
+    besuText = p.loadStrings(
+      "art/js/2025/data/flow_field_with_letters/data/besu_filtered_dependencies.txt"
     );
-    tekuText = p.loadStrings("art/Nadia/data/teku_filtered_dependencies.txt");
+    commonText = p.loadStrings(
+      "art/js/2025/data/flow_field_with_letters/data/overlap_with_version-25.1.0.txt"
+    );
+    tekuText = p.loadStrings(
+      "art/js/2025/data/flow_field_with_letters/data/teku_filtered_dependencies.txt"
+    );
   };
 
   p.setup = function () {
