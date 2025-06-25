@@ -173,5 +173,13 @@
     "repo": "https://github.com/sorensorel/algo-art/tree/main/Projet3-Datart",
     "data": " ",
     "src": "../art/js/2025/data/pissenlit/pissenlit.js"
+  },
+  {
+    "name": "Synesthesia",
+    "artist": "Tiffany M",
+    "year": "2024",
+    "type": "Genuary",
+    "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task1",
+    "src": "../art/js/2024/genuary/synesthesia/synesthesia.js"
   }
 ]
