@@ -213,5 +213,13 @@
     "type": "Algorithm Based",
     "repo": "https://github.com/rafpinter/algorithmic-art/tree/main/04-bezier",
     "src": "../art/js/2024/algo/bezier.js"
+  },
+  {
+    "name": "Tiling",
+    "artist": "Lena MK",
+    "year": "2024",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/tiling",
+    "src": "../art/js/2024/algo/tiling.js"
   }
 ]
