@@ -132,8 +132,8 @@
               script.type = "text/javascript";
 
               script.onload = () => {
-                if (typeof setup === "function") {
-                  currentP5Instance = new p5(setup, artworkContainer);
+                if (typeof sketch === "function") {
+                  currentP5Instance = new p5(sketch, artworkContainer);
                 } else {
                   console.error(
                     "Le fichier ne contient pas de fonction 'sketch'"
