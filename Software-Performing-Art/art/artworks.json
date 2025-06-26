@@ -181,5 +181,13 @@
     "type": "Genuary",
     "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task1",
     "src": "../art/js/2024/genuary/synesthesia/synesthesia.js"
+  },
+  {
+    "name": "Bauhaus",
+    "artist": "Rafaela Pinter",
+    "year": "2024",
+    "type": "Genuary",
+    "repo": "https://github.com/rafpinter/algorithmic-art/tree/main/02-bauhaus",
+    "src": "../art/js/2024/genuary/bauhaus.js"
   }
 ]
