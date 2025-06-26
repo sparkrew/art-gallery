@@ -189,5 +189,13 @@
     "type": "Genuary",
     "repo": "https://github.com/rafpinter/algorithmic-art/tree/main/02-bauhaus",
     "src": "../art/js/2024/genuary/bauhaus.js"
+  },
+  {
+    "name": "Vermeer",
+    "artist": "Lena MK",
+    "year": "2024",
+    "type": "Genuary",
+    "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/vermeer",
+    "src": "../art/js/2024/genuary/vermeer.js"
   }
 ]
