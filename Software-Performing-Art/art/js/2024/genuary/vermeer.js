@@ -84,6 +84,6 @@ var sketch = function (p) {
   };
 
   function windowResized() {
-    p.resizeCanvas(width, height);
+    p.resizeCanvas(windowWidth, windowHeight);
   }
 };

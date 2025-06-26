@@ -165,15 +165,7 @@
     "data": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter",
     "src": "../art/js/2025/data/flow_lake.js"
   },
-  {
-    "name": "Pissenlit",
-    "artist": "Taha Skiredj",
-    "year": "2025",
-    "type": "Data Based",
-    "repo": "https://github.com/sorensorel/algo-art/tree/main/Projet3-Datart",
-    "data": " ",
-    "src": "../art/js/2025/data/pissenlit/pissenlit.js"
-  },
+
   {
     "name": "Synesthesia",
     "artist": "Tiffany M",
@@ -205,5 +197,13 @@
     "type": "Genuary",
     "repo": "https://github.com/bricemichelb/hexagonal",
     "src": "../art/js/2024/genuary/hexagonal.js"
+  },
+  {
+    "name": "Lsystem",
+    "artist": "Tiffany M",
+    "year": "2024",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task2",
+    "src": "../art/js/2024/algo/lsystem.js"
   }
 ]
