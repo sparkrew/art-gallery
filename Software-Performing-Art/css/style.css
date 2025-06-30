@@ -116,10 +116,7 @@ display: none;
     display: flex;
     flex-direction:column ;
 }
-#buttons-container{
-    display: flex;
-    flex-direction: row;
+#buttons-container>*{
+     display: inline-block;
 }
-#buttons-container>* {
-    background-color: #FB2E0F;
-}
+
