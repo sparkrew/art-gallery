@@ -34,15 +34,24 @@
         <div id="cartel">
           <div id="artist-info-container"></div>
           <div id="button-container">
-            <button id="code-button">
+            <div id="code-button">
               <img
                 id="button-icon"
                 src="assets/svg/code.svg"
                 alt="icon code"
-                height="20px"
-                width="20px"
+                height="30px"
+                width="30px"
               />
-            </button>
+            </div>
+            <div id="gitHub-button">
+              <img
+                id="button-icon"
+                src="assets/svg/github.png"
+                alt="icon github"
+                height="30px"
+                width="30px"
+              />
+            </div>
           </div>
         </div>
 
@@ -68,10 +77,8 @@
 
         async function loadData() {
           try {
-            console.log("Setting data...");
             const response = await fetch("../art/artworks.json");
             artworks = await response.json();
-            console.log("Data loaded", artworks);
           } catch (error) {
             console.error("Erreur lors du chargement des données :", error);
           }
@@ -116,7 +123,7 @@
                 ).data;
                 artistContainer.innerHTML += ` <a href="${data}">Data</a>`;
               }
-              artistContainer.innerHTML += ` <a href="${repo}">GitHub Repository</a>`;
+              /* artistContainer.innerHTML += ` <a href="${repo}">GitHub Repository</a>`; */
 
               if (currentP5Instance) {
                 currentP5Instance.remove();
@@ -144,6 +151,11 @@
               document.body.appendChild(script);
             });
           });
+          document
+            .getElementById("gitHub-button")
+            .addEventListener("click", () => {
+              window.location.href = repo;
+            });
           document
             .getElementById("code-button")
             .addEventListener("click", () => {
