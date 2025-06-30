@@ -33,7 +33,7 @@
       <div id="art-container">
         <div id="cartel">
           <div id="artist-info-container"></div>
-          <div id="button-container">
+          <div id="buttons-container" style="display: none">
             <div id="code-button">
               <img
                 id="button-icon"
@@ -97,6 +97,8 @@
 
           document.querySelectorAll(".artwork").forEach((el) => {
             el.addEventListener("mouseover", () => {
+              const buttons = document.getElementById("buttons-container");
+              buttons.style.display = "block";
               currentSketchPath = artworks.find(
                 (artwork) => artwork.name === el.textContent
               ).src;

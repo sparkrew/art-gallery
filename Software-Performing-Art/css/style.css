@@ -116,6 +116,10 @@ display: none;
     display: flex;
     flex-direction:column ;
 }
-#button-container>* {
+#buttons-container{
+    display: flex;
+    flex-direction: row;
+}
+#buttons-container>* {
     background-color: #FB2E0F;
 }
