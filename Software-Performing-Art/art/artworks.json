@@ -246,5 +246,14 @@
     "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task3",
     "data": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710005701",
     "src": "../art/js/2024/data/dequoiserafaitlavenir/dequoiserafaitlavenir.js"
+  },
+  {
+    "name": "Figures Historiques",
+    "artist": "Lena MK",
+    "year": "2024",
+    "type": "Data Based",
+    "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/figures-historiques",
+    "data": "https://observablehq.com/collection/@maison-mona/gender-analysis",
+    "src": "../art/js/2024/data/figures_historiques/figures_historiques.js"
   }
 ]
