@@ -255,5 +255,14 @@
     "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/figures-historiques",
     "data": "https://observablehq.com/collection/@maison-mona/gender-analysis",
     "src": "../art/js/2024/data/figures_historiques/figures_historiques.js"
+  },
+  {
+    "name": "Papers",
+    "artist": "Bricemichelb",
+    "year": "2024",
+    "type": "Data Based",
+    "repo": "https://github.com/bricemichelb/data_art",
+    "data": "https://github.com/bricemichelb/data_art/blob/main/assets/papers.json",
+    "src": "../art/js/2024/data/papers/papers.js"
   }
 ]
