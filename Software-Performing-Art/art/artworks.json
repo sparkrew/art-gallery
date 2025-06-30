@@ -264,5 +264,14 @@
     "repo": "https://github.com/bricemichelb/data_art",
     "data": "https://github.com/bricemichelb/data_art/blob/main/assets/papers.json",
     "src": "../art/js/2024/data/papers/papers.js"
+  },
+  {
+    "name": "Heart Rates",
+    "artist": "Yvan Brunel",
+    "year": "2024",
+    "type": "Data Based",
+    "repo": "https://github.com/YBTopaz8/DataDrivenArt",
+    "data": "https://github.com/YBTopaz8/DataDrivenArt/tree/main/AllHearRates",
+    "src": "../art/js/2024/data/heart_rates/heart_rates.js"
   }
 ]
