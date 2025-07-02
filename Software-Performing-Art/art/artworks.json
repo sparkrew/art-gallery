@@ -273,5 +273,13 @@
     "repo": "https://github.com/YBTopaz8/DataDrivenArt",
     "data": "https://github.com/YBTopaz8/DataDrivenArt/tree/main/AllHearRates",
     "src": "../art/js/2024/data/heart_rates/heart_rates.js"
+  },
+  {
+    "name": "Cadavre exquis",
+    "artist": "??",
+    "year": "2025",
+    "type": "Exquisite Corpse",
+    "repo": "https://github.com/rethread-studio/algorithmic-art-course/tree/2025/exquis",
+    "src": "../art/js/2025/exquis/exquisite-conductor.js"
   }
 ]
