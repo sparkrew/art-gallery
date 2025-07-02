@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Software Performing Art</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Contact</h1>
-    </header>
+    <header></header>
     <main>
-      <p>Main</p>
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Gallery</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="art-history.html">Art History</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="../convert/html/test.html">Test Pandoc</a></li>
         </ul>
       </nav>
+      <h1>Contactez-nous</h1>
+      <form method="post">
+        <label>Votre email</label>
+        <input type="email" name="email" required />
+        <label>Votre Nom</label>
+        <input type="text" name="name" required />
+        <label>Votre prénom</label>
+        <input type="text" name="firstname" required />
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+        <input type="submit" />
+      </form>
     </main>
     <footer>
       <p>Footer</p>
