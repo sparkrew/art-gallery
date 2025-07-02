@@ -37,7 +37,7 @@
             <div id="artwork-info"></div>
             <div id="artwork-type"></div>
           </div>
-          <br>
+          <br />
           <div id="buttons-container" style="display: none">
             <div id="code-button">
               <img
@@ -56,7 +56,7 @@
                 width="30px"
               />
             </div>
-            <div id="data-button" style="display: none">
+            <div id="data-button">
               <img
                 src="assets/svg/data.png"
                 alt="icon data"
@@ -115,7 +115,7 @@
           document.querySelectorAll(".artwork").forEach((el) => {
             el.addEventListener("mouseover", () => {
               const buttons = document.getElementById("buttons-container");
-              buttons.style.display = "block";
+              buttons.style.display = "inline-block";
               dataButton.style.display = "none";
               currentSketchPath = artworks.find(
                 (artwork) => artwork.name === el.textContent
