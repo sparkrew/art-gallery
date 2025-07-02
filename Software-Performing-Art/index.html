@@ -32,7 +32,12 @@
       </nav>
       <div id="art-container">
         <div id="cartel">
-          <div id="artist-info-container"></div>
+          <div id="artist-info-container">
+            <div id="artist-name"></div>
+            <div id="artwork-info"></div>
+            <div id="artwork-type"></div>
+          </div>
+          <br>
           <div id="buttons-container" style="display: none">
             <div id="code-button">
               <img
@@ -76,12 +81,16 @@
         let repo;
         let type;
         let data;
+        let artworkName;
         const artworkContainer = document.getElementById("artwork-container");
         const artistContainer = document.getElementById(
           "artist-info-container"
         );
         const container = document.getElementById("artwork-name-container");
         const dataButton = document.getElementById("data-button");
+        const artistNameContainer = document.getElementById("artist-name");
+        const artworkInfoContainer = document.getElementById("artwork-info");
+        const artworkTypeContainer = document.getElementById("artwork-type");
 
         async function loadData() {
           try {
@@ -111,7 +120,9 @@
               currentSketchPath = artworks.find(
                 (artwork) => artwork.name === el.textContent
               ).src;
-
+              artworkName = artworks.find(
+                (artwork) => artwork.name === el.textContent
+              ).name;
               artistName = artworks.find(
                 (artwork) => artwork.name === el.textContent
               ).artist;
@@ -125,9 +136,9 @@
                 (artwork) => artwork.name === el.textContent
               ).type;
 
-              artistContainer.textContent = artistName;
-              artistContainer.textContent += ` (${year})`;
-              artistContainer.textContent += ` ${type}`;
+              artistNameContainer.innerHTML = artistName;
+              artworkInfoContainer.innerHTML = ` ${artworkName}, ${year}`;
+              artworkTypeContainer.innerHTML = ` ${type}`;
               if (type == "Data Based") {
                 data = artworks.find(
                   (artwork) => artwork.name === el.textContent

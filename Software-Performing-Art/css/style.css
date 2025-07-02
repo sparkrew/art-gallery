@@ -119,4 +119,7 @@ display: none;
 #buttons-container>*{
      display: inline-block;
 }
+#artist-name{
+    font-weight: bold;
+}
 
