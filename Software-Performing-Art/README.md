@@ -6,7 +6,9 @@ Le but de ce site web est de présenter les oeuvres créées par les élèves du
 La version actuelle du site ne permet d'afficher que les oeuvres réalisées à l'aide de la librairie javascript p5.js.
 Les oeuvres doivent être codées en mode instance de la forme 
 
-`var sketch = function(p){(code)}`
+`var sketch = function(p){
+(code)
+}`
 
 Dans la fonction setup la façon d'initialiser le canva est la suivante :
 
