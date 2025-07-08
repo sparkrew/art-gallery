@@ -139,6 +139,54 @@
               filterSelection("exquisite-corpse");
             });
 
+          function showArtwork(artwork) {
+            const el = document.createElement("p");
+            el.className = "artwork";
+            el.innerHTML = artwork.name;
+            container.appendChild(el);
+
+            el.addEventListener("mouseover", () => {
+              const buttons = document.getElementById("buttons-container");
+              buttons.style.display = "inline-block";
+              dataButton.style.display = "none";
+
+              currentSketchPath = artwork.src;
+              artworkName = artwork.name;
+              artistName = artwork.artist;
+              year = artwork.year;
+              repo = artwork.repo;
+
+              year = artwork.year;
+              type = artwork.type;
+              data = artwork.data;
+
+              artistNameContainer.innerHTML = artistName;
+              artworkInfoContainer.innerHTML = `${artworkName}, ${year}`;
+              artworkTypeContainer.innerHTML = type;
+
+              if (type === "Data Based" && data != " ") {
+                dataButton.style.display = "block";
+              }
+
+              if (currentP5Instance) {
+                currentP5Instance.remove();
+                currentP5Instance = null;
+              }
+
+              const oldScript = document.getElementById("dynamic-script");
+              if (oldScript) oldScript.remove();
+
+              const script = document.createElement("script");
+              script.src = currentSketchPath;
+              script.id = "dynamic-script";
+              script.onload = () => {
+                if (typeof sketch === "function") {
+                  currentP5Instance = new p5(sketch, artworkContainer);
+                }
+              };
+              document.body.appendChild(script);
+            });
+          }
           function filterSelection(filter) {
             container.innerHTML = "";
             const filteredArtworks =
@@ -154,58 +202,7 @@
                   });
 
             filteredArtworks.forEach((artwork) => {
-              const el = document.createElement("p");
-              el.className = "artwork";
-              el.innerHTML = artwork.name;
-              container.appendChild(el);
-
-              el.addEventListener("mouseover", () => {
-                console.log("ok");
-                const buttons = document.getElementById("buttons-container");
-                buttons.style.display = "inline-block";
-                dataButton.style.display = "none";
-                /* console.log(artwork, "arti");
-
-                const { src, name, artist, year, repo, type, data } = artwork;
-                console.log(artwork, "arti2"); */
-
-                currentSketchPath = artwork.src;
-                artworkName = artwork.name;
-                artistName = artwork.artist;
-                year = artwork.year;
-                repo = artwork.repo;
-                console.log("repo", repo);
-                year = artwork.year;
-                type = artwork.type;
-                data = artwork.data;
-                console.log("dta", data);
-
-                artistNameContainer.innerHTML = artistName;
-                artworkInfoContainer.innerHTML = `${artworkName}, ${year}`;
-                artworkTypeContainer.innerHTML = type;
-
-                if (type === "Data Based" && data != " ") {
-                  dataButton.style.display = "block";
-                }
-
-                if (currentP5Instance) {
-                  currentP5Instance.remove();
-                  currentP5Instance = null;
-                }
-
-                const oldScript = document.getElementById("dynamic-script");
-                if (oldScript) oldScript.remove();
-
-                const script = document.createElement("script");
-                script.src = currentSketchPath;
-                script.id = "dynamic-script";
-                script.onload = () => {
-                  if (typeof sketch === "function") {
-                    currentP5Instance = new p5(sketch, artworkContainer);
-                  }
-                };
-                document.body.appendChild(script);
-              });
+              showArtwork(artwork);
             });
 
             for (let i = 0; i < container.children.length; i++) {
