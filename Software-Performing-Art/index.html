@@ -30,7 +30,13 @@
           <li><a href="convert/html/test.html">Pandoc</a></li>
         </ul>
       </nav>
-      <div id="filters"></div>
+      <div id="filters">
+        <button id="show-all-filter">Show all</button>
+        <button id="genuary-filter">Genuary</button>
+        <button id="algorithm-filter">Algorithm</button>
+        <button id="data-filter">Data</button>
+        <button id="exquisite-corpse-filter">Exquisite Corpse</button>
+      </div>
       <div id="art-container">
         <div id="cartel">
           <div id="artist-info-container">
@@ -98,88 +104,117 @@
           try {
             const response = await fetch("../art/artworks.json");
             artworks = await response.json();
+            artworksNumber = artworks.length;
+            document.getElementById(
+              "show-all-filter"
+            ).innerHTML += ` (${artworksNumber})`;
           } catch (error) {
             console.error("Erreur lors du chargement des données :", error);
           }
         }
         loadData().then(() => {
-          container.innerHTML = "";
-          artworks.map((artwork) => {
-            artworksNumber++;
-            const el = document.createElement("p");
-            el.className = "artwork";
-            el.innerHTML = `${artwork.name}`;
-
-            document.getElementById("artwork-name-container").appendChild(el);
-          });
-          for (let i = 0; i < container.children.length; i++) {
-            container.appendChild(container.children[(Math.random() * i) | 0]);
-          }
-          document.getElementById("filters").innerHTML = artworksNumber;
-
-          document.querySelectorAll(".artwork").forEach((el) => {
-            el.addEventListener("mouseover", () => {
-              const buttons = document.getElementById("buttons-container");
-              buttons.style.display = "inline-block";
-              dataButton.style.display = "none";
-              currentSketchPath = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).src;
-              artworkName = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).name;
-              artistName = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).artist;
-              year = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).year;
-              repo = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).repo;
-              type = artworks.find(
-                (artwork) => artwork.name === el.textContent
-              ).type;
-
-              artistNameContainer.innerHTML = artistName;
-              artworkInfoContainer.innerHTML = ` ${artworkName}, ${year}`;
-              artworkTypeContainer.innerHTML = ` ${type}`;
-              if (type == "Data Based") {
-                data = artworks.find(
-                  (artwork) => artwork.name === el.textContent
-                ).data;
-                dataButton.style.display = "block";
-                /* artistContainer.innerHTML += ` <a href="${data}">Data</a>`; */
-              }
-              /* artistContainer.innerHTML += ` <a href="${repo}">GitHub Repository</a>`; */
-
-              if (currentP5Instance) {
-                currentP5Instance.remove();
-                currentP5Instance = null;
-              }
-
-              const oldScript = document.getElementById("dynamic-script");
-              if (oldScript) {
-                oldScript.remove();
-              }
-
-              const script = document.createElement("script");
-              script.src = currentSketchPath;
-              script.id = "dynamic-script";
-              script.type = "text/javascript";
-
-              script.onload = () => {
-                if (typeof sketch === "function") {
-                  currentP5Instance = new p5(sketch, artworkContainer);
-                } else {
-                  console.error(
-                    "Le fichier ne contient pas de fonction 'sketch'"
-                  );
-                }
-              };
-              document.body.appendChild(script);
+          document
+            .getElementById("show-all-filter")
+            .addEventListener("click", () => {
+              filterSelection("all");
             });
-          });
+          document
+            .getElementById("genuary-filter")
+            .addEventListener("click", () => {
+              filterSelection("genuary");
+            });
+          document
+            .getElementById("algorithm-filter")
+            .addEventListener("click", () => {
+              filterSelection("algorithm");
+            });
+          document
+            .getElementById("data-filter")
+            .addEventListener("click", () => {
+              filterSelection("data");
+            });
+          document
+            .getElementById("exquisite-corpse-filter")
+            .addEventListener("click", () => {
+              filterSelection("exquisite-corpse");
+            });
+
+          function filterSelection(filter) {
+            container.innerHTML = "";
+            const filteredArtworks =
+              filter === "all"
+                ? artworks
+                : artworks.filter((artwork) => {
+                    if (filter === "genuary") return artwork.type === "Genuary";
+                    if (filter === "algorithm")
+                      return artwork.type === "Algorithm Based";
+                    if (filter === "data") return artwork.type === "Data Based";
+                    if (filter === "exquisite-corpse")
+                      return artwork.type === "Exquisite Corpse";
+                  });
+
+            filteredArtworks.forEach((artwork) => {
+              const el = document.createElement("p");
+              el.className = "artwork";
+              el.innerHTML = artwork.name;
+              container.appendChild(el);
+
+              el.addEventListener("mouseover", () => {
+                console.log("ok");
+                const buttons = document.getElementById("buttons-container");
+                buttons.style.display = "inline-block";
+                dataButton.style.display = "none";
+                /* console.log(artwork, "arti");
+
+                const { src, name, artist, year, repo, type, data } = artwork;
+                console.log(artwork, "arti2"); */
+
+                currentSketchPath = artwork.src;
+                artworkName = artwork.name;
+                artistName = artwork.artist;
+                year = artwork.year;
+                repo = artwork.repo;
+                console.log("repo", repo);
+                year = artwork.year;
+                type = artwork.type;
+                data = artwork.data;
+                console.log("dta", data);
+
+                artistNameContainer.innerHTML = artistName;
+                artworkInfoContainer.innerHTML = `${artworkName}, ${year}`;
+                artworkTypeContainer.innerHTML = type;
+
+                if (type === "Data Based" && data != " ") {
+                  dataButton.style.display = "block";
+                }
+
+                if (currentP5Instance) {
+                  currentP5Instance.remove();
+                  currentP5Instance = null;
+                }
+
+                const oldScript = document.getElementById("dynamic-script");
+                if (oldScript) oldScript.remove();
+
+                const script = document.createElement("script");
+                script.src = currentSketchPath;
+                script.id = "dynamic-script";
+                script.onload = () => {
+                  if (typeof sketch === "function") {
+                    currentP5Instance = new p5(sketch, artworkContainer);
+                  }
+                };
+                document.body.appendChild(script);
+              });
+            });
+
+            for (let i = 0; i < container.children.length; i++) {
+              container.appendChild(
+                container.children[(Math.random() * i) | 0]
+              );
+            }
+          }
+
           document
             .getElementById("gitHub-button")
             .addEventListener("click", () => {
