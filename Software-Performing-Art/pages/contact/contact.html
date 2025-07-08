@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Performing Art</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Gallery</a></li>
+          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="../art-history.html">Art History</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../../convert/html/test.html">Test Pandoc</a></li>
+        </ul>
+      </nav>
+      <h1>Contact</h1>
+
+      <form action="traitement.php" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <br />
+
+        <button>Send</button>
+      </form>
+    </main>
+    <!-- <footer>
+      <p>Footer</p>
+    </footer> -->
+  </body>
+</html>
