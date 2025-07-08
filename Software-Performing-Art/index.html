@@ -30,6 +30,7 @@
           <li><a href="convert/html/test.html">Pandoc</a></li>
         </ul>
       </nav>
+      <div id="filters"></div>
       <div id="art-container">
         <div id="cartel">
           <div id="artist-info-container">
@@ -82,6 +83,7 @@
         let type;
         let data;
         let artworkName;
+        let artworksNumber = 0;
         const artworkContainer = document.getElementById("artwork-container");
         const artistContainer = document.getElementById(
           "artist-info-container"
@@ -103,14 +105,17 @@
         loadData().then(() => {
           container.innerHTML = "";
           artworks.map((artwork) => {
+            artworksNumber++;
             const el = document.createElement("p");
             el.className = "artwork";
             el.innerHTML = `${artwork.name}`;
+
             document.getElementById("artwork-name-container").appendChild(el);
           });
           for (let i = 0; i < container.children.length; i++) {
             container.appendChild(container.children[(Math.random() * i) | 0]);
           }
+          document.getElementById("filters").innerHTML = artworksNumber;
 
           document.querySelectorAll(".artwork").forEach((el) => {
             el.addEventListener("mouseover", () => {
