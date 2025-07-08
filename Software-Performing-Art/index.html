@@ -164,6 +164,11 @@
           }
           function showArtworks(artworks) {
             artworks.forEach((artwork) => showArtwork(artwork));
+            for (let i = 0; i < container.children.length; i++) {
+              container.appendChild(
+                container.children[(Math.random() * i) | 0]
+              );
+            }
           }
           function filterSelection(filter) {
             container.innerHTML = "";
@@ -180,12 +185,6 @@
                   });
 
             showArtworks(filteredArtworks);
-
-            for (let i = 0; i < container.children.length; i++) {
-              container.appendChild(
-                container.children[(Math.random() * i) | 0]
-              );
-            }
           }
 
           document
