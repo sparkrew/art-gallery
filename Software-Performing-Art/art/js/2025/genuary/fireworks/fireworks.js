@@ -51,6 +51,20 @@ var sketch = function (p) {
     }
   };
 
+  p.stopSound = function () {
+    if (explosionSound && explosionSound.isPlaying()) {
+      explosionSound.stop();
+      soundPlayed = false;
+    }
+  };
+
+  p.playSound = function () {
+    if (explosionSound && !explosionSound.isPlaying()) {
+      explosionSound.play();
+      soundPlayed = true;
+    }
+  };
+
   class Firework {
     constructor() {
       this.firework = new Particle(p.random(p.width), p.height, true);

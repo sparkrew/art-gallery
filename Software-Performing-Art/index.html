@@ -72,6 +72,11 @@
               />
             </div>
           </div>
+          <br />
+          <div id="sound-controller-container">
+            <div id="play-sound-button" style="display: none">P</div>
+            <div id="stop-sound-button" style="display: none">S</div>
+          </div>
         </div>
 
         <div id="artwork-container"></div>
@@ -88,6 +93,7 @@
         let repo;
         let type;
         let data;
+        let sound;
         let artworkName;
         let artworksNumber = 0;
         let isFiltered = false;
@@ -101,6 +107,8 @@
         const artistNameContainer = document.getElementById("artist-name");
         const artworkInfoContainer = document.getElementById("artwork-info");
         const artworkTypeContainer = document.getElementById("artwork-type");
+        const playSoundButton = document.getElementById("play-sound-button");
+        const stopSoundButton = document.getElementById("stop-sound-button");
 
         async function loadData() {
           try {
@@ -120,13 +128,15 @@
             const buttons = document.getElementById("buttons-container");
             buttons.style.display = "inline-block";
             dataButton.style.display = "none";
+            playSoundButton.style.display = "none";
+            stopSoundButton.style.display = "none";
 
             currentSketchPath = artwork.src;
             artworkName = artwork.name;
             artistName = artwork.artist;
             year = artwork.year;
             repo = artwork.repo;
-
+            sound = artwork.sound;
             year = artwork.year;
             type = artwork.type;
             data = artwork.data;
@@ -137,6 +147,10 @@
 
             if (type === "Data Based" && data != " ") {
               dataButton.style.display = "block";
+            }
+            if (sound === "true") {
+              playSoundButton.style.display = "block";
+              stopSoundButton.style.display = "block";
             }
 
             if (currentP5Instance) {
@@ -155,6 +169,7 @@
                 currentP5Instance = new p5(sketch, artworkContainer);
               }
             };
+
             document.body.appendChild(script);
           }
           function showArtwork(artwork) {
@@ -194,6 +209,17 @@
             showArtworks(artworks);
             executeArtwork(artworks[0]);
           }
+
+          document
+            .getElementById("stop-sound-button")
+            .addEventListener("click", () => {
+              currentP5Instance.stopSound();
+            });
+          document
+            .getElementById("play-sound-button")
+            .addEventListener("click", () => {
+              currentP5Instance.playSound();
+            });
 
           document
             .getElementById("show-all-filter")
