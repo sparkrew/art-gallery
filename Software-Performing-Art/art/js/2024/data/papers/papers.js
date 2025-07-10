@@ -44,7 +44,7 @@ var sketch = function (p) {
   }
 
   p.preload = function () {
-    data = p.loadJSON("art/js/2024/data/papers/papers.json");
+    data = p.loadJSON("../art/js/2024/data/papers/papers.json");
   };
 
   p.setup = function () {

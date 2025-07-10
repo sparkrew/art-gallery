@@ -22,7 +22,7 @@ var sketch = function (p) {
     //<Statistics Canada. Table 17-10-0057-01  Projected population, by projection scenario, age and sex, as of July 1 (x 1,000)
     //https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710005701
     thefuture = p.loadTable(
-      "art/js/2024/data/dequoiserafaitlavenir/1710005701-noSymbol_trimmed.csv",
+      "../art/js/2024/data/dequoiserafaitlavenir/1710005701-noSymbol_trimmed.csv",
       "csv",
       "header"
     );

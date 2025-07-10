@@ -327,7 +327,7 @@ var sketch = function (p) {
     p.noFill();
     p.stroke(0);
     p.frameRate(10);
-    img = p.loadImage("art/js/2024/genuary/synesthesia/small.JPG");
+    img = p.loadImage("../art/js/2024/genuary/synesthesia/small.JPG");
     //img = loadImage('assets/hedgehog.png');
     tenthousand = false;
     flock_adj = 1;

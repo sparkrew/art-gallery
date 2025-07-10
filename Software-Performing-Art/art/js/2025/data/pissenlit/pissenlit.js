@@ -68,7 +68,7 @@ var sketch = function (p) {
   }
 
   p.preload = function () {
-    iris = p.loadJSON("art/js/2025/data/pissenlit/iris.json");
+    iris = p.loadJSON("../art/js/2025/data/pissenlit/iris.json");
   };
 
   p.setup = function () {

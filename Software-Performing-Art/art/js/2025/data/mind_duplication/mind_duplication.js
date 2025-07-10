@@ -31,7 +31,7 @@ class Cell {
 }
 
 function preload() {
-  loadStrings("art/js/2025/data/mind_duplication/data", selectGame);
+  loadStrings("../art/js/2025/data/mind_duplication/data", selectGame);
 }
 
 async function setup() {

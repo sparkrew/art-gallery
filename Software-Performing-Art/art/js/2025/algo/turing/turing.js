@@ -14,7 +14,7 @@ var sketch = function (p) {
   let height;
 
   p.preload = function () {
-    tickSound = p.loadSound("art/js/2025/algo/turing/clock.mp3");
+    tickSound = p.loadSound("../art/js/2025/algo/turing/clock.mp3");
   };
 
   p.setup = function () {

@@ -27,11 +27,11 @@ var sketch = function (p) {
   ];
 
   p.preload = function () {
-    myFont = p.loadFont("art/js/2025/data/artwork_3/game_over.ttf");
-    p.loadStrings("art/js/2025/data/artwork_3/data/pos.csv", (data) =>
+    myFont = p.loadFont("../art/js/2025/data/artwork_3/game_over.ttf");
+    p.loadStrings("../art/js/2025/data/artwork_3/data/pos.csv", (data) =>
       processCSV(data, "pos")
     );
-    p.loadStrings("art/js/2025/data/artwork_3/data/neg.csv", (data) =>
+    p.loadStrings("../art/js/2025/data/artwork_3/data/neg.csv", (data) =>
       processCSV(data, "neg")
     );
   };

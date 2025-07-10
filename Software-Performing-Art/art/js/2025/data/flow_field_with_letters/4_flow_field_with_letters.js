@@ -17,13 +17,13 @@ var sketch = function (p) {
 
   p.preload = function () {
     besuText = p.loadStrings(
-      "art/js/2025/data/flow_field_with_letters/data/besu_filtered_dependencies.txt"
+      "../art/js/2025/data/flow_field_with_letters/data/besu_filtered_dependencies.txt"
     );
     commonText = p.loadStrings(
-      "art/js/2025/data/flow_field_with_letters/data/overlap_with_version-25.1.0.txt"
+      "../art/js/2025/data/flow_field_with_letters/data/overlap_with_version-25.1.0.txt"
     );
     tekuText = p.loadStrings(
-      "art/js/2025/data/flow_field_with_letters/data/teku_filtered_dependencies.txt"
+      "../art/js/2025/data/flow_field_with_letters/data/teku_filtered_dependencies.txt"
     );
   };
 

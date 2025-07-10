@@ -28,7 +28,7 @@ var sketch = function (p) {
 
   p.preload = function () {
     importedObject = p.loadJSON(
-      "art/js/2024/data/figures_historiques/data.json"
+      "../art/js/2024/data/figures_historiques/data.json"
     );
   };
 

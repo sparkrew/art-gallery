@@ -5,8 +5,8 @@ var sketch = function (p) {
 
   let currentFileIndex = 0; // Start with the first file
   let fileNames = [
-    "art/js/2024/data/heart_rates/heart_rate-2023-03-11.json",
-    "art/js/2024/data/heart_rates/heart_rate-2024-01-04.json",
+    "../art/js/2024/data/heart_rates/heart_rate-2023-03-11.json",
+    "../art/js/2024/data/heart_rates/heart_rate-2024-01-04.json",
     // Add more file names as needed
   ];
 

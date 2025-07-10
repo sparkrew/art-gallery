@@ -9,7 +9,7 @@ var sketch = function (p) {
 
   p.preload = function () {
     explosionSound = p.loadSound(
-      "art/js/2025/genuary/fireworks/firework.mp3",
+      "../art/js/2025/genuary/fireworks/firework.mp3",
       () => {
         soundPlayed = true;
       }

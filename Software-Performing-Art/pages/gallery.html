@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Performing Art</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="libraries/p5.speech.js"></script>
+    <script src="libraries/rhill-voronoi-core.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav id="nav">
+        <ul>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="art-history.html">Art History</a></li>
+          <li><a href="contact/contact.html">Contact</a></li>
+          <li><a href="../convert/html/test.html">Pandoc</a></li>
+        </ul>
+      </nav>
+      <div id="filters">
+        <button id="show-all-filter">Show all</button>
+        <button id="genuary-filter">Genuary</button>
+        <button id="algorithm-filter">Algorithm</button>
+        <button id="data-filter">Data</button>
+        <button id="exquisite-corpse-filter">Exquisite Corpse</button>
+      </div>
+      <div id="art-container">
+        <div id="cartel">
+          <div id="artist-info-container">
+            <div id="artist-name"></div>
+            <div id="artwork-info"></div>
+            <div id="artwork-type"></div>
+          </div>
+          <br />
+          <div id="buttons-container" style="display: none">
+            <div id="code-button">
+              <img
+                id="button-icon"
+                src="../assets/icon/code.svg"
+                alt="icon code"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div id="gitHub-button">
+              <img
+                src="../assets/icon/github.png"
+                alt="icon github"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div id="data-button">
+              <img
+                src="../assets/icon/data.png"
+                alt="icon data"
+                height="30px"
+                width="30px"
+              />
+            </div>
+          </div>
+          <br />
+          <div id="sound-controller-container">
+            <div id="play-sound-button" style="display: none">P</div>
+            <div id="stop-sound-button" style="display: none">S</div>
+          </div>
+        </div>
+
+        <div id="artwork-container"></div>
+        <div id="artwork-name-container"></div>
+      </div>
+      <script>
+        var artworks;
+        let codeAffiche = false;
+        let currentP5Instance;
+        let currentSketchPath;
+        let path;
+        let artistName;
+        let year;
+        let repo;
+        let type;
+        let data;
+        let sound;
+        let artworkName;
+        let artworksNumber = 0;
+        let isFiltered = false;
+        let filter;
+        const artworkContainer = document.getElementById("artwork-container");
+        const artistContainer = document.getElementById(
+          "artist-info-container"
+        );
+        const container = document.getElementById("artwork-name-container");
+        const dataButton = document.getElementById("data-button");
+        const artistNameContainer = document.getElementById("artist-name");
+        const artworkInfoContainer = document.getElementById("artwork-info");
+        const artworkTypeContainer = document.getElementById("artwork-type");
+        const playSoundButton = document.getElementById("play-sound-button");
+        const stopSoundButton = document.getElementById("stop-sound-button");
+
+        async function loadData() {
+          try {
+            const response = await fetch("../art/artworks.json");
+            artworks = await response.json();
+            artworksNumber = artworks.length;
+            document.getElementById(
+              "show-all-filter"
+            ).innerHTML += ` (${artworksNumber})`;
+          } catch (error) {
+            console.error("Erreur lors du chargement des données :", error);
+          }
+        }
+        loadData().then(() => {
+          function executeArtwork(artwork) {
+            console.log("art:", artwork);
+            const buttons = document.getElementById("buttons-container");
+            buttons.style.display = "inline-block";
+            dataButton.style.display = "none";
+            playSoundButton.style.display = "none";
+            stopSoundButton.style.display = "none";
+
+            currentSketchPath = artwork.src;
+            artworkName = artwork.name;
+            artistName = artwork.artist;
+            year = artwork.year;
+            repo = artwork.repo;
+            sound = artwork.sound;
+            year = artwork.year;
+            type = artwork.type;
+            data = artwork.data;
+
+            artistNameContainer.innerHTML = artistName;
+            artworkInfoContainer.innerHTML = `${artworkName}, ${year}`;
+            artworkTypeContainer.innerHTML = type;
+
+            if (type === "Data Based" && data != " ") {
+              dataButton.style.display = "block";
+            }
+            if (sound === "true") {
+              playSoundButton.style.display = "block";
+              stopSoundButton.style.display = "block";
+            }
+
+            if (currentP5Instance) {
+              currentP5Instance.remove();
+              currentP5Instance = null;
+            }
+
+            const oldScript = document.getElementById("dynamic-script");
+            if (oldScript) oldScript.remove();
+
+            const script = document.createElement("script");
+            script.src = currentSketchPath;
+            script.id = "dynamic-script";
+            script.onload = () => {
+              if (typeof sketch === "function") {
+                currentP5Instance = new p5(sketch, artworkContainer);
+              }
+            };
+
+            document.body.appendChild(script);
+          }
+          function showArtwork(artwork) {
+            const el = document.createElement("p");
+            el.className = "artwork";
+            el.innerHTML = artwork.name;
+            container.appendChild(el);
+
+            el.addEventListener("mouseover", () => {
+              executeArtwork(artwork);
+            });
+          }
+          function showArtworks(artworks) {
+            artworks.sort(() => Math.random() - 0.5);
+            artworks.forEach((artwork) => showArtwork(artwork));
+          }
+          function filterSelection(filter) {
+            container.innerHTML = "";
+            artworkContainer.innerHTML = "";
+            const filteredArtworks =
+              filter === "all"
+                ? artworks
+                : artworks.filter((artwork) => {
+                    if (filter === "genuary") return artwork.type === "Genuary";
+                    if (filter === "algorithm")
+                      return artwork.type === "Algorithm Based";
+                    if (filter === "data") return artwork.type === "Data Based";
+                    if (filter === "exquisite-corpse")
+                      return artwork.type === "Exquisite Corpse";
+                  });
+
+            showArtworks(filteredArtworks);
+            executeArtwork(filteredArtworks[0]);
+          }
+
+          if (isFiltered == false) {
+            showArtworks(artworks);
+            executeArtwork(artworks[0]);
+          }
+
+          document
+            .getElementById("stop-sound-button")
+            .addEventListener("click", () => {
+              currentP5Instance.stopSound();
+            });
+          document
+            .getElementById("play-sound-button")
+            .addEventListener("click", () => {
+              currentP5Instance.playSound();
+            });
+
+          document
+            .getElementById("show-all-filter")
+            .addEventListener("click", () => {
+              filterSelection("all");
+            });
+          document
+            .getElementById("genuary-filter")
+            .addEventListener("click", () => {
+              filterSelection("genuary");
+            });
+          document
+            .getElementById("algorithm-filter")
+            .addEventListener("click", () => {
+              filterSelection("algorithm");
+            });
+          document
+            .getElementById("data-filter")
+            .addEventListener("click", () => {
+              filterSelection("data");
+            });
+          document
+            .getElementById("exquisite-corpse-filter")
+            .addEventListener("click", () => {
+              filterSelection("exquisite-corpse");
+            });
+
+          document
+            .getElementById("gitHub-button")
+            .addEventListener("click", () => {
+              window.location.href = repo;
+            });
+          document
+            .getElementById("data-button")
+            .addEventListener("click", () => {
+              window.location.href = data;
+            });
+          document
+            .getElementById("code-button")
+            .addEventListener("click", () => {
+              if (!currentSketchPath) {
+                alert("Aucune œuvre sélectionnée !");
+                return;
+              }
+
+              if (!codeAffiche) {
+                fetch(currentSketchPath)
+                  .then((res) => res.text())
+                  .then((code) => {
+                    if (currentP5Instance) {
+                      currentP5Instance.remove();
+                      currentP5Instance = null;
+                    }
+                    artworkContainer.innerHTML = `<pre>
+                        <code>${code}</code>
+                      </pre>`;
+                    codeAffiche = true;
+                    document.getElementById("button-icon").src =
+                      "../assets/icon/art.svg";
+                  });
+              } else {
+                artworkContainer.innerHTML = "";
+
+                const oldScript = document.getElementById("dynamic-script");
+                if (oldScript) oldScript.remove();
+
+                const script = document.createElement("script");
+                script.src = currentSketchPath;
+                script.id = "dynamic-script";
+                script.onload = () => {
+                  if (typeof sketch === "function") {
+                    currentP5Instance = new p5(sketch, artworkContainer);
+                  }
+                  codeAffiche = false;
+                  document.getElementById("button-icon").src =
+                    "../assets/icon/code.svg";
+                };
+                document.body.appendChild(script);
+              }
+            });
+        });
+      </script>
+    </main>
+    <!-- <footer>
+      <p>Footer</p>
+    </footer> -->
+  </body>
+</html>

@@ -16,7 +16,7 @@ var sketch = function (p) {
 
   function preload() {
     if (fillWith == 2) {
-      img = loadImage("art/js/2024/algo/hilbert_curve/logoUdem.png");
+      img = loadImage("../art/js/2024/algo/hilbert_curve/logoUdem.png");
     }
   }
 
