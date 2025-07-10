@@ -48,7 +48,12 @@ try {
     $mail->Body    = $message;
     $mail->AltBody = 'Ceci est le corps en texte brut pour les clients de messagerie non-HTML';
 
-    $mail->send();
-    echo 'Votre message a bien été envoyé';
+    //$mail->send();
+   // echo 'Votre message a bien été envoyé';
+   if ($mail->Send()) {
+    header('Location: successful.html');
+    exit(); 
+}
+
 } catch (Exception $e) {
     echo "Votre message n'a pas pu être envoyé. Erreur Mailer : {$mail->ErrorInfo}";}
