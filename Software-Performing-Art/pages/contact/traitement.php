@@ -35,9 +35,9 @@ try {
     //Destinataires
     $mail->setFrom($email, $name);
     $mail->addAddress($_ENV['EMAIL_ADDRESS_DESTINATION']);     //Ajouter un destinataire
-    /* $mail->addAddress('japheth@example.com');               //Le nom est facultatif
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
+    //$mail->addAddress('japheth@example.com');               //Le nom est facultatif
+    $mail->addReplyTo($email,$name);
+    /*$mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com'); */
 
      /* //Pièces jointes 
