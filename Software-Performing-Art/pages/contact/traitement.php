@@ -34,18 +34,16 @@ try {
 
     //Destinataires
     $mail->setFrom($email, $name);
-    $mail->addAddress($_ENV['EMAIL_ADDRESS_DESTINATION']);     //Ajouter un destinataire
-    //$mail->addAddress('japheth@example.com');               //Le nom est facultatif
+    $mail->addAddress($_ENV['EMAIL_ADDRESS_DESTINATION']);     
     $mail->addReplyTo($email,$name);
     /*$mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com'); */
 
      /* //Pièces jointes 
-    $mail->addAttachment('/var/tmp/file.tar.gz');         //Ajouter des pièces jointes
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Le nom est facultatif */
+    $mail->addAttachment('/var/tmp/file.tar.gz');         
+    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');  */
 
-    //Contenu
-    $mail->isHTML(true);                                  // Définissez le format de l'e-mail sur HTML
+    $mail->isHTML(true);                                 
     $mail->Subject = 'Sujet';
     $mail->Body    = $message;
     $mail->AltBody = 'Ceci est le corps en texte brut pour les clients de messagerie non-HTML';
