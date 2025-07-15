@@ -153,7 +153,7 @@ textarea {
 }
 
 #contact-form {
-  border: solid 3px #000000;
+  border: solid 3px #474544;
   max-width: 40vw;
   margin: 60px auto;
   position: relative;
@@ -162,15 +162,6 @@ textarea {
 form {
   padding: 37.5px;
   margin: 50px 0;
-}
-
-h1 {
-  color: #474544;
-  font-size: var(--fs-2);
-  font-weight: 700;
-  letter-spacing: 1rem;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .email {
@@ -241,4 +232,10 @@ textarea {
 }
 #contact-title{
     font-family: Arial, Helvetica, sans-serif;
+    color: #474544;
+  font-size: var(--fs-2);
+  font-weight: 700;
+  letter-spacing: 1rem;
+  text-align: center;
+  text-transform: uppercase;
 }
