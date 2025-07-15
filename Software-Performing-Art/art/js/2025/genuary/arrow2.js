@@ -1,4 +1,7 @@
 (() => {
+  let width;
+  let height;
+  
   function init() {
     width = O_widthCanva;
     height = O_heightCanva;
@@ -6,9 +9,9 @@
   }
 
   function draw_fleche_qui_pointe_par_la() {
-    x = width / 2;
-    y = height / 2 - height / 5;
-    angle = radians(180);
+    let x = width / 2;
+    let y = height / 2 - height / 5;
+    let angle = radians(180);
     let arrowWidth = 80;
 
     push();
@@ -123,7 +126,7 @@
     background(0);
     draw_fleche_qui_pointe_par_la();
 
-    nbArrow = random(84, 84 + 26);
+    let nbArrow = random(84, 84 + 26);
     for (let i = 0; i < nbArrow; i++) {
       setTimeout(() => {
         draw_une_fleches_qui_pointe_a_quelque_part_qui_n_est_pas_la();

@@ -13,16 +13,97 @@
     <main>
       <nav>
         <ul>
-          <li><a href="../index.html">Gallery</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="art-history.html">Art History</a></li>
           <li><a href="contact/contact.html">Contact</a></li>
-          <li><a href="../convert/html/test.html">Test Pandoc</a></li>
+          <!--           <li><a href="../convert/html/test.html">Test Pandoc</a></li> -->
         </ul>
       </nav>
-      <div id="artwork-container" style="height: 800px; width: 800px"></div>
-      <script src="../art/js/2025/genuary/hex_grid.js"></script>
+      <nav id="nav">
+        <ul>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="art-history.html">Art History</a></li>
+          <li><a href="contact/contact.html">Contact</a></li>
+          <li><a href="../convert/html/test.html">Pandoc</a></li>
+        </ul>
+      </nav>
+      <div id="filters">
+        <button id="show-all-filter">Show all</button>
+        <button id="genuary-filter">Genuary</button>
+        <button id="algorithm-filter">Algorithm</button>
+        <button id="data-filter">Data</button>
+        <button id="exquisite-corpse-filter">Exquisite Corpse</button>
+      </div>
+      <div id="art-container">
+        <div id="cartel">
+          <div id="artist-info-container">
+            <div id="artist-name"></div>
+            <div id="artwork-info"></div>
+            <div id="artwork-type"></div>
+          </div>
+          <br />
+          <div id="buttons-container" style="display: none">
+            <div id="code-button">
+              <img
+                id="button-icon"
+                src="../assets/icon/code.svg"
+                alt="icon code"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div id="gitHub-button">
+              <img
+                src="../assets/icon/github.png"
+                alt="icon github"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div id="data-button">
+              <img
+                src="../assets/icon/data.png"
+                alt="icon data"
+                height="30px"
+                width="30px"
+              />
+            </div>
+          </div>
+          <br />
+          <div id="sound-controller-container">
+            <div id="play-sound-button" style="display: none">P</div>
+            <div id="stop-sound-button" style="display: none">S</div>
+          </div>
+        </div>
+
+        <div id="artwork-container"></div>
+        <div id="artwork-name-container"></div>
+      </div>
+
       <script src="../artworksExecutor.js"></script>
+      <script>
+        function fetchJSONData() {
+          fetch("../art/artworks.json")
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              return response.json();
+            })
+            .then((data) => {
+              for (const s of data) {
+                let js = document.createElement("script");
+                js.type = "module";
+                js.src = s.src;
+                document.body.appendChild(js);
+              }
+            })
+            .catch((error) => console.error("Failed to fetch data:", error));
+        }
+        fetchJSONData();
+      </script>
     </main>
     <!-- <footer>
       <p>Footer</p>

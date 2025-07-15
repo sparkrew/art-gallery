@@ -17,7 +17,7 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 --blue: 
 #16358E;
 --white: 
-#FCF8EA;
+#efefef;
 --title-font: 'Kolbano';
 --fs-0: 10rem;
 --fs-1: 4rem;
@@ -29,6 +29,7 @@ font-family: var(--title-font);
 font-size: var(--fs-0);
 color: var(--white);
 }
+
 body {
 width: 100vw;
 height: 100vh;
@@ -137,4 +138,107 @@ display: none;
     align-items: center;
 }
 
+button, input, textarea {
+  color: black;
+  font: var(--title-font);
+  margin: 0;
+}
 
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#contact-form {
+  border: solid 3px #000000;
+  max-width: 40vw;
+  margin: 60px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #474544;
+  font-size: var(--fs-2);
+  font-weight: 700;
+  letter-spacing: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], textarea {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+
+::placeholder{
+      text-transform: uppercase;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+
+#form_button {
+  background-color: var(--white);
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  
+}
+
+#form_button:hover {
+  background: var(--orange);
+  color:var(--white);
+  border: var(--orange);
+}
+#contact-title{
+    font-family: Arial, Helvetica, sans-serif;
+}

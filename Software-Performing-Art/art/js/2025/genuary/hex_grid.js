@@ -43,6 +43,8 @@
   var started = false;
 
   const fr = 42; // frame rate
+  let width;
+  let height;
 
   function init() {
     width = O_widthCanva;
@@ -97,21 +99,21 @@
   // création de la liste de toutes les notes (dans l'ordre)
   // (octaves au dessus et en dessous)
   function make_all_notes() {
-    for (i = 2; i > 0; i--) {
+    for (let i = 2; i > 0; i--) {
       // pour deux octaves en dessous
-      for (j = 0; j < notes.length; j++) {
+      for (let j = 0; j < notes.length; j++) {
         // pour chaque note choises
         all_notes.push(notes[j] / (octave * i));
         // division pour les octaves plus basses
       }
     }
-    for (j = 0; j < notes.length; j++) {
+    for (let j = 0; j < notes.length; j++) {
       //notes choises
       all_notes.push(notes[j]);
     }
-    for (i = 1; i < 2; i++) {
+    for (let i = 1; i < 2; i++) {
       // pour les octaves au dessus
-      for (j = 0; j < notes.length; j++) {
+      for (let j = 0; j < notes.length; j++) {
         all_notes.push(notes[j] * (octave * i));
         // multiplication pour les octaves plus hautes
       }
@@ -291,9 +293,13 @@
     var l = hex.links[n];
     grid[l[0]][l[1]].walls[(door + 3) % 6] = false;
   }
+  function cleanup() {
+    remove();
+  }
 
   window.hex_grid = {
     init,
     draw,
+    cleanup,
   };
 })();

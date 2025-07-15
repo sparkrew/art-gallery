@@ -11,36 +11,58 @@
     <main>
       <nav>
         <ul>
-          <li><a href="../../index.html">Gallery</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
           <li><a href="../publications.html">Publications</a></li>
           <li><a href="../art-history.html">Art History</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="../../convert/html/test.html">Test Pandoc</a></li>
+          <!--           <li><a href="../../convert/html/test.html">Test Pandoc</a></li> -->
         </ul>
       </nav>
-      <h1>Contact</h1>
 
-      <form
-        id="contact-form"
-        action="https://formspree.io/f/movwgeek"
-        method="post"
-      >
-        <div id="inputs">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required />
+      <div id="contact-form">
+        <h1 id="contact-title">Contact</h1>
+        <form
+          action="https://formspree.io/f/movwgeek"
+          method="post"
+          id="contact_form"
+        >
+          <div class="name">
+            <label for="name"></label>
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              id="name_input"
+              required
+            />
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              id="email_input"
+              required
+            />
+          </div>
 
-          <label for="email">email</label>
-          <input type="email" name="email" id="email" required />
-
-          <label for="subject">Subject</label>
-          <input type="text" name="subject" id="subject" required />
-
-          <label for="message">Message</label>
-          <textarea name="message" id="message" required></textarea>
-        </div>
-
-        <button type="submit">Send</button>
-      </form>
+          <div class="message">
+            <label for="message"></label>
+            <textarea
+              name="message"
+              placeholder="Message"
+              id="message_input"
+              cols="30"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Send Message" id="form_button" />
+          </div>
+        </form>
+      </div>
     </main>
     <!-- <footer>
       <p>Footer</p>
