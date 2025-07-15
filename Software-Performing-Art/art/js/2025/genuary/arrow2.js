@@ -1,12 +1,7 @@
 (() => {
   function init() {
-    let container = document.getElementById("artwork-container");
-    wd = container.offsetWidth;
-    ht = container.offsetHeight;
-
-    let canvas = createCanvas(wd, ht);
-    canvas.parent("artwork-container");
-
+    width = O_widthCanva;
+    height = O_heightCanva;
     background(255);
   }
 
@@ -137,9 +132,13 @@
 
     noLoop();
   }
+  function cleanup() {
+    remove();
+  }
 
   window.arrow2 = {
     init,
     draw,
+    cleanup,
   };
 })();

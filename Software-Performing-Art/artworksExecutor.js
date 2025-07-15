@@ -9,7 +9,7 @@ async function setup() {
     const data = await response.json();
     O_artworksData = data;
 
-    O_artworkRef = O_artworksData[0].ref;
+    O_artworkRef = O_artworksData[1].ref;
     console.log("Œuvre sélectionnée :", O_artworkRef);
   } catch (error) {
     console.error("Erreur de chargement JSON :", error);
