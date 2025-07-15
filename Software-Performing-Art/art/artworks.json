@@ -1,6 +1,7 @@
 [
   {
     "name": "Arrow 2",
+    "ref": "arrow2",
     "artist": "Gabriel Beaudoin",
     "year": "2025",
     "type": "Genuary",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Hex Grid",
+    "ref": "hex_grid",
     "artist": "Luchino Allix-Lastrego",
     "year": "2025",
     "type": "Genuary",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Ink Mountains",
+    "ref": "ink_mountains",
     "artist": "Hugo Mouton",
     "year": "2025",
     "type": "Genuary",
@@ -28,6 +31,7 @@
   },
   {
     "name": "Lines",
+    "ref": "lines",
     "artist": "Taha Skiredj",
     "year": "2025",
     "type": "Genuary",
@@ -37,6 +41,7 @@
   },
   {
     "name": "Artwork 1",
+    "ref": "artwork_1",
     "artist": "Leandreisk",
     "year": "2025",
     "type": "Genuary",
@@ -46,6 +51,7 @@
   },
   {
     "name": "Singularity",
+    "ref": "singularity",
     "artist": "Jean Barreto",
     "year": "2025",
     "type": "Genuary",
@@ -55,6 +61,7 @@
   },
   {
     "name": "Fireworks",
+    "ref": "fireworks",
     "artist": "Houda Fatih",
     "year": "2025",
     "type": "Genuary",
@@ -64,6 +71,7 @@
   },
   {
     "name": "Turing",
+    "ref": "turing",
     "artist": "Gabriel Beaudoin",
     "year": "2025",
     "type": "Algorithm Based",
@@ -73,6 +81,7 @@
   },
   {
     "name": "Hex Life",
+    "ref": "hex_life",
     "artist": "Luchino Allix-Lastrego",
     "year": "2025",
     "type": "Algorithm Based",
@@ -82,6 +91,7 @@
   },
   {
     "name": "Cornfield Flow",
+    "ref": "cornfield_flow",
     "artist": "Nadia González Fernández",
     "year": "2025",
     "type": "Algorithm Based",
@@ -91,6 +101,7 @@
   },
   {
     "name": "Glass",
+    "ref": "glass-bw",
     "artist": "Yogya Tulip Gamage",
     "year": "2025",
     "type": "Algorithm Based",
@@ -100,6 +111,7 @@
   },
   {
     "name": "Game Of Life",
+    "ref": "game-of-life",
     "artist": "Paul Godbert",
     "year": "2025",
     "type": "Algorithm Based",
@@ -109,6 +121,7 @@
   },
   {
     "name": "Artwork 2",
+    "ref": "artwork_2",
     "artist": "Leandreisk",
     "year": "2025",
     "type": "Algorithm Based",
@@ -118,6 +131,7 @@
   },
   {
     "name": "Trees",
+    "ref": "trees",
     "artist": "Hugo Mouton",
     "year": "2025",
     "type": "Algorithm Based",
@@ -127,6 +141,7 @@
   },
   {
     "name": "Meteo",
+    "ref": "meteo",
     "artist": "Luchino Allix-Lastrego",
     "year": "2025",
     "type": "Data Based",
@@ -137,6 +152,7 @@
   },
   {
     "name": "Watchman",
+    "ref": "watchman",
     "artist": "Gabriel Beaudoin",
     "year": "2025",
     "type": "Data Based",
@@ -147,6 +163,7 @@
   },
   {
     "name": "Theo",
+    "ref": "theo",
     "artist": "Yogya Tulip Gamage",
     "year": "2025",
     "type": "Data Based",
@@ -157,6 +174,7 @@
   },
   {
     "name": "Flow Field With Letters",
+    "ref": "4_flow_field_with_letters",
     "artist": "Nadia González Fernández",
     "year": "2025",
     "type": "Data Based",
@@ -167,6 +185,7 @@
   },
   {
     "name": "Artwork 3",
+    "ref": "artwork_3",
     "artist": "Leandreisk",
     "year": "2025",
     "type": "Data Based",
@@ -177,6 +196,7 @@
   },
   {
     "name": "Flow Lake",
+    "ref": "flow_lake",
     "artist": "Paul Godbert",
     "year": "2025",
     "type": "Data Based",
@@ -188,6 +208,7 @@
 
   {
     "name": "Synesthesia",
+    "ref": "synesthesia",
     "artist": "Tiffany M",
     "year": "2024",
     "type": "Genuary",
@@ -197,6 +218,7 @@
   },
   {
     "name": "Bauhaus",
+    "ref": "bauhaus",
     "artist": "Rafaela Pinter",
     "year": "2024",
     "type": "Genuary",
@@ -206,6 +228,7 @@
   },
   {
     "name": "Vermeer",
+    "ref": "vermeer",
     "artist": "Lena MK",
     "year": "2024",
     "type": "Genuary",
@@ -215,6 +238,7 @@
   },
   {
     "name": "Hexagonal",
+    "ref": "hexagonal",
     "artist": "Bricemichelb",
     "year": "2024",
     "type": "Genuary",
@@ -224,6 +248,7 @@
   },
   {
     "name": "Lsystem",
+    "ref": "lsystem",
     "artist": "Tiffany M",
     "year": "2024",
     "type": "Algorithm Based",
@@ -233,6 +258,7 @@
   },
   {
     "name": "Bézier",
+    "ref": "bezier",
     "artist": "Rafaela Pinter",
     "year": "2024",
     "type": "Algorithm Based",
@@ -242,6 +268,7 @@
   },
   {
     "name": "Tiling",
+    "ref": "tiling",
     "artist": "Lena MK",
     "year": "2024",
     "type": "Algorithm Based",
@@ -251,6 +278,7 @@
   },
   {
     "name": "Artbreeder",
+    "ref": "artbreeder",
     "artist": "Karla",
     "year": "2024",
     "type": "Algorithm Based",
@@ -260,6 +288,7 @@
   },
   {
     "name": "Hilbert Curve",
+    "ref": "hilbert_curve",
     "artist": "bricemichelb",
     "year": "2024",
     "type": "Algorithm Based",
@@ -269,6 +298,7 @@
   },
   {
     "name": "De quoi sera fait l'avenir",
+    "ref": "dequoiserafaitlavenir",
     "artist": "Tiffany M",
     "year": "2024",
     "type": "Data Based",
@@ -279,6 +309,7 @@
   },
   {
     "name": "Figures Historiques",
+    "ref": "figures_historiques",
     "artist": "Lena MK",
     "year": "2024",
     "type": "Data Based",
@@ -289,6 +320,7 @@
   },
   {
     "name": "Papers",
+    "ref": "papers",
     "artist": "Bricemichelb",
     "year": "2024",
     "type": "Data Based",
@@ -299,6 +331,7 @@
   },
   {
     "name": "Heart Rates",
+    "ref": "heart_rates",
     "artist": "Yvan Brunel",
     "year": "2024",
     "type": "Data Based",
@@ -309,6 +342,7 @@
   },
   {
     "name": "Cadavre exquis",
+    "ref": "exquisite-conductor",
     "artist": "??",
     "year": "2025",
     "type": "Exquisite Corpse",
