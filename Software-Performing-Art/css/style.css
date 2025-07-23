@@ -42,6 +42,7 @@ background-color: var(--white);
 main{
 width: 100vw;
 height: 100vh;
+margin: 0;
 scroll-snap-align: start;
 }
 #header-title {
@@ -79,7 +80,7 @@ color: var(--orange);
 display: flex;
 justify-content: center;
 gap : 2rem;
-margin-bottom: 2rem;
+
 }
 .artwork{
 font-size: var(--fs-2);
@@ -90,8 +91,8 @@ color: var(--orange);
 }
 
 #artwork-container{
-width: 90vh;
-height: 90vh;
+width: 85vh;
+height: 85vh;
 overflow-y: auto;
 }
 
@@ -101,7 +102,7 @@ display: none;
 
 #artwork-name-container{
 overflow-y: auto;
-height: 90vh;
+height: 85vh;
 }
 
 #artwork-name-container::-webkit-scrollbar {
@@ -231,11 +232,14 @@ textarea {
   border: var(--orange);
 }
 #contact-title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--title-font);
     color: #474544;
   font-size: var(--fs-2);
   font-weight: 700;
   letter-spacing: 1rem;
   text-align: center;
   text-transform: uppercase;
+}
+#error404-container{
+  height: 94vh;
 }

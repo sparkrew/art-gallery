@@ -1,4 +1,5 @@
-/*
+(() => {
+  /*
 Genuary: Bauhaus (?)
 
 "At the core of Bauhaus art were principles that championed simplicity and utility:
@@ -21,7 +22,6 @@ Is it already Bauhaus?
 Rafaela Pinter
 */
 
-var sketch = function (p) {
   // Playground variables
   // --------------------
   // Cube dimensions
@@ -68,30 +68,25 @@ var sketch = function (p) {
 
   // Canvas variables
   // ---------------
-  let width;
-  let height;
+  let wd;
+  let ht;
   let color_array = [];
   let sq_size;
   var cube;
 
   // Setup function
-  p.setup = function () {
-    const container =
-      document.querySelector(".artwork-container") || p._userNode;
-    width = container.offsetWidth;
-    height = container.offsetHeight;
-
-    const canvas = p.createCanvas(width, height);
-    canvas.parent("artwork-container");
-    sq_size = (width - ext_space * 2 - int_space * (dim_cube - 1)) / dim_cube;
-    p.noLoop();
+  function init() {
+    wd = O_widthCanva;
+    ht = O_heightCanva;
+    sq_size = (wd - ext_space * 2 - int_space * (dim_cube - 1)) / dim_cube;
+    noLoop();
 
     // Probabilistic colors
     color_array = [
-      p.color(157, 39, 25, transp), // red
-      p.color(21, 64, 132, transp), // blue
-      p.color(215, 180, 24, transp), // yellow
-      p.color(237, 237, 237, transp), // white
+      color(157, 39, 25, transp), // red
+      color(21, 64, 132, transp), // blue
+      color(215, 180, 24, transp), // yellow
+      color(237, 237, 237, transp), // white
       // color(237, 237, 237, transp), // white
       // color(237, 237, 237, transp), // white
       // color(237, 237, 237, transp), // white
@@ -108,33 +103,33 @@ var sketch = function (p) {
       color_array,
       sq_size
     );
-  };
+  }
 
   // Draw function
-  p.draw = function () {
+  function draw() {
     // Control background color
     if (mode == "dark") {
       r = 50;
       g = 50;
       b = 50;
     } else if (mode == "random") {
-      r = p.random(0, 255);
-      g = p.random(0, 255);
-      b = p.random(0, 255);
+      r = random(0, 255);
+      g = random(0, 255);
+      b = random(0, 255);
     }
-    p.background(p.color(r, g, b));
+    background(color(r, g, b));
 
-    p.strokeWeight(stroke_weight);
+    strokeWeight(stroke_weight);
     for (let i = 0; i < cube.objects.length; i++) {
       cube.objects[i].display();
     }
     txtBottom();
-  };
+  }
 
   function txtBottom() {
     // Font
     font = "Raleway";
-    p.textFont(font);
+    textFont(font);
 
     if (add_text) {
       // Control dark mode colors
@@ -143,21 +138,21 @@ var sketch = function (p) {
       } else {
         cor = 30;
       }
-      p.push();
+      push();
       // Line
-      p.translate(0, height * 0.875);
-      p.stroke(cor);
-      p.strokeWeight(height * 0.005);
-      p.strokeCap(SQUARE);
-      p.line(100, 0, 700, 0);
-      p.noStroke();
+      translate(0, ht * 0.875);
+      stroke(cor);
+      strokeWeight(ht * 0.005);
+      strokeCap(SQUARE);
+      line(100, 0, 700, 0);
+      noStroke();
 
       // Text
-      p.fill(cor, cor, cor, 255);
-      p.textAlign(100);
-      p.textSize(height * 0.025);
-      p.text("is it already bauhaus?", 100, height * 0.031);
-      p.pop();
+      fill(cor, cor, cor, 255);
+      textAlign(100);
+      textSize(ht * 0.025);
+      text("is it already bauhaus?", 100, ht * 0.031);
+      pop();
     }
   }
 
@@ -265,7 +260,7 @@ var sketch = function (p) {
 
     fill_object() {
       // Fill color
-      this.fill_color = p.random(this.color_array);
+      this.fill_color = random(this.color_array);
     }
 
     object_stroke() {
@@ -274,9 +269,9 @@ var sketch = function (p) {
         if (mode == "dark") {
           stroke_color = 255 - stroke_color;
         }
-        p.stroke(stroke_color);
+        stroke(stroke_color);
       } else {
-        p.noStroke();
+        noStroke();
       }
     }
   }
@@ -286,19 +281,21 @@ var sketch = function (p) {
     display() {
       // Random stroke
       if (no_stroke == false) {
-        if (random_stroke == true && p.floor(p.random(3)) == 2) {
-          p.stroke(stroke_color);
+        if (random_stroke == true && floor(random(3)) == 2) {
+          stroke(stroke_color);
         } else if (random_stroke == false) {
-          p.p.noStroke();
+          stroke(stroke_color);
+        } else {
+          noStroke();
         }
       } else {
-        p.noStroke();
+        noStroke();
       }
 
       // Random size increment
       let inc = 0;
       if (random_sizes) {
-        inc = p.random(-inc_limit, inc_limit);
+        inc = random(-inc_limit, inc_limit);
       }
 
       // Multiple objects
@@ -306,9 +303,9 @@ var sketch = function (p) {
         i = i * form_sep;
 
         if (no_fill) {
-          p.noFill();
+          noFill();
         } else {
-          p.fill(this.fill_color);
+          fill(this.fill_color);
         }
         circle(
           this.xmin + this.size / 2 + i,
@@ -334,7 +331,7 @@ var sketch = function (p) {
       y3 = this.ymin;
 
       // Random side of the triangle
-      let randint = p.floor(p.random(3));
+      let randint = floor(random(3));
 
       // Other side
       if (randint === 1) {
@@ -356,9 +353,9 @@ var sketch = function (p) {
         i = i * form_sep;
         // Displaying figure
         if (no_fill) {
-          p.noFill();
+          noFill();
         } else {
-          p.fill(this.fill_color);
+          fill(this.fill_color);
         }
         triangle(x1 - i, y1 - i, x2 - i, y2 - i, x3 - i, y3 - i);
       }
@@ -371,7 +368,7 @@ var sketch = function (p) {
       // Random size increment
       let inc = 0;
       if (random_sizes) {
-        inc = p.random(-inc_limit, inc_limit);
+        inc = random(-inc_limit, inc_limit);
       }
 
       // Multiple objects
@@ -379,13 +376,13 @@ var sketch = function (p) {
         i = i * form_sep;
         // Drawing object
         if (no_fill) {
-          p.noFill();
+          noFill();
         } else {
-          p.fill(this.fill_color);
+          fill(this.fill_color);
         }
 
         if (round_edges != 0) {
-          p.rect(
+          rect(
             this.xmin + i,
             this.ymin + i,
             this.size + inc + i,
@@ -398,8 +395,26 @@ var sketch = function (p) {
       }
     }
   }
+  function cleanup() {
+    if (O_canvas) {
+      O_canvas.remove();
+    }
+    wd = null;
+    ht = null;
+    color_array = [];
+    cube = null;
+
+
+    noLoop();
+    clear();
+  }
 
   /*
 maybe the code is also bauhaus?
 */
-};
+  window.bauhaus = {
+    init,
+    draw,
+    cleanup,
+  };
+})();

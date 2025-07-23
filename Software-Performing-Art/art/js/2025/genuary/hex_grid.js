@@ -61,12 +61,12 @@
 
     start();
     started = true;
-    colorMode(HSB, 360, 100, 100, 250);
-    frameRate(fr);
     initGrid();
   }
 
   function draw() {
+    colorMode(HSB, 360, 100, 100, 250);
+    frameRate(fr);
     if (started) {
       draw_next();
       duration--;
@@ -294,7 +294,9 @@
     grid[l[0]][l[1]].walls[(door + 3) % 6] = false;
   }
   function cleanup() {
-    remove();
+    if (O_canvas) {
+      O_canvas.remove();
+    }
   }
 
   window.hex_grid = {

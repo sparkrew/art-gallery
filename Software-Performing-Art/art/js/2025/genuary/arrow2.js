@@ -1,11 +1,10 @@
 (() => {
   let width;
   let height;
-  
+
   function init() {
     width = O_widthCanva;
     height = O_heightCanva;
-    background(255);
   }
 
   function draw_fleche_qui_pointe_par_la() {
@@ -123,6 +122,7 @@
   }
 
   function draw() {
+    background(255);
     background(0);
     draw_fleche_qui_pointe_par_la();
 
@@ -136,7 +136,11 @@
     noLoop();
   }
   function cleanup() {
-    remove();
+    if (O_canvas) {
+      O_canvas.remove();
+    }
+    noLoop();
+    clear();
   }
 
   window.arrow2 = {
