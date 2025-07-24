@@ -2,7 +2,7 @@ let colors = ["#1c80b4", "#fcad2a", "#f82f1d"];
 let grid = 6;
 let boxes = [];
 let size = 10;
-let msg = "SOFTWARE";
+let msg = "SOFTWARES";
 let points = [];
 let fontX;
 let fontY;
@@ -28,7 +28,6 @@ function setup() {
       //console.log("couleur", c);
 
       boxes.push(new Box(x, y, "#1c80b4"));
-      console.log(boxes);
     }
   }
   for (let pt of points) {
@@ -74,10 +73,11 @@ class Box {
     if (this.isLetter) {
       fill("#f82f1d");
     } else {
-      fill(this.color); // Couleur normale
+      fill(this.color);
     }
 
     square(this.x, this.y, this.size);
+    console.log("nouveau carré");
   }
 
   move() {

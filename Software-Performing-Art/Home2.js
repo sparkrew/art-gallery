@@ -1,81 +1,51 @@
-let size = 20;
-let rows;
-let cols;
-let grid = 6;
-let width;
-let height;
-let colors = ["#fb2e0f", "#abe54d", "#f7e40f"];
-let boxes = [];
-
+//let shapeLayer;
 let font;
-let msg = "SOFTWARE";
-let points = [];
-let fontX;
-let fontY;
-let fontSize = 300;
-let isLetterTab = [];
-
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
 }
-
 function setup() {
-  width = windowWidth;
-  height = windowHeight;
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight);
+  textFont(font);
+  textSize(100);
 
-  fontX = -width / 2 + 40;
-  fontY = -height / 5;
-  cols = width / size;
-  rows = height / size;
+  shapeLayer = createGraphics(width, height);
+  shapeLayer.background(90);
+  shapeLayer.fill(255); // Blanc = zone à remplir
+  shapeLayer.noStroke();
 
-  points = font.textToPoints(msg, fontX, fontY, fontSize);
+  // Centrage du texte
+  let bounds = font.textBounds("software", 0, 0, 100);
+  let x = width / 4;
+  let y = height / 2 + bounds.h / 2;
 
-  background("#efefef");
-  noStroke();
+  // Dessiner texte plein
+  shapeLayer.textFont(font);
+  shapeLayer.textSize(300);
+  shapeLayer.text("software", x, y);
+  generateFillPoints();
+}
+let fillPoints = [];
 
-  for (let y = -height / 2 + 120; y < height; y += height / grid) {
-    for (let x = -width / 2 + 120; x < windowWidth; x += width / grid) {
-      let c = colors[(x / (width / grid) + floor(y / (height / grid))) % 3];
-      boxes.push(new Box(x, y, c));
+function generateFillPoints() {
+  let step = 5; // Espace entre points
+  for (let y = 0; y < height; y += step) {
+    for (let x = 0; x < width; x += step) {
+      let col = shapeLayer.get(x, y);
+      if (col[0] > 200) {
+        // Zone blanche = dans la lettre
+        fillPoints.push({ x, y });
+      }
     }
   }
 }
 function draw() {
-  ellipse(-width / 2, -height / 2, 10, 10);
-  fill(0, 0, 0);
-  for (let i = 0; i < points.length; i++) {
-    ellipse(points[i].x, points[i].y, 10, 10);
-  }
-  boxes.forEach((box) => {
-    box.show();
-    box.move();
-    if (random(1) < 0.01) box.speed = 1;
-  });
-}
-class Box {
-  constructor(x, y, color) {
-    this.start = x;
-    this.x = x;
-    this.y = y;
-    this.speed = 0;
-    this.size = height / grid / 8;
-    this.color = color;
-  }
+  background(0);
+  image(shapeLayer, 0, 0); // pour visualiser la forme
 
-  show() {
-    fill("#0d0e08");
-    square(this.x - 1, this.y + 1, this.size);
-    fill(this.color);
-    square(this.x, this.y, this.size);
-  }
+  noStroke();
+  fill(0, 255, 255);
 
-  move() {
-    if (this.x < this.start + this.size) {
-      this.x += this.speed;
-      this.y -= this.speed;
-    } else {
-      console.log("trop petit");
-    }
+  for (let pt of fillPoints) {
+    ellipse(pt.x, pt.y, 3, 3);
   }
 }
