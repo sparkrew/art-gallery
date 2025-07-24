@@ -2,19 +2,20 @@
 let font;
 let squares = [];
 let isGenerated = false;
-let letters = [];
+let g;
+
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(239, 239, 239);
-  fill(255);
-  textFont(font);
-  textSize(300);
-  textAlign(CENTER, CENTER);
-  text("Software", width / 2, height / 2 - 200);
-  text("Performing", width / 2, height / 2 + 200);
+  g = createGraphics(windowWidth, windowHeight);
+  g.fill(255);
+  g.textFont(font);
+  g.textSize(windowWidth / 8);
+  g.textAlign(CENTER, CENTER);
+  g.text("Software \nPerforming \nArt", width / 2, height / 2);
 }
 let fillPoints = [];
 
@@ -22,7 +23,7 @@ function generateFillPoints() {
   let step = 16;
   for (let y = 0; y < height; y += step) {
     for (let x = 0; x < width; x += step) {
-      let col = get(x, y);
+      let col = g.get(x, y);
       if (col[0] == 255) {
         fillPoints.push({ x, y });
       }
@@ -31,7 +32,7 @@ function generateFillPoints() {
 }
 function draw() {
   noStroke();
-  fill(0, 255, 255);
+  //fill(0, 255, 255);
   if (!isGenerated) {
     generateFillPoints();
     for (let pt of fillPoints) {
@@ -56,7 +57,7 @@ class Square {
     this.x = x;
     this.y = y;
     this.speed = 0;
-    this.size = 12;
+    this.size = 13;
     this.color = color;
     this.isLetter = false;
   }
