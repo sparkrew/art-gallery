@@ -1,8 +1,9 @@
-//let shapeLayer;
 let font;
 let squares = [];
 let isGenerated = false;
 let g;
+let step;
+let colors = ["#FB2E0F", "#AAC3EB", "#F2BD3D", "#8B820E"];
 
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
@@ -15,17 +16,19 @@ function setup() {
   g.textFont(font);
   g.textSize(windowWidth / 8);
   g.textAlign(CENTER, CENTER);
-  g.text("Software \nPerforming \nArt", width / 2, height / 2);
+  g.text("Software \nPerforming \nArts", width / 2, height / 2);
 }
 let fillPoints = [];
 
 function generateFillPoints() {
-  let step = 16;
+  step = 16;
   for (let y = 0; y < height; y += step) {
     for (let x = 0; x < width; x += step) {
       let col = g.get(x, y);
       if (col[0] == 255) {
-        fillPoints.push({ x, y });
+        let colorIndex = Math.floor(x / step + y / step) % colors.length;
+        let c = colors[colorIndex];
+        fillPoints.push({ x, y, c });
       }
     }
   }
@@ -36,7 +39,8 @@ function draw() {
   if (!isGenerated) {
     generateFillPoints();
     for (let pt of fillPoints) {
-      squares.push(new Square(pt.x, pt.y, "#7b71d9"));
+      let c = pt.c;
+      squares.push(new Square(pt.x, pt.y, c));
       for (let square of squares) {
         square.isLetter = true;
       }
@@ -51,6 +55,7 @@ function draw() {
     if (random(1) < 0.01) square.speed = 0.5;
   });
 }
+
 class Square {
   constructor(x, y, color) {
     this.start = x;
@@ -63,11 +68,11 @@ class Square {
   }
 
   show() {
-    fill("#bf2008");
+    fill("#050505");
     square(this.x - 1, this.y + 1, this.size);
 
     if (this.isLetter) {
-      fill("#FB2E0F");
+      fill(this.color);
     }
 
     square(this.x, this.y, this.size);
@@ -81,4 +86,17 @@ class Square {
       }
     }
   }
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  g = createGraphics(windowWidth, windowHeight);
+  g.fill(255);
+  g.textFont(font);
+  g.textSize(windowWidth / 8);
+  g.textAlign(CENTER, CENTER);
+  g.text("Software \nPerforming \nArts", width / 2, height / 2);
+
+  fillPoints = [];
+  squares = [];
+  isGenerated = false;
 }
