@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Software Performing Art</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="../css/style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
@@ -34,38 +34,17 @@
         <div id="cartel">
           <div id="artist-info-container">
             <div id="artist-name"></div>
-            <div id="artwork-info"></div>
+            <div id="artwork-name"></div>
+          </div>
+          <div id="artwork-metadata">
+            <div id="artwork-year"></div>
             <div id="artwork-type"></div>
+            <div id="artwork-code">Code</div>
           </div>
-          <br />
-          <div id="buttons-container" style="display: none">
-            <div id="code-button">
-              <img
-                id="button-icon"
-                src="../assets/icon/code.svg"
-                alt="icon code"
-                height="30px"
-                width="30px"
-              />
-            </div>
-            <div id="gitHub-button">
-              <img
-                src="../assets/icon/github.png"
-                alt="icon github"
-                height="30px"
-                width="30px"
-              />
-            </div>
-            <div id="data-button">
-              <img
-                src="../assets/icon/data.png"
-                alt="icon data"
-                height="30px"
-                width="30px"
-              />
-            </div>
+          <div id="artwork-data">
+            <div id="artwork-repo">Repo</div>
+            <div id="artwork-dataset" style="display: none">Data</div>
           </div>
-          <br />
           <div id="sound-controller-container">
             <div id="play-sound-button" style="display: none">P</div>
             <div id="stop-sound-button" style="display: none">S</div>
@@ -96,10 +75,11 @@
           "artist-info-container"
         );
         const container = document.getElementById("artwork-name-container");
-        const dataButton = document.getElementById("data-button");
+        const dataButton = document.getElementById("artwork-dataset");
         const artistNameContainer = document.getElementById("artist-name");
-        const artworkInfoContainer = document.getElementById("artwork-info");
+        const artworkNameContainer = document.getElementById("artwork-name");
         const artworkTypeContainer = document.getElementById("artwork-type");
+        const artworkYearContainer = document.getElementById("artwork-year");
         const playSoundButton = document.getElementById("play-sound-button");
         const stopSoundButton = document.getElementById("stop-sound-button");
 
@@ -119,7 +99,6 @@
           function executeArtwork(artwork) {
             console.log("art:", artwork);
             const buttons = document.getElementById("buttons-container");
-            buttons.style.display = "inline-block";
             dataButton.style.display = "none";
             playSoundButton.style.display = "none";
             stopSoundButton.style.display = "none";
@@ -135,8 +114,9 @@
             data = artwork.data;
 
             artistNameContainer.innerHTML = artistName;
-            artworkInfoContainer.innerHTML = `${artworkName}, ${year}`;
+            artworkNameContainer.innerHTML = artworkName;
             artworkTypeContainer.innerHTML = type;
+            artworkYearContainer.innerHTML = year;
 
             if (type === "Data Based" && data != " ") {
               dataButton.style.display = "block";
@@ -241,17 +221,18 @@
             });
 
           document
-            .getElementById("gitHub-button")
+            .getElementById("artwork-repo")
             .addEventListener("click", () => {
               window.location.href = repo;
             });
           document
-            .getElementById("data-button")
+            .getElementById("artwork-dataset")
             .addEventListener("click", () => {
               window.location.href = data;
             });
+
           document
-            .getElementById("code-button")
+            .getElementById("artwork-code")
             .addEventListener("click", () => {
               if (!currentSketchPath) {
                 alert("Aucune œuvre sélectionnée !");
@@ -270,8 +251,6 @@
                         <code>${code}</code>
                       </pre>`;
                     codeAffiche = true;
-                    document.getElementById("button-icon").src =
-                      "../assets/icon/art.svg";
                   });
               } else {
                 artworkContainer.innerHTML = "";
@@ -287,8 +266,6 @@
                     currentP5Instance = new p5(sketch, artworkContainer);
                   }
                   codeAffiche = false;
-                  document.getElementById("button-icon").src =
-                    "../assets/icon/code.svg";
                 };
                 document.body.appendChild(script);
               }

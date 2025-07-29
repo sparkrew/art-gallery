@@ -3,7 +3,7 @@ let squares = [];
 let isGenerated = false;
 let g;
 let step;
-let colors = ["#FB2E0F", "#AAC3EB", "#F2BD3D", "#8B820E"];
+let colors = ["#FB2E0F", "#AAC3EB", "#F2BD3D", "#CFDB93"];
 
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
@@ -16,7 +16,7 @@ function setup() {
   g.textFont(font);
   g.textSize(windowWidth / 8);
   g.textAlign(CENTER, CENTER);
-  g.text("Software \nPerforming \nArts", width / 2, height / 2);
+  g.text("Software \nPerforming \nArts Gallery", width / 2, height / 2);
 }
 let fillPoints = [];
 

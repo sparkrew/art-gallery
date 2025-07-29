@@ -113,6 +113,10 @@ display: none;
     
     height: 90vh;
     width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:4rem;
     font-family: var(--title-font);
 }
 #artist-info-container{
@@ -120,7 +124,8 @@ display: none;
     flex-direction:column ;
 }
 #buttons-container>*{
-     display: inline-block;
+     display: flex;
+    
 }
 #artist-name{
     font-weight: bold;
