@@ -29,6 +29,13 @@
         <button id="algorithm-filter">Algorithm</button>
         <button id="data-filter">Data</button>
         <button id="exquisite-corpse-filter">Exquisite Corpse</button>
+        <div id="dropdown">
+          <div>Year</div>
+          <div id="dropdown-content">
+            <button id="2025-filter">2025</button>
+            <button id="2024-filter">2024</button>
+          </div>
+        </div>
       </div>
       <div id="art-container">
         <div id="cartel">
@@ -172,6 +179,8 @@
                     if (filter === "data") return artwork.type === "Data Based";
                     if (filter === "exquisite-corpse")
                       return artwork.type === "Exquisite Corpse";
+                    if (filter === "2024") return artwork.year === "2024";
+                    if (filter === "2025") return artwork.year === "2025";
                   });
 
             showArtworks(filteredArtworks);
@@ -208,6 +217,16 @@
             .getElementById("algorithm-filter")
             .addEventListener("click", () => {
               filterSelection("algorithm");
+            });
+          document
+            .getElementById("2024-filter")
+            .addEventListener("click", () => {
+              filterSelection("2024");
+            });
+          document
+            .getElementById("2025-filter")
+            .addEventListener("click", () => {
+              filterSelection("2025");
             });
           document
             .getElementById("data-filter")
