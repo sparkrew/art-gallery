@@ -21,8 +21,9 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 --title-font: 'Kolbano';
 --fs-0: 10rem;
 --fs-1: 4rem;
---fs-2: 2rem;
---fs-3: 1rem;
+--fs-2: 3rem;
+--fs-3: 2rem;
+--fs-4: 1rem;
 }
 #SPA-title {
 font-family: var(--title-font);
@@ -68,7 +69,7 @@ justify-content: center;
 list-style-type: none;
 gap: 3rem;
 font-family: var(--title-font);
-font-size: var(--fs-2);
+font-size: var(--fs-3);
 }
 a{
 text-decoration: none;
@@ -84,7 +85,7 @@ gap : 2rem;
 
 }
 .artwork{
-font-size: var(--fs-2);
+font-size: var(--fs-3);
 font-family: var(--title-font);
 }
 .artwork:hover {
@@ -118,6 +119,7 @@ display: none;
     justify-content: center;
     gap:4rem;
     font-family: var(--title-font);
+    font-size: var(--fs-3);
 }
 #artist-info-container{
     display: flex;
@@ -240,7 +242,7 @@ textarea {
 #contact-title{
     font-family: var(--title-font);
     color: #474544;
-  font-size: var(--fs-2);
+  font-size: var(--fs-3);
   font-weight: 700;
   letter-spacing: 1rem;
   text-align: center;
