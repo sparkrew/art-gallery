@@ -23,7 +23,7 @@ function setup() {
   g.textFont(font);
   g.textSize(windowWidth / 8);
   g.textAlign(CENTER, CENTER);
-  g.text("Software \nPerforming \nArts Gallery", width / 2, height / 2);
+  g.text("Software \nPerforming \nArts Gallery", width / 2, height / 2 - 50);
   randomColor = Math.floor(Math.random(2) * colors.length);
 }
 let fillPoints = [];
@@ -49,11 +49,14 @@ function draw() {
     generateFillPoints();
     for (let pt of fillPoints) {
       let c = pt.c;
-      squares.push(new Square(pt.x, pt.y, c));
-      for (let square of squares) {
-        square.isLetter = true;
+      let square = new Square(pt.x, pt.y, c);
+      square.isLetter = true;
+
+      if (pt.x > width / 2 - (1 / 10) * width && pt.y > (height / 3) * 2) {
+        square.isGallery = true;
       }
-      //ellipse(pt.x, pt.y, 3, 3);
+
+      squares.push(square);
     }
     isGenerated = true;
   }
@@ -63,6 +66,20 @@ function draw() {
     square.move();
     if (random(1) < 0.01) square.speed = 0.5;
   });
+}
+function mousePressed() {
+  for (let square of squares) {
+    if (
+      square.isGallery &&
+      mouseX > square.x &&
+      mouseX < square.x + square.size &&
+      mouseY > square.y &&
+      mouseY < square.y + square.size
+    ) {
+      window.location.href = "pages/gallery.html";
+      return;
+    }
+  }
 }
 
 class Square {
@@ -74,6 +91,7 @@ class Square {
     this.size = 13;
     this.color = color;
     this.isLetter = false;
+    this.isGallery = false;
   }
 
   show() {
@@ -94,6 +112,13 @@ class Square {
         this.y -= this.speed;
       }
     }
+  }
+  explose() {
+    console.log("x avant", this.x);
+    this.x += 800;
+    this.y += 800;
+    console.log("x après", this.x);
+    console.log("explose");
   }
 }
 function windowResized() {
