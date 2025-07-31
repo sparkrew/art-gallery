@@ -23,7 +23,8 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 --fs-1: 4rem;
 --fs-2: 3rem;
 --fs-3: 2rem;
---fs-4: 1rem;
+--fs-4:1.5rem;
+--fs-5: 1rem;
 }
 #SPA-title {
 font-family: var(--title-font);
@@ -119,7 +120,7 @@ display: none;
     justify-content: center;
     gap:4rem;
     font-family: var(--title-font);
-    font-size: var(--fs-3);
+    font-size: var(--fs-4);
 }
 #artist-info-container{
     display: flex;
@@ -261,11 +262,36 @@ textarea {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
 }
 #dropdown:hover #dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+#filters{
+  font-family: var(--title-font);
+  padding:1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap:1rem;
+}
+.filters-elements{
+align-content: center;
+
+
+}
+.filters-elements:hover{
+  cursor: pointer;
+align-content: center;
+color:var(--orange);
+}
+
+.year-filter:hover {
+  cursor: pointer;
+  color:var(--orange);
 }
