@@ -295,3 +295,6 @@ color:var(--orange);
   cursor: pointer;
   color:var(--orange);
 }
+#artist-name{
+  color:var(--orange)
+}
