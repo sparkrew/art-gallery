@@ -11,6 +11,7 @@ let colors = [
   ["#F2BD3D"],
 ];
 let randomColor;
+let galleryZone;
 
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
@@ -70,7 +71,6 @@ function draw() {
 function mousePressed() {
   for (let square of squares) {
     if (
-      square.isGallery &&
       mouseX > square.x &&
       mouseX < square.x + square.size &&
       mouseY > square.y &&
@@ -112,13 +112,6 @@ class Square {
         this.y -= this.speed;
       }
     }
-  }
-  explose() {
-    console.log("x avant", this.x);
-    this.x += 800;
-    this.y += 800;
-    console.log("x après", this.x);
-    console.log("explose");
   }
 }
 function windowResized() {

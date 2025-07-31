@@ -27,8 +27,8 @@
         <div id="dropdown">
           <button class="filters-elements">Year</button>
           <div id="dropdown-content">
-            <button class="year-filter" id="2025-filter">2025</button>
-            <button class="year-filter" id="2024-filter">2024</button>
+            <div class="year-filter" id="2025-filter">2025</div>
+            <div class="year-filter" id="2024-filter">2024</div>
           </div>
         </div>
 
@@ -115,7 +115,6 @@
         }
         loadData().then(() => {
           function executeArtwork(artwork) {
-            console.log("art:", artwork);
             const buttons = document.getElementById("buttons-container");
             dataButton.style.display = "none";
             playSoundButton.style.display = "none";
