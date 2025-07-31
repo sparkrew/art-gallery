@@ -3,7 +3,14 @@ let squares = [];
 let isGenerated = false;
 let g;
 let step;
-let colors = ["#FB2E0F", "#AAC3EB", "#F2BD3D", "#CFDB93"];
+let colors = [
+  ["#FB2E0F", "#AAC3EB", "#F2BD3D", "#CFDB93"],
+  ["#FB2E0F"],
+  ["#CFDB93"],
+  ["#AAC3EB"],
+  ["#F2BD3D"],
+];
+let randomColor;
 
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
@@ -17,6 +24,7 @@ function setup() {
   g.textSize(windowWidth / 8);
   g.textAlign(CENTER, CENTER);
   g.text("Software \nPerforming \nArts Gallery", width / 2, height / 2);
+  randomColor = Math.floor(Math.random(2) * colors.length);
 }
 let fillPoints = [];
 
@@ -26,8 +34,9 @@ function generateFillPoints() {
     for (let x = 0; x < width; x += step) {
       let col = g.get(x, y);
       if (col[0] == 255) {
-        let colorIndex = Math.floor(x / step + y / step) % colors.length;
-        let c = colors[colorIndex];
+        let colorIndex =
+          Math.floor(x / step + y / step) % colors[randomColor].length;
+        let c = colors[randomColor][colorIndex];
         fillPoints.push({ x, y, c });
       }
     }
