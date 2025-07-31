@@ -106,6 +106,7 @@ display: none;
 #artwork-name-container{
 overflow-y: auto;
 height: 85vh;
+width: 20vw;
 }
 
 #artwork-name-container::-webkit-scrollbar {
