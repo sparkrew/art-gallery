@@ -32,6 +32,7 @@ font-size: var(--fs-0);
 color: var(--white);
 }
 
+
 body {
 width: 100vw;
 height: 100vh;
@@ -43,7 +44,7 @@ background-color: var(--white);
 }
 main{
 width: 100vw;
-height: 100vh;
+height: 85vh;
 padding: 0;
 margin: 0;
 scroll-snap-align: start;
@@ -114,7 +115,7 @@ display: none;
 }
 #cartel {
     
-    height: 90vh;
+    height: 85vh;
     width: 20vw;
     display: flex;
     flex-direction: column;

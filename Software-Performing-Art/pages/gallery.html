@@ -162,6 +162,7 @@
             };
 
             document.body.appendChild(script);
+            showCode();
           }
           function showArtwork(artwork) {
             const el = document.createElement("p");
@@ -261,45 +262,78 @@
               window.location.href = data;
             });
 
-          document
-            .getElementById("artwork-code")
-            .addEventListener("click", () => {
-              if (!currentSketchPath) {
-                alert("Aucune œuvre sélectionnée !");
-                return;
-              }
+          function showCode() {
+            if (codeAffiche) {
+              artworkContainer.innerHTML = "";
 
-              if (!codeAffiche) {
-                fetch(currentSketchPath)
-                  .then((res) => res.text())
-                  .then((code) => {
-                    if (currentP5Instance) {
-                      currentP5Instance.remove();
-                      currentP5Instance = null;
-                    }
-                    artworkContainer.innerHTML = `<pre>
+              const oldScript = document.getElementById("dynamic-script");
+              if (oldScript != currentSketchPath) oldScript.remove();
+
+              const script = document.createElement("script");
+              script.src = currentSketchPath;
+              script.id = "dynamic-script";
+              script.onload = () => {
+                if (typeof sketch === "function") {
+                  currentP5Instance = new p5(sketch, artworkContainer);
+                }
+                codeAffiche = false;
+              };
+              document.body.appendChild(script);
+            }
+            document
+              .getElementById("artwork-code")
+              .addEventListener("click", () => {
+                if (!currentSketchPath) {
+                  alert("Aucune œuvre sélectionnée !");
+                  return;
+                }
+
+                if (!codeAffiche) {
+                  fetch(currentSketchPath)
+                    .then((res) => res.text())
+                    .then((code) => {
+                      if (currentP5Instance) {
+                        currentP5Instance.remove();
+                        currentP5Instance = null;
+                      }
+                      artworkContainer.innerHTML = `<pre>
                         <code>${code}</code>
                       </pre>`;
-                    codeAffiche = true;
-                  });
-              } else {
-                artworkContainer.innerHTML = "";
+                      codeAffiche = true;
+                    });
+                }
+                if (!codeAffiche) {
+                  fetch(currentSketchPath)
+                    .then((res) => res.text())
+                    .then((code) => {
+                      if (currentP5Instance) {
+                        currentP5Instance.remove();
+                        currentP5Instance = null;
+                      }
+                      artworkContainer.innerHTML = `<pre>
+                        <code>${code}</code>
+                      </pre>`;
+                      codeAffiche = true;
+                    });
+                } else {
+                  artworkContainer.innerHTML = "";
 
-                const oldScript = document.getElementById("dynamic-script");
-                if (oldScript) oldScript.remove();
+                  const oldScript = document.getElementById("dynamic-script");
+                  if (oldScript) oldScript.remove();
 
-                const script = document.createElement("script");
-                script.src = currentSketchPath;
-                script.id = "dynamic-script";
-                script.onload = () => {
-                  if (typeof sketch === "function") {
-                    currentP5Instance = new p5(sketch, artworkContainer);
-                  }
-                  codeAffiche = false;
-                };
-                document.body.appendChild(script);
-              }
-            });
+                  const script = document.createElement("script");
+                  script.src = currentSketchPath;
+                  script.id = "dynamic-script";
+                  script.onload = () => {
+                    if (typeof sketch === "function") {
+                      currentP5Instance = new p5(sketch, artworkContainer);
+                    }
+                    codeAffiche = false;
+                  };
+                  document.body.appendChild(script);
+                }
+              });
+          }
         });
       </script>
     </main>
