@@ -123,10 +123,7 @@ display: none;
     font-family: var(--title-font);
     font-size: var(--fs-4);
 }
-#artist-info-container{
-    display: flex;
-    flex-direction:column ;
-}
+
 #buttons-container>*{
      display: flex;
     
@@ -315,4 +312,19 @@ border-color: var(--orange);
   border-color: var(--orange);
   background-color: var(--orange);
   border-radius: 50px;
+}
+
+.metadata-button{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.metadata-button:hover{
+  color:var(--orange);
+  text-decoration: underline;
+}
+.cartel-element{
+  display: flex;
+  flex-direction:column ;
+  gap:0.5rem;
 }
