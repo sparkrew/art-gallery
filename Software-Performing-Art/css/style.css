@@ -13,7 +13,7 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 }
 :root {
 --orange: 
-#FB2E0F;
+#fb2e0f;
 --blue: 
 #16358E;
 --white: 
@@ -281,14 +281,18 @@ textarea {
   gap:1rem;
 }
 .filters-elements{
-align-content: center;
-
-
+border: 1px solid #474544;
+border-radius: 50px;
+padding-left:0.7rem;
+padding-right:0.7rem;
+background-color: var(--white);
 }
 .filters-elements:hover{
-  cursor: pointer;
+cursor: pointer;
 align-content: center;
-color:var(--orange);
+color:var(--white);
+background-color: var(--orange);
+border-color: var(--orange);
 }
 
 .year-filter:hover {
@@ -297,4 +301,17 @@ color:var(--orange);
 }
 #artist-name{
   color:var(--orange)
+}
+#start-button{
+  background-color: var(--white);
+  border: 1px solid #474544;
+  border-radius: 50px;
+}
+
+#start-button:hover{
+  cursor: pointer;
+  color:var(--white);
+  border-color: var(--orange);
+  background-color: var(--orange);
+  border-radius: 50px;
 }

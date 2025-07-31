@@ -27,7 +27,6 @@ var sketch = function (p) {
   let height;
 
   p.setup = function () {
-    
     let container = document.querySelector(".artwork-container") || p._userNode;
     width = container.offsetWidth;
     height = container.offsetHeight;
@@ -39,7 +38,8 @@ var sketch = function (p) {
     voronoi = new Voronoi();
     bounds = { xl: 0, xr: p.width, yt: 0, yb: p.height };
     startButton = p.createButton("Start");
-    startButton.parent("artwork-container");
+    startButton.id("start-button");
+    startButton.parent("cartel");
     startButton.mousePressed(startAudio);
 
     osc = new p5.Oscillator("sine");
