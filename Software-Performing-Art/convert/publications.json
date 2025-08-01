@@ -1,0 +1,4 @@
+[
+  { "name": "test", "author": "Clara Fanget", "src": "./md/test.md" },
+  { "name": "essai", "author": "John Doe", "src": "./md/essai.md" }
+]
