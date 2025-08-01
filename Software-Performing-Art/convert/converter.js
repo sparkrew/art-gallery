@@ -1,5 +1,6 @@
 const nodePandoc = require("node-pandoc");
 const { readFile } = require("fs/promises");
+const fs = require("fs");
 let publications;
 async function loadData() {
   publications = JSON.parse(await readFile("./publications.json"));
@@ -21,6 +22,9 @@ function markdownToHTML(publication) {
     "-o",
     `./html/${fileName}.html`,
   ];
+  publication.HTMLsrc = `../convert/html/${fileName}.html`;
+  const updatedJSONData = JSON.stringify(publications, null, 2);
+  fs.writeFileSync("./publications.json", updatedJSONData);
 
   nodePandoc(src, args, (err, result) => {
     if (err) {

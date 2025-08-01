@@ -21,7 +21,33 @@
         </ul>
       </nav>
       <div id="publications"></div>
-      <script></script>
+      <script>
+        const container = document.getElementById("publications");
+        let publications;
+        async function loadData() {
+          const response = await fetch("../convert/publications.json");
+          publications = await response.json();
+          console.log(publications);
+        }
+        loadData().then(() => {
+          if (publications.length === 0) {
+            const el = document.createElement("p");
+            el.innerHTML = "Aucune publication";
+            container.appendChild(el);
+          }
+          publications.forEach((publication) => {
+            const el = document.createElement("p");
+            el.className = "publication";
+            el.innerHTML = publication.name;
+            container.appendChild(el);
+            console.log(window.location);
+
+            el.addEventListener("click", () => {
+              window.location.href = publication.HTMLsrc;
+            });
+          });
+        });
+      </script>
     </main>
     <!-- <footer>
       <p>Footer</p>

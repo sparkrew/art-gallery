@@ -1,4 +1,14 @@
 [
-  { "name": "test", "author": "Clara Fanget", "src": "./md/test.md" },
-  { "name": "essai", "author": "John Doe", "src": "./md/essai.md" }
+  {
+    "name": "test",
+    "author": "Clara Fanget",
+    "src": "./md/test.md",
+    "HTMLsrc": "../convert/html/test.html"
+  },
+  {
+    "name": "essai",
+    "author": "John Doe",
+    "src": "./md/essai.md",
+    "HTMLsrc": "../convert/html/essai.html"
+  }
 ]
