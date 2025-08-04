@@ -115,6 +115,7 @@
         }
         loadData().then(() => {
           function executeArtwork(artwork) {
+            artworkContainer.innerHTML = "";
             const buttons = document.getElementById("buttons-container");
             dataButton.style.display = "none";
             playSoundButton.style.display = "none";
@@ -161,7 +162,6 @@
             };
 
             document.body.appendChild(script);
-            showCode();
           }
           function showArtwork(artwork) {
             const el = document.createElement("p");
@@ -170,6 +170,7 @@
             container.appendChild(el);
 
             el.addEventListener("mouseover", () => {
+              codeAffiche = false;
               executeArtwork(artwork);
             });
           }
@@ -260,79 +261,45 @@
             .addEventListener("click", () => {
               window.location.href = data;
             });
+          document
+            .getElementById("artwork-code")
+            .addEventListener("click", () => {
+              console.log(codeAffiche);
+              if (!currentSketchPath) {
+                alert("Aucune œuvre sélectionnée !");
+                return;
+              }
 
-          function showCode() {
-            if (codeAffiche) {
-              artworkContainer.innerHTML = "";
-
-              const oldScript = document.getElementById("dynamic-script");
-              if (oldScript != currentSketchPath) oldScript.remove();
-
-              const script = document.createElement("script");
-              script.src = currentSketchPath;
-              script.id = "dynamic-script";
-              script.onload = () => {
-                if (typeof sketch === "function") {
-                  currentP5Instance = new p5(sketch, artworkContainer);
-                }
-                codeAffiche = false;
-              };
-              document.body.appendChild(script);
-            }
-            document
-              .getElementById("artwork-code")
-              .addEventListener("click", () => {
-                if (!currentSketchPath) {
-                  alert("Aucune œuvre sélectionnée !");
-                  return;
-                }
-
-                if (!codeAffiche) {
-                  fetch(currentSketchPath)
-                    .then((res) => res.text())
-                    .then((code) => {
-                      if (currentP5Instance) {
-                        currentP5Instance.remove();
-                        currentP5Instance = null;
-                      }
-                      artworkContainer.innerHTML = `<pre>
-                        <code>${code}</code>
-                      </pre>`;
-                      codeAffiche = true;
-                    });
-                }
-                if (!codeAffiche) {
-                  fetch(currentSketchPath)
-                    .then((res) => res.text())
-                    .then((code) => {
-                      if (currentP5Instance) {
-                        currentP5Instance.remove();
-                        currentP5Instance = null;
-                      }
-                      artworkContainer.innerHTML = `<pre>
-                        <code>${code}</code>
-                      </pre>`;
-                      codeAffiche = true;
-                    });
-                } else {
-                  artworkContainer.innerHTML = "";
-
-                  const oldScript = document.getElementById("dynamic-script");
-                  if (oldScript) oldScript.remove();
-
-                  const script = document.createElement("script");
-                  script.src = currentSketchPath;
-                  script.id = "dynamic-script";
-                  script.onload = () => {
-                    if (typeof sketch === "function") {
-                      currentP5Instance = new p5(sketch, artworkContainer);
+              if (!codeAffiche) {
+                fetch(currentSketchPath)
+                  .then((res) => res.text())
+                  .then((code) => {
+                    if (currentP5Instance) {
+                      currentP5Instance.remove();
+                      currentP5Instance = null;
                     }
-                    codeAffiche = false;
-                  };
-                  document.body.appendChild(script);
-                }
-              });
-          }
+                    artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
+                  });
+                codeAffiche = true;
+                console.log(codeAffiche);
+              } else {
+                artworkContainer.innerHTML = "";
+
+                const oldScript = document.getElementById("dynamic-script");
+                if (oldScript) oldScript.remove();
+
+                const script = document.createElement("script");
+                script.src = currentSketchPath;
+                script.id = "dynamic-script";
+                script.onload = () => {
+                  if (typeof sketch === "function") {
+                    currentP5Instance = new p5(sketch, artworkContainer);
+                  }
+                  codeAffiche = false;
+                };
+                document.body.appendChild(script);
+              }
+            });
         });
       </script>
     </main>

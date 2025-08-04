@@ -26,12 +26,6 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 --fs-4:1.5rem;
 --fs-5: 1rem;
 }
-#SPA-title {
-font-family: var(--title-font);
-font-size: var(--fs-0);
-color: var(--white);
-}
-
 
 body {
 width: 100vw;
@@ -48,22 +42,18 @@ height: 85vh;
 padding: 0;
 margin: 0;
 scroll-snap-align: start;
-}
-#header-title {
-padding: 1rem;
-height: 100vh;
-background-color: var(--orange);
-align-content: center;
-scroll-snap-align: start;
+
 }
 footer {
-background-color: 
-#f4f4f4;
+background-color: var(--white);
 text-align: center;
 padding: 1rem;
 }
 nav{
+  display: flex;
 height: 6vh;
+align-items: center;
+justify-content: center;
 }
 ul{
 display: flex;
@@ -333,4 +323,14 @@ border-color: var(--orange);
   display: flex;
   flex-direction:column ;
   gap:0.5rem;
+}
+#publications{
+
+  text-align: center;
+  height:94vh;
+}
+.publication{
+  margin:0;
+  font-family: var(--title-font);
+  padding:20px
 }
