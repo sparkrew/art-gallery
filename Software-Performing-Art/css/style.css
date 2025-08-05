@@ -278,7 +278,6 @@ textarea {
 }
 .filters-elements{
 border: 1px solid #474544;
-border-radius: 50px;
 padding-left:0.7rem;
 padding-right:0.7rem;
 background-color: var(--white);
@@ -361,6 +360,7 @@ font-weight: 600;
 font-size: var(--fs-4);
 }
 #intro-container{
+  color:var(--grey);
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -371,7 +371,7 @@ font-size: var(--fs-4);
   margin-right: 5.5rem;
   padding:2rem;
   align-items: center;
-border: var(--orange) 2px solid;
+background-color: rgb(49, 48, 47,0.25);
 }
 #udem-logo{
   height: 10rem;
