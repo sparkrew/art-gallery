@@ -18,12 +18,13 @@
           <li><a href="publications.html">Publications</a></li>
           <li><a href="art-history.html">Art History</a></li>
           <li><a href="contact/contact.html">Contact</a></li>
-          <!--           <li><a href="../convert/html/test.html">Test Pandoc</a></li> -->
+          <!--<li><a href="../convert/html/test.html">Test Pandoc</a></li> -->
         </ul>
       </nav>
       <div id="publications"></div>
       <script>
         const container = document.getElementById("publications");
+
         let publications;
         async function loadData() {
           const response = await fetch("../convert/publications.json");
@@ -32,20 +33,45 @@
         }
         loadData().then(() => {
           if (publications.length === 0) {
-            const el = document.createElement("p");
-            el.innerHTML = "Aucune publication";
-            container.appendChild(el);
+            const noPublicationCard = document.createElement("div");
+            noPublicationCard.id = "noPublicationCard";
+
+            const el = document.createElement("div");
+            el.textContent = "No publication";
+            noPublicationCard.appendChild(el);
+
+            const galleryButton = document.createElement("div");
+            galleryButton.id = "gallery-button";
+            galleryButton.textContent = "Back to the gallery";
+            galleryButton.addEventListener("click", () => {
+              window.location.href = "../pages/gallery.html";
+            });
+            noPublicationCard.appendChild(galleryButton);
+
+            container.appendChild(noPublicationCard);
           }
           publications.forEach((publication) => {
-            const el = document.createElement("p");
-            el.className = "publication";
-            el.innerHTML = publication.name;
-            container.appendChild(el);
-            console.log(window.location);
+            const publicationCard = document.createElement("div");
+            publicationCard.className = "publicationCard";
 
-            el.addEventListener("click", () => {
+            const publicationName = document.createElement("div");
+            publicationName.className = "publicationName";
+            publicationName.textContent = publication.name;
+            publicationCard.appendChild(publicationName);
+
+            const publicationAuthor = document.createElement("div");
+            publicationAuthor.className = "publicationAuthor";
+            publicationAuthor.textContent = publication.author;
+            publicationCard.appendChild(publicationAuthor);
+
+            const readButton = document.createElement("div");
+            readButton.className = "read-button";
+            readButton.textContent = "Read";
+            readButton.addEventListener("click", () => {
               window.location.href = publication.HTMLsrc;
             });
+            publicationCard.appendChild(readButton);
+            container.appendChild(publicationCard);
           });
         });
       </script>

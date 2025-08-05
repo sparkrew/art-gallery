@@ -62,32 +62,34 @@
         }
         loadData().then(() => {
           artistsList.forEach((artist) => {
-            let artistCard = document.createElement("div");
+            const artistCard = document.createElement("div");
             artistCard.className = "artistCard";
 
-            let artistName = document.createElement("div");
+            const artistName = document.createElement("div");
             artistName.className = "artistName";
             artistName.textContent = artist.name;
+            artistCard.appendChild(artistName);
 
-            let artistNamePopup = document.createElement("p");
+            const artistNamePopup = document.createElement("p");
             artistNamePopup.className = "artistNamePopup";
             artistNamePopup.textContent = artist.name;
+            artistsListPopup.appendChild(artistNamePopup);
+            
+            const photo = document.createElement("img");
+            photo.className = "artist-photo";
+            photo.src = artist.photo;
+            artistCard.appendChild(photo);
 
-            let repoButton = document.createElement("div");
+            const repoButton = document.createElement("div");
             repoButton.className = "repo-button";
             repoButton.textContent = "Repo";
             repoButton.addEventListener("click", () => {
               window.location.href = artist.repo;
             });
-
-            let photo = document.createElement("img");
-            photo.className = "artist-photo";
-            photo.src = artist.photo;
-
-            artistsListPopup.appendChild(artistNamePopup);
-            artistCard.appendChild(artistName);
-            artistCard.appendChild(photo);
             artistCard.appendChild(repoButton);
+
+            
+
             artistsContainer.appendChild(artistCard);
           });
           artistsListPopupContainer.addEventListener("click", () => {

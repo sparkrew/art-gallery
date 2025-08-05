@@ -325,16 +325,7 @@ border-color: var(--orange);
   flex-direction:column ;
   gap:0.5rem;
 }
-#publications{
 
-  text-align: center;
-  height:94vh;
-}
-.publication{
-  margin:0;
-  font-family: var(--title-font);
-  padding:20px
-}
 #artists-container{
   display: flex;
   flex-direction: row;
@@ -383,8 +374,6 @@ background-color: rgb(49, 48, 47,0.25);
   padding-bottom: 2rem;
   display: flex ;
   align-items: center;
-
-
 }
 #course-repo-button{
   border: var(--grey) 2px solid;
@@ -397,14 +386,14 @@ background-color: rgb(49, 48, 47,0.25);
   color:var(--white);
   padding:0.5rem;
 }
-.repo-button{
+.repo-button,.read-button{
   color: var(--grey);
   display: inline-block;
   border: var(--grey) 2px solid;
   padding: 0.5rem;
   width: fit-content;
 }
-.repo-button:hover{
+.repo-button,.read-button:hover{
   cursor: pointer;
   color: var(--white);
   background-color: var(--orange);
@@ -435,7 +424,7 @@ scroll-snap-type: y mandatory;
   height: 33rem;
   padding-left: 3rem;
 }
-#contributor-artists-title{
+#artists-title{
   text-align: center;
   font-size: var(--fs-4);
 }
@@ -450,4 +439,41 @@ scroll-snap-type: y mandatory;
 }
 #show-artists-list:hover{
    cursor: pointer;
+}
+
+#publications{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.publicationCard{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:2rem;
+border:var(--grey) 2px solid;
+height: 20rem;
+width: 20rem;
+text-align: center;
+font-family: var(--title-font);
+}
+.publicationName{
+  color:var(--orange);
+  height: 30%;
+  align-content: center;
+}
+
+#noPublicationCard{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:2rem;
+height: 30rem;
+text-align: center;
+font-family: var(--title-font);
 }
