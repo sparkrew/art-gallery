@@ -362,15 +362,40 @@ font-size: var(--fs-4);
 }
 #intro-container{
   display:flex;
+  flex-direction: column;
   justify-content: center;
-    font-family: var(--title-font);
+  font-family: var(--title-font);
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 5.5rem;
+  margin-right: 5.5rem;
+  padding:2rem;
   align-items: center;
+border: var(--orange) 2px solid;
+}
+#udem-logo{
+  height: 10rem;
 }
 #artists-intro{
-  height: 15rem;
+  height: fit-content;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex ;
+  align-items: center;
 
 
+}
+#course-repo-button{
+  border: var(--grey) 2px solid;
+  padding:0.5rem;
+}
+#course-repo-button:hover{
+  cursor: pointer;
+  border: var(--orange) 2px solid;
+  background-color: var(--orange);
+  color:var(--white);
+  padding:0.5rem;
 }
 .repo-button{
   color: var(--grey);
@@ -419,4 +444,10 @@ scroll-snap-type: y mandatory;
   text-align: end;
   padding-top: 1rem;
   padding-right: 1rem;
+}
+#close:hover{
+  cursor: pointer;
+}
+#show-artists-list:hover{
+   cursor: pointer;
 }

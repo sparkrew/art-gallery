@@ -21,15 +21,16 @@
       </nav>
       <div id="intro-container">
         <div id="artists-intro">
-          Artists are students from the algorithmic art course at Université de
-          Montréal
+        <img id="udem-logo"src="../../assets/artists-photos/udem.png" ></img>
+          <p>Artists are students from the algorithmic art course at Université de
+          Montréal</p>
         </div>
         <div id="course-repo-button">Repo</div>
       </div>
 
       <div id="artists-container"></div>
       <div id="artists-popup-container">
-        <p id="show-artists-list">Afficher la liste des artistes</p>
+        <p id="show-artists-list">Show list of artists</p>
         <div id="artists-popup">
           <div id="close">X</div>
           <p id="contributor-artists-title">Contributor artists</p>
@@ -43,6 +44,7 @@
         const artistsPopup = document.getElementById("artists-popup");
         const artistsListPopup = document.getElementById("artists-list");
         const closePopup = document.getElementById("close");
+        const courseRepoButton = document.getElementById("course-repo-button");
         let artistsList = [];
         async function loadData() {
           try {
@@ -94,6 +96,10 @@
           closePopup.addEventListener("click", () => {
             artistsPopup.style.display = "none";
             console.log("fermé");
+          });
+          courseRepoButton.addEventListener("click", () => {
+            window.location.href =
+              "https://github.com/rethread-studio/algorithmic-art-course";
           });
         });
       </script>
