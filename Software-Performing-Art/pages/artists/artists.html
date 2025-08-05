@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artists</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav id="nav">
+        <ul>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li>
+            <a href="artists.html">Artists</a>
+          </li>
+          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="../art-history.html">Art History</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="intro-container">
+        <div id="artists-intro">
+          Artists are students from the algorithmic art course at Université de
+          Montréal
+        </div>
+        <div id="course-repo-button">Repo</div>
+      </div>
+
+      <div id="artists-container"></div>
+      <div id="artists-popup-container">
+        <p id="show-artists-list">Afficher la liste des artistes</p>
+        <div id="artists-popup">
+          <div id="close">X</div>
+          <p id="contributor-artists-title">Contributor artists</p>
+          <div id="artists-list"></div>
+        </div>
+      </div>
+      <script>
+        const artistsContainer = document.getElementById("artists-container");
+        const artistsListPopupContainer =
+          document.getElementById("show-artists-list");
+        const artistsPopup = document.getElementById("artists-popup");
+        const artistsListPopup = document.getElementById("artists-list");
+        const closePopup = document.getElementById("close");
+        let artistsList = [];
+        async function loadData() {
+          try {
+            const response = await fetch("artists.json");
+            artists = await response.json();
+            artists.forEach((artist) => {
+              if (!artistsList.includes(artist.name)) {
+                artistsList.push(artist);
+              }
+            });
+            artistsList.sort(() => Math.random() - 0.5);
+          } catch (error) {
+            console.error("Erreur lors du chargement des données :", error);
+          }
+        }
+        loadData().then(() => {
+          artistsList.forEach((artist) => {
+            let artistCard = document.createElement("div");
+            artistCard.className = "artistCard";
+
+            let artistName = document.createElement("div");
+            artistName.className = "artistName";
+            artistName.textContent = artist.name;
+
+            let artistNamePopup = document.createElement("p");
+            artistNamePopup.className = "artistNamePopup";
+            artistNamePopup.textContent = artist.name;
+
+            let repoButton = document.createElement("div");
+            repoButton.className = "repo-button";
+            repoButton.textContent = "Repo";
+            repoButton.addEventListener("click", () => {
+              window.location.href = artist.repo;
+            });
+
+            let photo = document.createElement("img");
+            photo.className = "artist-photo";
+            photo.src = artist.photo;
+
+            artistsListPopup.appendChild(artistNamePopup);
+            artistCard.appendChild(artistName);
+            artistCard.appendChild(photo);
+            artistCard.appendChild(repoButton);
+            artistsContainer.appendChild(artistCard);
+          });
+          artistsListPopupContainer.addEventListener("click", () => {
+            artistsPopup.style.display = "block";
+          });
+          closePopup.addEventListener("click", () => {
+            artistsPopup.style.display = "none";
+            console.log("fermé");
+          });
+        });
+      </script>
+    </main>
+    <!-- <footer>
+      <p>Footer</p>
+    </footer> -->
+  </body>
+</html>

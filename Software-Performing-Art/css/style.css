@@ -18,6 +18,8 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 #16358E;
 --white: 
 #efefef;
+--grey:
+#31302f;
 --title-font: 'Kolbano';
 --fs-0: 10rem;
 --fs-1: 4rem;
@@ -65,7 +67,7 @@ font-size: var(--fs-3);
 }
 a{
 text-decoration: none;
-color: black;
+color: var(--grey);
 }
 a:hover {
 color: var(--orange);
@@ -138,7 +140,7 @@ display: none;
 }
 
 button, input, textarea {
-  color: black;
+
   font: var(--title-font);
   margin: 0;
 }
@@ -152,7 +154,7 @@ textarea {
 }
 
 #contact-form {
-  border: solid 3px #474544;
+  border: solid 3px var(--grey);
   max-width: 40vw;
   margin: 60px auto;
   position: relative;
@@ -333,4 +335,88 @@ border-color: var(--orange);
   margin:0;
   font-family: var(--title-font);
   padding:20px
+}
+#artists-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.artistCard{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:1rem;
+border:var(--grey) 2px solid;
+height: 20rem;
+width: 20rem;
+text-align: center;
+font-family: var(--title-font);
+}
+.artistName{
+color: var(--orange);
+font-weight: 600;
+font-size: var(--fs-4);
+}
+#intro-container{
+  display:flex;
+  justify-content: center;
+    font-family: var(--title-font);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+#artists-intro{
+  height: 15rem;
+
+
+}
+.repo-button{
+  color: var(--grey);
+  display: inline-block;
+  border: var(--grey) 2px solid;
+  padding: 0.5rem;
+  width: fit-content;
+}
+.repo-button:hover{
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--orange);
+  display: inline-block;
+  border: var(--orange) 2px solid;
+  padding: 0.5rem;
+  width: fit-content;
+}
+#artists-popup{
+  display: none;
+  position: fixed;
+  top:3rem;
+  height: 40rem;
+  width: 40%;
+border:var(--grey) 2px solid;
+background-color: var(--white);
+}
+#artists-popup-container{
+  display: flex;
+  justify-content: center;
+  font-family: var(--title-font);
+}
+#artists-list{
+    overflow-y: scroll;
+scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  height: 33rem;
+  padding-left: 3rem;
+}
+#contributor-artists-title{
+  text-align: center;
+  font-size: var(--fs-4);
+}
+#close{
+  font-size: var(--fs-4);
+  text-align: end;
+  padding-top: 1rem;
+  padding-right: 1rem;
 }
