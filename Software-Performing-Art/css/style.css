@@ -393,7 +393,7 @@ background-color: rgb(49, 48, 47,0.25);
   padding: 0.5rem;
   width: fit-content;
 }
-.repo-button,.read-button:hover{
+.repo-button:hover,.read-button:hover{
   cursor: pointer;
   color: var(--white);
   background-color: var(--orange);
