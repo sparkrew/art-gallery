@@ -2,7 +2,7 @@ var sketch = function (p) {
   let width;
   let height;
   p.setup = function () {
-    let container = document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
     const canvas = p.createCanvas(width, height);

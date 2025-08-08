@@ -35,8 +35,7 @@ var sketch = function (p) {
   p.setup = function () {
     p.colorMode(p.HSB, 360, 100, 100, 250);
 
-    const container =
-      document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
 

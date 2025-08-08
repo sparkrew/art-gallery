@@ -33,7 +33,7 @@ var sketch = function (p) {
   let height;
 
   p.setup = function () {
-    let container = document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
     const canvas = p.createCanvas(width, height);
@@ -47,10 +47,10 @@ var sketch = function (p) {
     radius = (2 * apo) / sq3;
     radius2 = radius / 2;
 
-    osc1 = new p5.Oscillator("sine");
-    osc2 = new p5.Oscillator("sine");
+    //osc1 = new p5.Oscillator("sine");
+    //osc2 = new p5.Oscillator("sine");
 
-    start();
+    //start();
     started = true;
     /*const button = p.select("#startButton");
     button.mousePressed(() => {
@@ -84,7 +84,7 @@ var sketch = function (p) {
     let a = Math.floor(p.random(2, nb_rows) / 2);
     if (a % 2) a += 1;
     stack = [grid[a][a - 2]];
-    make_all_notes();
+    //make_all_notes();
   }
 
   function make_all_notes() {
@@ -107,23 +107,23 @@ var sketch = function (p) {
     let current_cell = stack[stack.length - 1];
     if (!current_cell.visited) {
       draw_hex(current_cell);
-      if (duration <= 0) {
+      /* if (duration <= 0) {
         play_note();
-      }
+      } */
       current_cell.visited = true;
-    } else {
+    } /* else {
       osc1.amp(0.25, 0.2);
       osc2.amp(0.125, 0.2);
-    }
+    } */
 
     let next_cell_index = get_random_unvisited_neighbour(current_cell);
     if (next_cell_index == -1) {
       stack.pop();
-      if (stack.length == 0) {
+      /* if (stack.length == 0) {
         osc1.stop();
         osc2.stop();
         p.noLoop();
-      }
+      } */
     } else {
       open(current_cell, next_cell_index);
       let l = current_cell.links[next_cell_index];

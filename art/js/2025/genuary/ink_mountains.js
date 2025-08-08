@@ -1,6 +1,6 @@
 var sketch = function (p) {
-  let WIDTH ;
-  let HEIGHT ;
+  let WIDTH;
+  let HEIGHT;
 
   let drops = [];
   let dropsSun = [];
@@ -25,7 +25,7 @@ var sketch = function (p) {
   let radiusSup = 6;
 
   p.setup = function () {
-    let container = document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     WIDTH = container.offsetWidth;
     HEIGHT = container.offsetHeight;
     const canvas = p.createCanvas(WIDTH, HEIGHT);

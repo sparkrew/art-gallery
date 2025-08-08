@@ -29,8 +29,7 @@ var sketch = function (p) {
   };
 
   p.setup = function () {
-    const container =
-      document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
 

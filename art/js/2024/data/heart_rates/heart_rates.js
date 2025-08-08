@@ -22,8 +22,7 @@ var sketch = function (p) {
     dataArray = p.loadJSON(fileNames[currentFileIndex]); // Load the current file
   };
   p.setup = function () {
-    const container =
-      document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
 
