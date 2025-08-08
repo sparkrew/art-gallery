@@ -1,0 +1,20 @@
+[
+  {
+    "date": "1950s",
+    "srcColor": "../../assets/images/color/vera.png",
+    "srcBW": "../../assets/images/bw/vera-bw.png",
+    "page": "./moments/1950s.html"
+  },
+  {
+    "date": "1960s",
+    "srcColor": "../../assets/images/color/udem.png",
+    "srcBW": "../../assets/images/bw/udem-bw.png",
+    "page": "./moments/1960s.html"
+  },
+  {
+    "date": "1970s",
+    "srcColor": "../../assets/images/color/udem.png",
+    "srcBW": "../../assets/images/bw/udem-bw.png",
+    "page": "./moments/1970s.html"
+  }
+]

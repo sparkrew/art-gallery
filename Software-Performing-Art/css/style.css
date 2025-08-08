@@ -355,7 +355,6 @@ font-size: var(--fs-4);
   display:flex;
   flex-direction: column;
   justify-content: center;
-  font-family: var(--title-font);
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 5.5rem;
@@ -476,4 +475,38 @@ gap:2rem;
 height: 30rem;
 text-align: center;
 font-family: var(--title-font);
+}
+
+#art-history-container{
+  height: 94vh;
+  
+}
+.moment-container{
+  margin-top: 5vh;
+  height: 88vh;
+  display: flex;
+  flex-direction: row;
+}
+.text-container{
+  background-color: var(--white);
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+.photo-container{
+  background-image: url('../assets/images/color/vera.png');
+  background-size:cover;
+  width: 50vw;
+}
+.title-moment{
+  font-family: var(--title-font);
+  font-size: var(--fs-1);
+  color: var(--orange);
+  text-align: center;
+}
+.text-moment{
+  font-family: var(--title-font);
+  line-height: 2em;
+  padding: 2rem;
 }
