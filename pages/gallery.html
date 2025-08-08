@@ -64,10 +64,6 @@
               Data
             </div>
           </div>
-          <div id="sound-controller-container">
-            <div id="play-sound-button" style="display: none">P</div>
-            <div id="stop-sound-button" style="display: none">S</div>
-          </div>
         </div>
 
         <div id="artwork-container"></div>
@@ -84,7 +80,6 @@
         let repo;
         let type;
         let data;
-        let sound;
         let artworkName;
         let artworksNumber = 0;
         let isFiltered = false;
@@ -99,8 +94,6 @@
         const artworkNameContainer = document.getElementById("artwork-name");
         const artworkTypeContainer = document.getElementById("artwork-type");
         const artworkYearContainer = document.getElementById("artwork-year");
-        const playSoundButton = document.getElementById("play-sound-button");
-        const stopSoundButton = document.getElementById("stop-sound-button");
 
         async function loadData() {
           try {
@@ -119,15 +112,13 @@
             artworkContainer.innerHTML = "";
             const buttons = document.getElementById("buttons-container");
             dataButton.style.display = "none";
-            playSoundButton.style.display = "none";
-            stopSoundButton.style.display = "none";
 
             currentSketchPath = artwork.src;
             artworkName = artwork.name;
             artistName = artwork.artist;
             year = artwork.year;
             repo = artwork.repo;
-            sound = artwork.sound;
+
             year = artwork.year;
             type = artwork.type;
             data = artwork.data;
@@ -139,10 +130,6 @@
 
             if (type === "Data Based" && data != " ") {
               dataButton.style.display = "block";
-            }
-            if (sound === "true") {
-              playSoundButton.style.display = "block";
-              stopSoundButton.style.display = "block";
             }
 
             if (currentP5Instance) {
@@ -204,17 +191,6 @@
             showArtworks(artworks);
             executeArtwork(artworks[0]);
           }
-
-          document
-            .getElementById("stop-sound-button")
-            .addEventListener("click", () => {
-              currentP5Instance.stopSound();
-            });
-          document
-            .getElementById("play-sound-button")
-            .addEventListener("click", () => {
-              currentP5Instance.playSound();
-            });
 
           document
             .getElementById("show-all-filter")

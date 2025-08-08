@@ -6,8 +6,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_1",
-    "src": "../art/js/2025/genuary/arrow2.js",
-    "sound": "false"
+    "src": "../art/js/2025/genuary/arrow2.js"
   },
   {
     "name": "Hex Grid",
@@ -16,8 +15,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_grid",
-    "src": "../art/js/2025/genuary/hex_grid.js",
-    "sound": "true"
+    "src": "../art/js/2025/genuary/hex_grid.js"
   },
   {
     "name": "Ink Mountains",
@@ -26,8 +24,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/ink-mountains",
-    "src": "../art/js/2025/genuary/ink_mountains.js",
-    "sound": "false"
+    "src": "../art/js/2025/genuary/ink_mountains.js"
   },
   {
     "name": "Lines",
@@ -36,18 +33,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/sorensorel/algo-art/tree/main/lines-genuary",
-    "src": "../art/js/2025/genuary/lines.js",
-    "sound": "false"
-  },
-  {
-    "name": "Artwork 1",
-    "ref": "artwork_1",
-    "artist": "Leandreisk",
-    "year": "2025",
-    "type": "Genuary",
-    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%231",
-    "src": "../art/js/2025/genuary/artwork_1.js",
-    "sound": "true"
+    "src": "../art/js/2025/genuary/lines.js"
   },
   {
     "name": "Singularity",
@@ -56,8 +42,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/JeanBrrt/ArtAlgo/tree/main/Singularity",
-    "src": "../art/js/2025/genuary/singularity.js",
-    "sound": "true"
+    "src": "../art/js/2025/genuary/singularity.js"
   },
   {
     "name": "Fireworks",
@@ -66,8 +51,7 @@
     "year": "2025",
     "type": "Genuary",
     "repo": "https://github.com/houda1999/Fire_Work_Project",
-    "src": "../art/js/2025/genuary/fireworks/fireworks.js",
-    "sound": "true"
+    "src": "../art/js/2025/genuary/fireworks/fireworks.js"
   },
   {
     "name": "Turing",
@@ -76,8 +60,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_2",
-    "src": "../art/js/2025/algo/turing/turing.js",
-    "sound": "true"
+    "src": "../art/js/2025/algo/turing/turing.js"
   },
   {
     "name": "Hex Life",
@@ -86,8 +69,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/hex_life",
-    "src": "../art/js/2025/algo/hex_life.js",
-    "sound": "false"
+    "src": "../art/js/2025/algo/hex_life.js"
   },
   {
     "name": "Cornfield Flow",
@@ -96,8 +78,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/nala7/cornfield_flow",
-    "src": "../art/js/2025/algo/cornfield_flow.js",
-    "sound": "false"
+    "src": "../art/js/2025/algo/cornfield_flow.js"
   },
   {
     "name": "Glass",
@@ -106,8 +87,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/glass",
-    "src": "../art/js/2025/algo/glass-bw.js",
-    "sound": "true"
+    "src": "../art/js/2025/algo/glass-bw.js"
   },
   {
     "name": "Game Of Life",
@@ -116,18 +96,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/Neokoldstudio/p5-Game-Of-Life",
-    "src": "../art/js/2025/algo/game-of-life/game-of-life.js",
-    "sound": "false"
-  },
-  {
-    "name": "Artwork 2",
-    "ref": "artwork_2",
-    "artist": "Leandreisk",
-    "year": "2025",
-    "type": "Algorithm Based",
-    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%232",
-    "src": "../art/js/2025/algo/artwork_2/artwork_2.js",
-    "sound": "true"
+    "src": "../art/js/2025/algo/game-of-life/game-of-life.js"
   },
   {
     "name": "Trees",
@@ -136,8 +105,7 @@
     "year": "2025",
     "type": "Algorithm Based",
     "repo": "https://github.com/UnMoutonPerdu/generative-art/tree/main/trees",
-    "src": "../art/js/2025/algo/trees.js",
-    "sound": "false"
+    "src": "../art/js/2025/algo/trees.js"
   },
   {
     "name": "Meteo",
@@ -147,19 +115,7 @@
     "type": "Data Based",
     "repo": "https://github.com/LuchinoAllix/Projets_p5/tree/main/météo²",
     "data": "https://open-meteo.com",
-    "src": "../art/js/2025/data/meteo.js",
-    "sound": "false"
-  },
-  {
-    "name": "Watchman",
-    "ref": "watchman",
-    "artist": "Gabriel Beaudoin",
-    "year": "2025",
-    "type": "Data Based",
-    "repo": "https://github.com/GabrielBeaudoinUdem/ift6251/tree/main/oeuvre_3",
-    "data": "https://github.com/sharmaroshan/WHO-Suicide-Statistics",
-    "src": "../art/js/2025/data/watchman/watchman.js",
-    "sound": "true"
+    "src": "../art/js/2025/data/meteo.js"
   },
   {
     "name": "Theo",
@@ -169,8 +125,7 @@
     "type": "Data Based",
     "repo": "https://github.com/yogyagamage/algorithmic-art/tree/main/theo",
     "data": "https://github.com/chains-project/theo",
-    "src": "../art/js/2025/data/theo/theo.js",
-    "sound": "false"
+    "src": "../art/js/2025/data/theo/theo.js"
   },
   {
     "name": "Flow Field With Letters",
@@ -180,19 +135,7 @@
     "type": "Data Based",
     "repo": "https://github.com/nala7/Data-representation-with-Flow-Fields",
     "data": "https://github.com/nala7/besu_teku_ssc",
-    "src": "../art/js/2025/data/flow_field_with_letters/4_flow_field_with_letters.js",
-    "sound": "false"
-  },
-  {
-    "name": "Artwork 3",
-    "ref": "artwork_3",
-    "artist": "Leandreisk",
-    "year": "2025",
-    "type": "Data Based",
-    "repo": "https://github.com/leandreisk/ift6251/tree/main/Artwork%20%233",
-    "data": " ",
-    "src": "../art/js/2025/data/artwork_3/artwork_3.js",
-    "sound": "true"
+    "src": "../art/js/2025/data/flow_field_with_letters/4_flow_field_with_letters.js"
   },
   {
     "name": "Flow Lake",
@@ -202,8 +145,7 @@
     "type": "Data Based",
     "repo": "https://github.com/Neokoldstudio/p5-waves",
     "data": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter",
-    "src": "../art/js/2025/data/flow_lake.js",
-    "sound": "false"
+    "src": "../art/js/2025/data/flow_lake.js"
   },
 
   {
@@ -213,8 +155,7 @@
     "year": "2024",
     "type": "Genuary",
     "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task1",
-    "src": "../art/js/2024/genuary/synesthesia/synesthesia.js",
-    "sound": "false"
+    "src": "../art/js/2024/genuary/synesthesia/synesthesia.js"
   },
   {
     "name": "Bauhaus",
@@ -223,8 +164,7 @@
     "year": "2024",
     "type": "Genuary",
     "repo": "https://github.com/rafpinter/algorithmic-art/tree/main/02-bauhaus",
-    "src": "../art/js/2024/genuary/bauhaus.js",
-    "sound": "false"
+    "src": "../art/js/2024/genuary/bauhaus.js"
   },
   {
     "name": "Vermeer",
@@ -233,8 +173,7 @@
     "year": "2024",
     "type": "Genuary",
     "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/vermeer",
-    "src": "../art/js/2024/genuary/vermeer.js",
-    "sound": "false"
+    "src": "../art/js/2024/genuary/vermeer.js"
   },
   {
     "name": "Hexagonal",
@@ -243,8 +182,7 @@
     "year": "2024",
     "type": "Genuary",
     "repo": "https://github.com/bricemichelb/hexagonal",
-    "src": "../art/js/2024/genuary/hexagonal.js",
-    "sound": "false"
+    "src": "../art/js/2024/genuary/hexagonal.js"
   },
   {
     "name": "Lsystem",
@@ -253,8 +191,7 @@
     "year": "2024",
     "type": "Algorithm Based",
     "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task2",
-    "src": "../art/js/2024/algo/lsystem.js",
-    "sound": "false"
+    "src": "../art/js/2024/algo/lsystem.js"
   },
   {
     "name": "Bézier",
@@ -263,8 +200,7 @@
     "year": "2024",
     "type": "Algorithm Based",
     "repo": "https://github.com/rafpinter/algorithmic-art/tree/main/04-bezier",
-    "src": "../art/js/2024/algo/bezier.js",
-    "sound": "false"
+    "src": "../art/js/2024/algo/bezier.js"
   },
   {
     "name": "Tiling",
@@ -273,8 +209,7 @@
     "year": "2024",
     "type": "Algorithm Based",
     "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/tiling",
-    "src": "../art/js/2024/algo/tiling.js",
-    "sound": "false"
+    "src": "../art/js/2024/algo/tiling.js"
   },
   {
     "name": "Artbreeder",
@@ -283,8 +218,7 @@
     "year": "2024",
     "type": "Algorithm Based",
     "repo": "https://github.com/siliconfeather/algo-art/tree/d03aa4fc97c9e5ad16589988f8cfc29b4b4014ef/02%20-%20gen-algo_artbreeder",
-    "src": "../art/js/2024/algo/artbreeder.js",
-    "sound": "false"
+    "src": "../art/js/2024/algo/artbreeder.js"
   },
   {
     "name": "Hilbert Curve",
@@ -293,8 +227,7 @@
     "year": "2024",
     "type": "Algorithm Based",
     "repo": "https://github.com/bricemichelb/hilbertCurve",
-    "src": "../art/js/2024/algo/hilbert_curve/hilbert_curve.js",
-    "sound": "false"
+    "src": "../art/js/2024/algo/hilbert_curve/hilbert_curve.js"
   },
   {
     "name": "De quoi sera fait l'avenir",
@@ -304,8 +237,7 @@
     "type": "Data Based",
     "repo": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task3",
     "data": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710005701",
-    "src": "../art/js/2024/data/dequoiserafaitlavenir/dequoiserafaitlavenir.js",
-    "sound": "false"
+    "src": "../art/js/2024/data/dequoiserafaitlavenir/dequoiserafaitlavenir.js"
   },
   {
     "name": "Figures Historiques",
@@ -315,8 +247,7 @@
     "type": "Data Based",
     "repo": "https://github.com/lenaMK/art-algorithmique/tree/main/figures-historiques",
     "data": "https://observablehq.com/collection/@maison-mona/gender-analysis",
-    "src": "../art/js/2024/data/figures_historiques/figures_historiques.js",
-    "sound": "false"
+    "src": "../art/js/2024/data/figures_historiques/figures_historiques.js"
   },
   {
     "name": "Papers",
@@ -326,8 +257,7 @@
     "type": "Data Based",
     "repo": "https://github.com/bricemichelb/data_art",
     "data": "https://github.com/bricemichelb/data_art/blob/main/assets/papers.json",
-    "src": "../art/js/2024/data/papers/papers.js",
-    "sound": "false"
+    "src": "../art/js/2024/data/papers/papers.js"
   },
   {
     "name": "Heart Rates",
@@ -337,8 +267,7 @@
     "type": "Data Based",
     "repo": "https://github.com/YBTopaz8/DataDrivenArt",
     "data": "https://github.com/YBTopaz8/DataDrivenArt/tree/main/AllHearRates",
-    "src": "../art/js/2024/data/heart_rates/heart_rates.js",
-    "sound": "false"
+    "src": "../art/js/2024/data/heart_rates/heart_rates.js"
   },
   {
     "name": "Cadavre exquis",
@@ -347,7 +276,6 @@
     "year": "2025",
     "type": "Exquisite Corpse",
     "repo": "https://github.com/rethread-studio/algorithmic-art-course/tree/2025/exquis",
-    "src": "../art/js/2025/exquis/exquisite-conductor.js",
-    "sound": "false"
+    "src": "../art/js/2025/exquis/exquisite-conductor.js"
   }
 ]

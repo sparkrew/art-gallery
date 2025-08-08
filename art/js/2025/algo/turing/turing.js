@@ -13,9 +13,9 @@ var sketch = function (p) {
   let width;
   let height;
 
-  p.preload = function () {
+  /* p.preload = function () {
     tickSound = p.loadSound("../art/js/2025/algo/turing/clock.mp3");
-  };
+  }; */
 
   p.setup = function () {
     p.frameRate(30);
@@ -59,7 +59,7 @@ var sketch = function (p) {
       }
     }
 
-    playSound();
+    //playSound();
     Compteur++;
     if (Compteur >= 15) {
       updateGrid();
@@ -69,12 +69,12 @@ var sketch = function (p) {
     p.pop();
   };
 
-  function playSound() {
+  /* function playSound() {
     if (p.millis() - lastSound > soundInterval) {
       tickSound.play();
       lastSound = p.millis();
     }
-  }
+  } */
 
   function updateGrid() {
     let newGrid = [];

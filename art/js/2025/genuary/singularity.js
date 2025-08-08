@@ -42,7 +42,7 @@ var sketch = function (p) {
     cam = p.createCamera();
     img = p.createGraphics(p.windowWidth, p.windowWidth);
 
-    for (let i = 0; i < poolSize; i++) {
+    /* for (let i = 0; i < poolSize; i++) {
       let env = new p5.Envelope();
       let osc = new p5.Oscillator("triangle");
       osc.start();
@@ -50,7 +50,7 @@ var sketch = function (p) {
       osc.amp(env);
       envPool.push(env);
       oscPool.push(osc);
-    }
+    } */
 
     for (let i = 0; i < numberOfEntities; i++) {
       let x = p.random(img.width);

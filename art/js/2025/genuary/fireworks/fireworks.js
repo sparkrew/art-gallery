@@ -7,14 +7,14 @@ var sketch = function (p) {
   let width;
   let height;
 
-  p.preload = function () {
+  /* p.preload = function () {
     explosionSound = p.loadSound(
       "../art/js/2025/genuary/fireworks/firework.mp3",
       () => {
         soundPlayed = true;
       }
     );
-  };
+  }; */
 
   p.setup = function () {
     let container = document.getElementById("artwork-container");
