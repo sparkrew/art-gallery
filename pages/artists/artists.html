@@ -21,9 +21,11 @@
       </nav>
       <div id="intro-container">
         <div id="artists-intro">
-        <img id="udem-logo"src="../../assets/artists-photos/udem.png" ></img>
-          <p>Artists are students from the algorithmic art course at Université de
-          Montréal</p>
+          <img id="udem-logo" src="../../assets/artists-photos/udem.png" />
+          <p>
+            Artists are students from the algorithmic art course at Université
+            de Montréal
+          </p>
         </div>
         <div id="course-repo-button">Repo</div>
       </div>
@@ -48,12 +50,28 @@
         let artistsList = [];
         async function loadData() {
           try {
-            const response = await fetch("artists.json");
-            artists = await response.json();
-            artists.forEach((artist) => {
-              if (!artistsList.includes(artist.name)) {
-                artistsList.push(artist);
+            const response = await fetch("../../art/artworks.json");
+            artworks = await response.json();
+
+            artworks.forEach((artwork) => {
+              let i = 0;
+              if (
+                !artistsList.some((artist) =>
+                  artist[0].includes(artwork.artist)
+                )
+              ) {
+                artistsList.push([
+                  artwork.artist,
+                  artwork.year,
+                  [artwork.name],
+                ]);
+              } else {
+                const index = artistsList.findIndex(
+                  (artist) => artist[0] === artwork.artist
+                );
+                artistsList[index][2].push(artwork.name);
               }
+              i++;
             });
             artistsList.sort(() => Math.random() - 0.5);
           } catch (error) {
@@ -67,28 +85,41 @@
 
             const artistName = document.createElement("div");
             artistName.className = "artistName";
-            artistName.textContent = artist.name;
+            artistName.textContent = artist[0];
             artistCard.appendChild(artistName);
+
+            const artistYear = document.createElement("div");
+            artistYear.className = "artistInfo";
+            artistYear.textContent = artist[1];
+            artistCard.appendChild(artistYear);
+
+            const artistArtworks = document.createElement("div");
+            artistArtworks.className = "artistArtworks";
+            
+            let a = 0;
+            artist[2].forEach((artwork) => {
+              if (a == 0) {
+                artistArtworks.innerText += `${artwork}`;
+              } else {
+                artistArtworks.innerText += `, ${artwork}`;
+              }
+              a++;
+            });
+            //artistArtworks.textContent = artist[2];
+            artistCard.appendChild(artistArtworks);
 
             const artistNamePopup = document.createElement("p");
             artistNamePopup.className = "artistNamePopup";
-            artistNamePopup.textContent = artist.name;
+            artistNamePopup.textContent = artist[0];
             artistsListPopup.appendChild(artistNamePopup);
-            
-            const photo = document.createElement("img");
-            photo.className = "artist-photo";
-            photo.src = artist.photo;
-            artistCard.appendChild(photo);
 
-            const repoButton = document.createElement("div");
+            /*  const repoButton = document.createElement("div");
             repoButton.className = "repo-button";
             repoButton.textContent = "Repo";
             repoButton.addEventListener("click", () => {
               window.location.href = artist.repo;
             });
-            artistCard.appendChild(repoButton);
-
-            
+            artistCard.appendChild(repoButton); */
 
             artistsContainer.appendChild(artistCard);
           });

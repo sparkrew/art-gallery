@@ -328,21 +328,21 @@ border-color: var(--orange);
 
 #artists-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
+  width:80vw;
   gap: 2rem;
 }
 .artistCard{
 display: flex;
-flex-direction: column;
-justify-content: center;
+margin-left: 5.5rem;
+  margin-right: 5.5rem;
+
 align-items: center;
 gap:1rem;
-border:var(--grey) 2px solid;
-height: 20rem;
-width: 20rem;
-text-align: center;
+
 font-family: var(--title-font);
 }
 .artistName{
@@ -350,8 +350,12 @@ color: var(--orange);
 font-weight: 600;
 font-size: var(--fs-4);
 }
+.artistArtworks{
+  font-style: italic;
+}
 #intro-container{
   color:var(--grey);
+  font-family: var(--title-font);
   display:flex;
   flex-direction: column;
   justify-content: center;
