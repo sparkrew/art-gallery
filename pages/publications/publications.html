@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Software Performing Art</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
@@ -13,11 +13,11 @@
     <main>
       <nav>
         <ul>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="artists/artists.html">Artists</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../artists/artists.html">Artists</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="art-history/art-history.html">Art History</a></li>
-          <li><a href="contact/contact.html">Contact</a></li>
+          <li><a href="../art-history/art-history.html">Art History</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
           <!--<li><a href="../convert/html/test.html">Test Pandoc</a></li> -->
         </ul>
       </nav>
@@ -27,7 +27,7 @@
 
         let publications;
         async function loadData() {
-          const response = await fetch("../convert/publications.json");
+          const response = await fetch("./publications.json");
           publications = await response.json();
           console.log(publications);
         }
@@ -44,7 +44,7 @@
             galleryButton.id = "gallery-button";
             galleryButton.textContent = "Back to the gallery";
             galleryButton.addEventListener("click", () => {
-              window.location.href = "../pages/gallery.html";
+              window.location.href = "../../pages/gallery.html";
             });
             noPublicationCard.appendChild(galleryButton);
 
@@ -59,16 +59,21 @@
             publicationName.textContent = publication.name;
             publicationCard.appendChild(publicationName);
 
+            const publicationYear = document.createElement("div");
+            publicationYear.className = "publicationYear";
+            publicationYear.textContent = publication.year;
+            publicationCard.appendChild(publicationYear);
+
             const publicationAuthor = document.createElement("div");
             publicationAuthor.className = "publicationAuthor";
-            publicationAuthor.textContent = publication.author;
+            publicationAuthor.textContent = publication.authors;
             publicationCard.appendChild(publicationAuthor);
 
             const readButton = document.createElement("div");
             readButton.className = "read-button";
             readButton.textContent = "Read";
             readButton.addEventListener("click", () => {
-              window.location.href = publication.HTMLsrc;
+              window.location.href = publication.link;
             });
             publicationCard.appendChild(readButton);
             container.appendChild(publicationCard);

@@ -457,17 +457,22 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-gap:2rem;
+gap:1rem;
 border:var(--grey) 2px solid;
 height: 20rem;
 width: 20rem;
 text-align: center;
 font-family: var(--title-font);
 }
+.publicationAuthor{
+  padding: 1rem;
+}
 .publicationName{
   color:var(--orange);
   height: 30%;
   align-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #noPublicationCard{
