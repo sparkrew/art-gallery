@@ -24,12 +24,6 @@
     "link": "https://archive.aec.at/media/assets/ebbc5373678a5af914de8865fc3e82b2.pdf"
   },
   {
-    "name": "Estuary: Browser-based Collaborative Projectional Live Coding of Musical Patterns",
-    "year": "1990",
-    "authors": "David Ogborn, Jamie Beverley, Luis Navarro del Angel, Eldad Tsabary, Alex McLean",
-    "link": "https://iclc.toplap.org/2017/cameraReady/ICLC_2017_paper_78.pdf"
-  },
-  {
     "name": "Software engineering issues in interactive installation art",
     "year": "2008",
     "authors": "Anna Trifonova, Letizia Jaccheri",
@@ -70,6 +64,12 @@
     "year": "2015",
     "authors": "Daniel Temkin",
     "link": "https://history.siggraph.org/wp-content/uploads/2018/04/2015_Temkin_LightPattern.pdf"
+  },
+  {
+    "name": "Estuary: Browser-based Collaborative Projectional Live Coding of Musical Patterns",
+    "year": "2017",
+    "authors": "David Ogborn, Jamie Beverley, Luis Navarro del Angel, Eldad Tsabary, Alex McLean",
+    "link": "https://iclc.toplap.org/2017/cameraReady/ICLC_2017_paper_78.pdf"
   },
   {
     "name": "The afterlives of network-based artworks",
