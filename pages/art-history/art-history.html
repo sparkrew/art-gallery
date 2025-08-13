@@ -26,7 +26,61 @@
       </nav>
       <div id="art-history-container"></div>
     </main>
-    <script src="art-history.js"></script>
+    <script>
+      let container = document.getElementById("art-history-container");
+      let eventsList = [];
+      async function loadData() {
+        const response = await fetch("./art-history.json");
+        events = await response.json();
+
+        events.forEach((event) => {
+          eventsList.push([
+            event.date,
+            event.srcColor,
+            event.srcBW,
+            event.page,
+          ]);
+        });
+      }
+      loadData().then(() => {
+
+        eventsList.forEach((event) => {
+          const card = document.createElement("div");
+          card.className = "history-card";
+
+          const date = document.createElement("div");
+          date.className = "date-history";
+          date.textContent = event[0];
+          card.appendChild(date);
+
+          const image = document.createElement("img");
+          image.className = "image-history";
+          image.src = event[2];
+          card.appendChild(image);
+
+          container.appendChild(card);
+
+          card.addEventListener("mouseenter", () => {
+            date.classList.add("date-history-hover");
+            image.src = event[1];
+          });
+          card.addEventListener("mouseleave", () => {
+            date.classList.remove("date-history-hover");
+            image.src = event[2];
+          });
+          card.addEventListener("click", () => {
+            window.location.href = event[3];
+          });
+          function resetCardState() {
+            date.classList.remove("date-history-hover");
+            image.src = event[2];
+          }
+
+          window.addEventListener("pageshow", resetCardState);
+          window.addEventListener("load", resetCardState);
+        });
+      });
+    </script>
     <!-- <footer>
       <p>Footer</p>
     </footer> -->

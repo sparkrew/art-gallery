@@ -519,3 +519,43 @@ font-family: var(--title-font);
   line-height: 2em;
   padding: 2rem;
 }
+.history-card{
+  display: flex;
+  border: var(--orange) 1px solid;
+  width: 20vw;
+  height: 10vh;
+}
+#art-history-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.date-history{
+  font-family: var(--title-font);
+  font-size: var(--fs-3);
+  color: var(--orange);
+  width: 50%;
+  text-align: center;
+  align-content: center;
+  border-right: var(--orange)1px solid ;
+}
+.date-history-hover{
+ background-color: var(--orange);
+  font-family: var(--title-font);
+  font-size: var(--fs-3);
+  color: var(--white);
+  width: 50%;
+  text-align: center;
+  align-content: center;
+  border-right: var(--orange)1px solid ;
+ 
+}
+.image-history{
+  text-align: center;
+  align-content: center;
+  width: 50%;
+      height: 100%;
+object-fit: cover
+}

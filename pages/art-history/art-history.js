@@ -44,38 +44,48 @@ function draw() {
   //background(251, 46, 15);
   blocs = [];
 
-  i = 20;
-  l = 300;
+  i = 0;
+  l = 0;
+
+  let blocWidth = width / 10;
+  let blocHeight = height / 7;
+
+  let nbMax = Math.floor((width - 20) / (blocWidth * 2));
+  console.log(nbMax);
 
   for (let k = 0; k < nbMoments; k++) {
-    let bloc = new Bloc(i, l, width / 10, height / 7, " #efefef");
-    let image = new Photo(
-      photosBW[k],
-      bloc.x + bloc.w,
-      bloc.y,
-      width / 10,
-      height / 7
-    );
-
-    if (
-      mouseX > bloc.x &&
-      mouseX < image.x + image.w &&
-      mouseY > bloc.y &&
-      mouseY < bloc.y + bloc.h
-    ) {
-      bloc.isHover = true;
-      image.isHover = true;
-      image.img = photosColor[k];
-      bloc.c = "#fb2e0f";
+    let bloc;
+    let image;
+    for (let m = 0; m < nbMax; m++) {
+      bloc = new Bloc(i, l, blocWidth, blocHeight, " #efefef");
+      image = new Photo(
+        photosBW[k],
+        bloc.x + bloc.w,
+        bloc.y,
+        blocWidth,
+        blocHeight
+      );
+      blocs.push(bloc);
+      images.push(image);
+      image.show();
+      bloc.display();
+      bloc.writeText(k);
+      i += blocWidth * 2 + 5;
+      if (
+        mouseX > bloc.x &&
+        mouseX < image.x + image.w &&
+        mouseY > bloc.y &&
+        mouseY < bloc.y + bloc.h
+      ) {
+        bloc.isHover = true;
+        image.isHover = true;
+        image.img = photosColor[k];
+        bloc.c = "#fb2e0f";
+      }
     }
 
-    blocs.push(bloc);
-    images.push(image);
-    image.show();
-    bloc.display();
-    bloc.writeText(k);
-
-    i += 400;
+    i = 0;
+    l += blocHeight + 5;
   }
 }
 
