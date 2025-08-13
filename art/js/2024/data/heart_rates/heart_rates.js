@@ -34,7 +34,7 @@ var sketch = function (p) {
       // Call the createParticles function to create particles for the current file
       createParticles();
     } else {
-      console.error("heartRateData is undefined or null");
+      //console.error("heartRateData is undefined or null");
     }
     p.frameRate(60);
   };
@@ -91,7 +91,7 @@ var sketch = function (p) {
       }
 
       p.noLoop();
-      console.log(
+      /* console.log(
         "Number of red: ",
         nbRed,
         " Orange:",
@@ -100,7 +100,7 @@ var sketch = function (p) {
         nbLB,
         " back: ",
         nbBlack
-      );
+      ); */
     }
   };
 

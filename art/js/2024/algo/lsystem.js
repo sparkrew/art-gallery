@@ -68,7 +68,7 @@ var sketch = function (p) {
   }
 
   p.draw = function () {
-    console.log(thestring);
+    //console.log(thestring);
     // draw the current character in the string:
     drawIt(thestring[whereinstring]);
 

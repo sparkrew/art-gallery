@@ -259,9 +259,9 @@ var sketch = function (p) {
         // Initialize previous data to match the first frame
         previousCurrents = JSON.parse(JSON.stringify(oceanCurrents));
 
-        console.log("Tide Levels:", tideLevels);
-        console.log("Water Temperatures:", waterTemps);
-        console.log("Ocean Currents:", oceanCurrents);
+        //console.log("Tide Levels:", tideLevels);
+        //console.log("Water Temperatures:", waterTemps);
+        //console.log("Ocean Currents:", oceanCurrents);
       })
       .catch((error) => console.error("API Fetch Error:", error));
   }

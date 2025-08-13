@@ -41,7 +41,7 @@ var sketch = function (p) {
     });*/
 
     max_nb_iteration = p.random(nb / 2, nb);
-    console.log(max_nb_iteration);
+    //console.log(max_nb_iteration);
 
     make_grid();
     initiate();

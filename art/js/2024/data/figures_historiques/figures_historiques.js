@@ -69,7 +69,7 @@ var sketch = function (p) {
   };
 
   function mousePressed() {
-    console.log("mouse Pressed");
+    //console.log("mouse Pressed");
     if (isLooping()) p.noLoop();
     else p.loop();
   }
@@ -135,7 +135,7 @@ var sketch = function (p) {
     if (status > drawTime - transitionTime) {
       //reduce alpha
       var decreaseTime = drawTime - status;
-      console.log(decreaseTime);
+      //console.log(decreaseTime);
 
       var currentOpacity = p.map(
         transitionTime - decreaseTime,
@@ -179,13 +179,13 @@ var sketch = function (p) {
       startFrame = p.frameCount;
       var nbArtworks = Math.round(p.random(minArtworks, maxArtworks));
       var randomStart = Math.round(p.random(0, 276 - nbArtworks));
-      console.log("randomStart", randomStart);
+      //console.log("randomStart", randomStart);
 
       selection = data.slice(randomStart, randomStart + nbArtworks);
-      console.log("new selection", selection);
+      //console.log("new selection", selection);
 
       nbSteps = selection.length - 1;
-      console.log("nb Steps", nbSteps);
+      //console.log("nb Steps", nbSteps);
 
       drawTime = 800;
     }

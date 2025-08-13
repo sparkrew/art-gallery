@@ -55,7 +55,7 @@ var sketch = function (p) {
       let g = p.map(this.flower["sepalWidth"], minSw, maxSw, 0.0, 120);
       let b = p.map(this.flower["petalWidth"], minPw, maxPw, 0.0, 120);
       let h = r + g + b;
-      console.log(h);
+      //console.log(h);
       p.fill(h, 100, 50);
 
       //p.fill(r, g, b);

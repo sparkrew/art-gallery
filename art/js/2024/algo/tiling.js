@@ -61,7 +61,7 @@ var sketch = function (p) {
 
   function makeTile(x, y, size) {
     var letsTry = Math.floor(p.random(100));
-    console.log(letsTry);
+    //console.log(letsTry);
 
     p.fill(0, 0, 100, 250);
 

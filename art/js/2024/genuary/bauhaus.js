@@ -190,7 +190,7 @@ var sketch = function (p) {
           } else {
             randint = object_number;
           }
-          console.log(randint);
+          //console.log(randint);
 
           if (randint === 0) {
             // Push square
