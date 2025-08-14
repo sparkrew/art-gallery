@@ -21,7 +21,6 @@
           <li><a href="publications/publications.html">Publications</a></li>
           <li><a href="art-history/art-history.html">Art History</a></li>
           <li><a href="contact/contact.html">Contact</a></li>
-          <!--          <li><a href="../convert/html/test.html">Pandoc</a></li> -->
         </ul>
       </nav>
       <div id="filters">
@@ -71,10 +70,9 @@
       </div>
       <script>
         var artworks;
-        let codeAffiche = false;
-        let currentP5Instance;
-        let currentSketchPath;
-        let path;
+        let isDisplayed = false;
+        let artworkInstance;
+        let artworkPath;
         let artistName;
         let year;
         let repo;
@@ -111,16 +109,12 @@
         loadData().then(() => {
           function executeArtwork(artwork) {
             artworkContainer.innerHTML = "";
-            const buttons = document.getElementById("buttons-container");
-            dataButton.style.display = "none";
 
-            currentSketchPath = artwork.src;
+            artworkPath = artwork.src;
             artworkName = artwork.name;
             artistName = artwork.artist;
             year = artwork.year;
             repo = artwork.repo;
-
-            year = artwork.year;
             type = artwork.type;
             data = artwork.data;
 
@@ -133,20 +127,20 @@
               dataButton.style.display = "block";
             }
 
-            if (currentP5Instance) {
-              currentP5Instance.remove();
-              currentP5Instance = null;
+            if (artworkInstance) {
+              artworkInstance.remove();
+              artworkInstance = null;
             }
 
-            const oldScript = document.getElementById("dynamic-script");
+            const oldScript = document.getElementById("current-script");
             if (oldScript) oldScript.remove();
 
             const script = document.createElement("script");
-            script.src = currentSketchPath;
-            script.id = "dynamic-script";
+            script.src = artworkPath;
+            script.id = "current-script";
             script.onload = () => {
               if (typeof sketch === "function") {
-                currentP5Instance = new p5(sketch, artworkContainer);
+                artworkInstance = new p5(sketch, artworkContainer);
               }
             };
 
@@ -159,7 +153,7 @@
             container.appendChild(el);
 
             el.addEventListener("mouseover", () => {
-              codeAffiche = false;
+              isDisplayed = false;
               executeArtwork(artwork);
             });
           }
@@ -242,38 +236,36 @@
           document
             .getElementById("artwork-code")
             .addEventListener("click", () => {
-              console.log(codeAffiche);
-              if (!currentSketchPath) {
+              if (!artworkPath) {
                 alert("Aucune œuvre sélectionnée !");
                 return;
               }
 
-              if (!codeAffiche) {
-                fetch(currentSketchPath)
+              if (!isDisplayed) {
+                fetch(artworkPath)
                   .then((res) => res.text())
                   .then((code) => {
-                    if (currentP5Instance) {
-                      currentP5Instance.remove();
-                      currentP5Instance = null;
+                    if (artworkInstance) {
+                      artworkInstance.remove();
+                      artworkInstance = null;
                     }
                     artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
                   });
-                codeAffiche = true;
-                console.log(codeAffiche);
+                isDisplayed = true;
               } else {
                 artworkContainer.innerHTML = "";
 
-                const oldScript = document.getElementById("dynamic-script");
+                const oldScript = document.getElementById("current-script");
                 if (oldScript) oldScript.remove();
 
                 const script = document.createElement("script");
-                script.src = currentSketchPath;
-                script.id = "dynamic-script";
+                script.src = artworkPath;
+                script.id = "current-script";
                 script.onload = () => {
                   if (typeof sketch === "function") {
-                    currentP5Instance = new p5(sketch, artworkContainer);
+                    artworkInstance = new p5(sketch, artworkContainer);
                   }
-                  codeAffiche = false;
+                  isDisplayed = false;
                 };
                 document.body.appendChild(script);
               }

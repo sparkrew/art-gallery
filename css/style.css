@@ -361,11 +361,11 @@ font-size: var(--fs-4);
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-left: 5.5rem;
-  margin-right: 5.5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
   padding:2rem;
   align-items: center;
-background-color: rgb(49, 48, 47,0.25);
+  border:var(--orange) 2px solid
 }
 #udem-logo{
   height: 10rem;
@@ -378,25 +378,16 @@ background-color: rgb(49, 48, 47,0.25);
   display: flex ;
   align-items: center;
 }
-#course-repo-button{
-  border: var(--grey) 2px solid;
-  padding:0.5rem;
-}
-#course-repo-button:hover{
-  cursor: pointer;
-  border: var(--orange) 2px solid;
-  background-color: var(--orange);
-  color:var(--white);
-  padding:0.5rem;
-}
-.repo-button,.read-button{
+
+
+.repo-button,.read-button,#course-repo-button{
   color: var(--grey);
   display: inline-block;
-  border: var(--grey) 2px solid;
+  border: var(--orange) 2px solid;
   padding: 0.5rem;
   width: fit-content;
 }
-.repo-button:hover,.read-button:hover{
+.repo-button:hover,.read-button:hover,#course-repo-button:hover{
   cursor: pointer;
   color: var(--white);
   background-color: var(--orange);
@@ -558,4 +549,15 @@ font-family: var(--title-font);
   width: 50%;
       height: 100%;
 object-fit: cover
+}
+#gallery-button{
+  border: var(--orange)1px solid;
+  padding: 1rem;
+}
+#gallery-button:hover{
+  border: var(--orange)1px solid;
+  background-color: var(--orange);
+  color:var(--white);
+  padding: 1rem;
+  cursor: pointer;
 }

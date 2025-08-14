@@ -1,11 +1,11 @@
 let font;
-let squares = [];
+let squaresLetters = [];
 let isGenerated = false;
 let isFree = true;
-let carres = [];
+let squaresTransition = [];
 let cols;
 let rows;
-let g;
+let graphic;
 let step;
 let size;
 let colors = [
@@ -16,6 +16,7 @@ let colors = [
   ["#F2BD3D"],
 ];
 let randomColor;
+let colorIndex;
 let galleryZone;
 let animationStarted = false;
 let animationStartTime = 0;
@@ -27,32 +28,36 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(239, 239, 239);
-  g = createGraphics(windowWidth, windowHeight);
+  graphic = createGraphics(windowWidth, windowHeight);
   size = windowWidth / 30;
   cols = ceil(windowWidth / size);
   rows = ceil(windowHeight / size);
   for (let i = 0; i < cols * size; i = i + size) {
     for (let j = 0; j < rows * size; j = j + size) {
-      carres.push(new Carre(i, j));
+      squaresTransition.push(new SquareTransition(i, j));
     }
   }
 
-  g.fill(255);
-  g.textFont(font);
-  g.textSize(windowWidth / 8);
-  g.textAlign(CENTER, CENTER);
-  g.text("Software \nPerforming \nArts Gallery", width / 2, height / 2 - 50);
+  graphic.fill(255);
+  graphic.textFont(font);
+  graphic.textSize(windowWidth / 8);
+  graphic.textAlign(CENTER, CENTER);
+  graphic.text(
+    "Software \nPerforming \nArts Gallery",
+    width / 2,
+    height / 2 - 50
+  );
   randomColor = Math.floor(Math.random(2) * colors.length);
 }
 let fillPoints = [];
 
 function generateFillPoints() {
-  step = 16;
+  step = width / 95;
   for (let y = 0; y < height; y += step) {
     for (let x = 0; x < width; x += step) {
-      let col = g.get(x, y);
+      let col = graphic.get(x, y);
       if (col[0] == 255) {
-        let colorIndex =
+        colorIndex =
           Math.floor(x / step + y / step) % colors[randomColor].length;
         let c = colors[randomColor][colorIndex];
         fillPoints.push({ x, y, c });
@@ -67,20 +72,20 @@ function draw() {
   if (!isGenerated) {
     generateFillPoints();
     for (let pt of fillPoints) {
-      let square = new Square(pt.x, pt.y, pt.c);
+      let square = new SquareLetter(pt.x, pt.y, pt.c);
       square.isLetter = true;
 
       if (pt.x > width / 2 - (1 / 10) * width && pt.y > (height / 3) * 2) {
         square.isGallery = true;
       }
 
-      squares.push(square);
+      squaresLetters.push(square);
     }
     isGenerated = true;
   }
   let isMoving = false;
 
-  squares.forEach((square) => {
+  squaresLetters.forEach((square) => {
     square.show();
     square.move();
     if (random(1) < 0.01) square.speed = 0.5;
@@ -92,18 +97,19 @@ function draw() {
   if (!isMoving && !animationStarted) {
     animationStarted = true;
     animationStartTime = millis();
-    carres.forEach((carre) => {
-      carre.fadeDelay = random(0, 2000);
+    squaresTransition.forEach((square) => {
+      square.appearance = random(0, 2000);
+      console.log("ok");
     });
   }
   if (animationStarted && !animationFinished) {
     let currentTime = millis() - animationStartTime;
     //console.log(currentTime);
-    carres.forEach((carre) => {
-      carre.update(currentTime);
-      carre.show();
+    squaresTransition.forEach((square) => {
+      square.update(currentTime);
+      square.show();
     });
-    if (carres.every((c) => !c.isFree)) {
+    if (squaresTransition.every((c) => !c.isFree)) {
       setTimeout(() => {
         animationFinished = true;
       }, 1000);
@@ -112,12 +118,12 @@ function draw() {
 
   if (animationFinished) {
     background(0);
-    window.location.href = "pages/gallery.html";
-    return;
+    //window.location.href = "pages/gallery.html";
+    //return;
   }
 }
 
-class Square {
+class SquareLetter {
   constructor(x, y, color) {
     this.start = x;
     this.x = x;
@@ -149,20 +155,20 @@ class Square {
     }
   }
 }
-class Carre {
+class SquareTransition {
   constructor(x, y) {
     this.x = x;
     this.y = y;
     this.size = size;
     this.isFree = true;
-    this.fadeDelay = 0;
+    this.appearance = 0;
     this.color;
     this.shouldShow = false;
   }
   show() {
     if (this.shouldShow) {
       randomColor = Math.floor(Math.random(2) * colors.length);
-      let colorIndex =
+      colorIndex =
         Math.floor(this.x / step + this.y / step) % colors[randomColor].length;
       this.color = colors[randomColor][colorIndex];
       fill(this.color);
@@ -170,7 +176,7 @@ class Carre {
     }
   }
   update(currentTime) {
-    if (currentTime >= this.fadeDelay) {
+    if (currentTime >= this.appearance) {
       this.shouldShow = true;
       this.isFree = false;
     }
@@ -179,14 +185,13 @@ class Carre {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   g = createGraphics(windowWidth, windowHeight);
-  g.fill(255);
-  g.textFont(font);
-  g.textSize(windowWidth / 8);
-  console.log(windowWidth / 8);
-  g.textAlign(CENTER, CENTER);
-  g.text("Software \nPerforming \nArts", width / 2, height / 2);
+  graphic.fill(255);
+  graphic.textFont(font);
+  graphic.textSize(windowWidth / 8);
+  graphic.textAlign(CENTER, CENTER);
+  graphic.text("Software \nPerforming \nArts", width / 2, height / 2);
 
   fillPoints = [];
-  squares = [];
+  squaresLetters = [];
   isGenerated = false;
 }

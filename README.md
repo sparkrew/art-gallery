@@ -1,39 +1,37 @@
-# Software Performing Art
+# Software Performing Art Gallery
 
-Le but de ce site web est de présenter les oeuvres créées par les élèves du cours d'art algorithmique de l'Université de Montréal.
+Ce site web a pour but de mettre en avant les oeuvres réalisées par les élèves du [cours d’art algorithmique de l’Université de Montréal](https://github.com/rethread-studio/algorithmic-art-course)
+
+The aim of this web site is to show artworks created by students in the [algorithmic art course at Université de Montréal](https://github.com/rethread-studio/algorithmic-art-course)
 
 ## Ajouter des oeuvres
-La version actuelle du site ne permet d'afficher que les oeuvres réalisées à l'aide de la librairie javascript p5.js.
-Les oeuvres doivent être codées en mode instance de la forme 
+The current version of the site only allows displaying works created using the JavaScript library p5.js.
+The works must be coded in instance mode in the form of
 
 `var sketch = function(p){(code)}`
-
-Dans la fonction setup la façon d'initialiser le canva est la suivante :
+In the setup function, the way to initialize the canvas is as follows
 
 ```bash
-    let container = document.querySelector(".artwork-container") || p._userNode;
+    let container = document.getElementById("artwork-container");
     width = container.offsetWidth;
     height = container.offsetHeight;
     const canvas = p.createCanvas(width, height);
+    canvas.parent("artwork-container");
 ```
 
-
-Pour ajouter les oeuvres à la galerie il suffit ensuite de les ajouter dans le fichier artworks.json en suivant le format suivant :
+To add artworks to the gallery you have to add them to the artworks.json file following this format :
 
 ```bash
-  {
-    "name": "nom de l'oeuvre",
-    "artist": "nom de l'artiste",
-    "year": "année de réalisation",
-    "type": "Genuary / Algorithm Based / Data Based / Exquisite Corpse",
-    "repo": "lien vers le repo gitHub",
-    "src": "../art/emplacement du fichier"
+{
+    "name": "artwork name",
+    "ref": "artwork reference",
+    "artist": "artist name",
+    "year": "year of creation",
+    "type": "Genuary / Algorithm Based / Data Based",
+    "repo": "link to the github repo",
+    "data": "link to the dataset (only if type == "Data Based")",
+    "src": "file path"
   }
-```
-À noter que pour une oeuvre Data Based il faut rajouter le lien vers le jeu de données :
-
-```bash
-
-"data": "lien vers le jeu de donnée",
  
 ```
+

@@ -1,18 +1,15 @@
-let size = 20;
+let size;
 let rows;
 let cols;
-
 let width;
 let height;
-
 let boxes = [];
-
 let font;
 let msg = "404";
 let points = [];
 let fontX;
 let fontY;
-let fontSize = 700;
+let fontSize;
 let isLetterTab = [];
 let container = document.getElementById("error404-container");
 
@@ -26,13 +23,16 @@ function setup() {
   canvas = createCanvas(width, height, WEBGL);
   canvas.parent(container);
   angleMode(DEGREES);
+  size = width / 90;
+  fontSize = width / 3;
   fontX = -width / 3.2 + 6;
   fontY = height / 3.5 - 12;
   cols = width / size;
   rows = height / size;
 
   points = font.textToPoints(msg, fontX, fontY, fontSize);
-  console.log(points);
+  textAlign(CENTER, CENTER);
+
   for (let i = 0; i < cols; i++) {
     boxes[i] = [];
     isLetterTab[i] = [];
@@ -63,7 +63,6 @@ function setup() {
 
 function draw() {
   background(251, 46, 15);
-  let distance;
   /* fill(0, 0, 0);
   for (let i = 0; i < points.length; i++) {
     ellipse(points[i].x, points[i].y, 10, 10);
@@ -102,4 +101,7 @@ class Box {
     box(size - (1 / 3) * size);
     pop();
   }
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

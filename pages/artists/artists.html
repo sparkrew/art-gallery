@@ -105,21 +105,13 @@
               }
               a++;
             });
-            //artistArtworks.textContent = artist[2];
+
             artistCard.appendChild(artistArtworks);
 
             const artistNamePopup = document.createElement("p");
             artistNamePopup.className = "artistNamePopup";
             artistNamePopup.textContent = artist[0];
             artistsListPopup.appendChild(artistNamePopup);
-
-            /*  const repoButton = document.createElement("div");
-            repoButton.className = "repo-button";
-            repoButton.textContent = "Repo";
-            repoButton.addEventListener("click", () => {
-              window.location.href = artist.repo;
-            });
-            artistCard.appendChild(repoButton); */
 
             artistsContainer.appendChild(artistCard);
           });
@@ -128,7 +120,6 @@
           });
           closePopup.addEventListener("click", () => {
             artistsPopup.style.display = "none";
-            console.log("fermé");
           });
           courseRepoButton.addEventListener("click", () => {
             window.location.href =
