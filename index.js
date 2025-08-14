@@ -99,7 +99,6 @@ function draw() {
     animationStartTime = millis();
     squaresTransition.forEach((square) => {
       square.appearance = random(0, 2000);
-      console.log("ok");
     });
   }
   if (animationStarted && !animationFinished) {

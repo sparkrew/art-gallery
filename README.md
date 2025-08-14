@@ -1,8 +1,6 @@
 # Software Performing Art Gallery
 
-Ce site web a pour but de mettre en avant les oeuvres réalisées par les élèves du [cours d’art algorithmique de l’Université de Montréal](https://github.com/rethread-studio/algorithmic-art-course)
-
-The aim of this web site is to show artworks created by students in the [algorithmic art course at Université de Montréal](https://github.com/rethread-studio/algorithmic-art-course)
+The aim of this web site is to show artworks created by students in the [algorithmic art course](https://github.com/rethread-studio/algorithmic-art-course) at Université de Montréal
 
 ## Ajouter des oeuvres
 The current version of the site only allows displaying works created using the JavaScript library p5.js.
