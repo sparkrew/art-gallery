@@ -129,8 +129,8 @@ function draw() {
 
   if (animationFinished) {
     background(0);
-    //window.location.href = "pages/gallery.html";
-    //return;
+    window.location.href = "pages/gallery.html";
+    return;
   }
 }
 
