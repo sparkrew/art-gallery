@@ -21,6 +21,16 @@ let galleryZone;
 let animationStarted = false;
 let animationStartTime = 0;
 let animationFinished = false;
+let fs; //font size
+
+function resizingText(minRem, vw, maxRem) {
+  const remToPx = 16;
+  const minPx = minRem * remToPx;
+  const maxPx = maxRem * remToPx;
+  const vwPx = (vw / 100) * windowWidth;
+
+  return Math.max(minPx, Math.min(vwPx, maxPx));
+}
 
 function preload() {
   font = loadFont("assets/fonts/Roboto-Bold.ttf");
@@ -30,6 +40,8 @@ function setup() {
   background(239, 239, 239);
   graphic = createGraphics(windowWidth, windowHeight);
   size = windowWidth / 30;
+  fs = resizingText(0.5, 13, 500);
+
   cols = ceil(windowWidth / size);
   rows = ceil(windowHeight / size);
   for (let i = 0; i < cols * size; i = i + size) {
@@ -40,7 +52,7 @@ function setup() {
 
   graphic.fill(255);
   graphic.textFont(font);
-  graphic.textSize(windowWidth / 8);
+  graphic.textSize(fs);
   graphic.textAlign(CENTER, CENTER);
   graphic.text(
     "Software \nPerforming \nArts Gallery",
@@ -116,9 +128,9 @@ function draw() {
   }
 
   if (animationFinished) {
-    //background(0);
-    window.location.href = "pages/gallery.html";
-    return;
+    background(0);
+    //window.location.href = "pages/gallery.html";
+    //return;
   }
 }
 
@@ -183,10 +195,11 @@ class SquareTransition {
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  g = createGraphics(windowWidth, windowHeight);
+  graphic = createGraphics(windowWidth, windowHeight);
   graphic.fill(255);
   graphic.textFont(font);
-  graphic.textSize(windowWidth / 8);
+  fs = resizingText(0.5, 13, 500);
+  graphic.textSize(fs);
   graphic.textAlign(CENTER, CENTER);
   graphic.text("Software \nPerforming \nArts", width / 2, height / 2);
 
