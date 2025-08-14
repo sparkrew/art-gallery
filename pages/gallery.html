@@ -109,6 +109,7 @@
         loadData().then(() => {
           function executeArtwork(artwork) {
             artworkContainer.innerHTML = "";
+            dataButton.style.display = "none";
 
             artworkPath = artwork.src;
             artworkName = artwork.name;
