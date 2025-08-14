@@ -116,7 +116,7 @@ function draw() {
   }
 
   if (animationFinished) {
-    background(0);
+    //background(0);
     window.location.href = "pages/gallery.html";
     return;
   }
