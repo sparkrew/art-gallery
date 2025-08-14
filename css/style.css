@@ -108,9 +108,9 @@ width: 20vw;
 display: none;
 }
 #cartel {
-    
     height: 85vh;
     width: 20vw;
+    padding-left: 4vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,6 +289,7 @@ border: 1px solid #474544;
 padding-left:0.7rem;
 padding-right:0.7rem;
 background-color: var(--white);
+color:var(--grey);
 }
 .filters-elements:hover{
 cursor: pointer;
