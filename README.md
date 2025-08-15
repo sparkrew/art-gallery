@@ -1,16 +1,16 @@
 # Software Performing Art Gallery
 
-The aim of this web site is to show artworks created by students in the [algorithmic art course](https://github.com/rethread-studio/algorithmic-art-course) at Université de Montréal
+The aim of this web site is to show artworks created by students in the [algorithmic art course](https://github.com/rethread-studio/algorithmic-art-course) at Université de Montréal.
 
 ## Add artworks
-The current version of the site only allows displaying works created using the JavaScript library p5.js.
-The works must be coded in instance mode in the form of
+The current version of the site only allows displaying artworks created using the JavaScript library p5.js.
+The artworks must be coded in instance mode in the form of :
 
 `var sketch = function(p){(code)}`
 
 All p5.js functions must been called as methods of this instance (e.g., p.createCanvas(), p.background()).
 
-In the setup function, the way to initialize the canvas is as follows
+In the setup function, the way to initialize the canvas is as follows :
 
 ```bash
     let container = document.getElementById("artwork-container");
