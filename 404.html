@@ -14,16 +14,14 @@
   </head>
   <body>
     <script>
-      // 1. On force l'URL à revenir à la racine du site
+
       history.replaceState({}, "", "https://software-performing.art/");
 
-      // 2. On convertit tous les liens relatifs en liens absolus
       const domain = "https://software-performing.art";
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("a[href]").forEach((link) => {
           const href = link.getAttribute("href");
           if (href && !href.startsWith("http") && !href.startsWith("#")) {
-            // On corrige le lien
             link.setAttribute(
               "href",
               domain + (href.startsWith("/") ? href : "/" + href)
@@ -38,9 +36,9 @@
         <ul>
           <li><a href="pages/gallery.html">Gallery</a></li>
           <li><a href="pages/artists/artists.html">Artists</a></li>
-          <li><a href="pages/publications.html">Publications</a></li>
-          <li><a href="pages/art-history.html">Art History</a></li>
-          <li><a href="pages/contact/contact.html">Contact</a></li>
+          <li><a href="pages/biblio/biblio.html">Bibliography</a></li>
+          <li><a href="pages/art-history/art-history.html">Art History</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div id="error404-container"></div>
