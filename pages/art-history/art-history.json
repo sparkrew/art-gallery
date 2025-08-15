@@ -8,23 +8,23 @@
   },
   {
     "date": "1960s",
-    "srcColor": "../../assets/images/color/udem.png",
-    "srcBW": "../../assets/images/bw/udem-bw.png",
+    "srcColor": "../../assets/images/color/vera.png",
+    "srcBW": "../../assets/images/bw/vera-bw.png",
     "page": "./moment.html?id=1960s",
-    "text": "Page 1960s"
+    "text": "1960s page"
   },
   {
     "date": "1970s",
-    "srcColor": "../../assets/images/color/udem.png",
-    "srcBW": "../../assets/images/bw/udem-bw.png",
+    "srcColor": "../../assets/images/color/vera.png",
+    "srcBW": "../../assets/images/bw/vera-bw.png",
     "page": "./moment.html?id=1970s",
-    "text": "Page 1970s"
+    "text": "1970s page"
   },
   {
-    "date": "1970s",
-    "srcColor": "../../assets/images/color/udem.png",
-    "srcBW": "../../assets/images/bw/udem-bw.png",
-    "page": "./moment.html?id=1970s",
-    "text": "Page 1970s"
+    "date": "1980s",
+    "srcColor": "../../assets/images/color/vera.png",
+    "srcBW": "../../assets/images/bw/vera-bw.png",
+    "page": "./moment.html?id=1980s",
+    "text": "1980s page"
   }
 ]
