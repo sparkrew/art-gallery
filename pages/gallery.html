@@ -18,7 +18,7 @@
         <ul>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="artists/artists.html">Artists</a></li>
-          <li><a href="publications/publications.html">Publications</a></li>
+          <li><a href="biblio/biblio.html">Bibliopgraphy</a></li>
           <li><a href="art-history/art-history.html">Art History</a></li>
           <li><a href="contact/contact.html">Contact</a></li>
         </ul>
@@ -37,9 +37,7 @@
           Algorithm
         </button>
         <button class="filters-elements" id="data-filter">Data</button>
-        <button class="filters-elements" id="exquisite-corpse-filter">
-          Exquisite Corpse
-        </button>
+
         <button class="filters-elements" id="show-all-filter">Show all</button>
       </div>
       <div id="art-container">
@@ -173,8 +171,7 @@
                     if (filter === "algorithm")
                       return artwork.type === "Algorithm Based";
                     if (filter === "data") return artwork.type === "Data Based";
-                    if (filter === "exquisite-corpse")
-                      return artwork.type === "Exquisite Corpse";
+
                     if (filter === "2024") return artwork.year === "2024";
                     if (filter === "2025") return artwork.year === "2025";
                   });
@@ -217,11 +214,6 @@
             .getElementById("data-filter")
             .addEventListener("click", () => {
               filterSelection("data");
-            });
-          document
-            .getElementById("exquisite-corpse-filter")
-            .addEventListener("click", () => {
-              filterSelection("exquisite-corpse");
             });
 
           document

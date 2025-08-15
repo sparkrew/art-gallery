@@ -133,6 +133,10 @@ function draw() {
     return;
   }
 }
+function mousePressed() {
+  window.location.href = "pages/gallery.html";
+  return;
+}
 
 class SquareLetter {
   constructor(x, y, color) {

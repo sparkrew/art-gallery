@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Performing Art</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../artists/artists.html">Artists</a></li>
+          <li><a href="biblio.html">Bibliography</a></li>
+          <li><a href="../art-history/art-history.html">Art History</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="biblios"></div>
+      <script>
+        const container = document.getElementById("biblios");
+
+        let biblios;
+        async function loadData() {
+          const response = await fetch("./biblio.json");
+          biblios = await response.json();
+        }
+        loadData().then(() => {
+          if (biblios.length === 0) {
+            const noBiblioCard = document.createElement("div");
+            noBiblioCard.id = "noBiblioCard";
+
+            const el = document.createElement("div");
+            el.textContent = "No bibliography";
+            noBiblioCard.appendChild(el);
+
+            const galleryButton = document.createElement("div");
+            galleryButton.id = "gallery-button";
+            galleryButton.textContent = "Back to the gallery";
+            galleryButton.addEventListener("click", () => {
+              window.location.href = "../../pages/gallery.html";
+            });
+            noBiblioCard.appendChild(galleryButton);
+
+            container.appendChild(noBiblioCard);
+          }
+          biblios.forEach((biblio) => {
+            const biblioCard = document.createElement("div");
+            biblioCard.className = "biblioCard";
+
+            const biblioName = document.createElement("div");
+            biblioName.className = "biblioName";
+            biblioName.textContent = biblio.name;
+            biblioCard.appendChild(biblioName);
+
+            const biblioYear = document.createElement("div");
+            biblioYear.className = "biblioYear";
+            biblioYear.textContent = biblio.year;
+            biblioCard.appendChild(biblioYear);
+
+            const biblioAuthor = document.createElement("div");
+            biblioAuthor.className = "biblioAuthor";
+            biblioAuthor.textContent = biblio.authors;
+            biblioCard.appendChild(biblioAuthor);
+
+            const readButton = document.createElement("div");
+            readButton.className = "read-button";
+            readButton.textContent = "Read";
+            readButton.addEventListener("click", () => {
+              window.location.href = biblio.link;
+            });
+            biblioCard.appendChild(readButton);
+            container.appendChild(biblioCard);
+          });
+        });
+      </script>
+    </main>
+    <!-- <footer>
+      <p>Footer</p>
+    </footer> -->
+  </body>
+</html>

@@ -1,8 +1,3 @@
-/* Styles généraux /
-/@font-face {
- font-family: 'Made-Infinity';
- src: url('../assets/fonts/MADEINFINITYBesidePersonalUse-Medium.otf') format('opentype');
-}*/
 @font-face {
 font-family: 'Kolbano';
 src: url('../assets/fonts/Kolbano-regular.otf') format('opentype');
@@ -388,16 +383,7 @@ font-size: var(--fs-4);
   font-size: var(--fs-5);
 }
 
-
-.repo-button,.read-button,#course-repo-button{
-  color: var(--grey);
-  display: inline-block;
-  border: var(--orange) 2px solid;
-  padding: 0.5vw;
-  width: fit-content;
-}
-.repo-button:hover,.read-button:hover,#course-repo-button:hover{
-  cursor: pointer;
+.read-button,.repo-button,#course-repo-button{
   color: var(--white);
   background-color: var(--orange);
   display: inline-block;
@@ -405,6 +391,16 @@ font-size: var(--fs-4);
   padding: 0.5vw;
   width: fit-content;
 }
+.read-button:hover,.repo-button:hover,#course-repo-button:hover{
+  cursor: pointer;
+  color: var(--orange);
+  background-color: var(--white);
+  display: inline-block;
+  border: var(--orange) 2px solid;
+  padding: 0.5vw;
+  width: fit-content;
+}
+
 #artists-popup{
   display: none;
   position: fixed;
@@ -448,7 +444,7 @@ scroll-snap-type: y mandatory;
   font-size: var(--fs-5);
 }
 
-#publications{
+#biblios{
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
@@ -456,7 +452,7 @@ scroll-snap-type: y mandatory;
   justify-content: center;
   gap: 2vw;
 }
-.publicationCard{
+.biblioCard{
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -469,10 +465,10 @@ text-align: center;
 font-family: var(--title-font);
 font-size: var(--fs-5);
 }
-.publicationAuthor{
+.biblioAuthor{
   padding: 1vh;
 }
-.publicationName{
+.biblioName{
   color:var(--orange);
   height: 30%;
   align-content: center;
@@ -480,7 +476,7 @@ font-size: var(--fs-5);
   padding-right: 1vw;
 }
 
-#noPublicationCard{
+#noBiblioCard{
 display: flex;
 flex-direction: column;
 justify-content: center;

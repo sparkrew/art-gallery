@@ -3,24 +3,28 @@
     "date": "1950s",
     "srcColor": "../../assets/images/color/vera.png",
     "srcBW": "../../assets/images/bw/vera-bw.png",
-    "page": "./moments/1950s.html"
+    "page": "./moment.html?id=1950s",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec\nvehicula nisi. Nam enim sem, vulputate ac neque nec, venenatis\neleifend nisi. Mauris nec lorem vel quam dignissim dapibus sit amet\n eget nibh. Fusce vitae dapibus eros. Quisque ultrices pellentesque\n risus. Quisque non interdum nibh. Aliquam efficitur ante vitae\n vestibulum lacinia. Vestibulum ante ipsum primis in faucibus orci\n luctus et ultrices posuere cubilia curae; Ut cursus nec tortor in\n faucibus. Ut fermentum sapien lorem, vel vehicula nulla consectetur\n at. Mauris semper, turpis tincidunt dictum consequat, enim risus\n pulvinar tellus, at aliquam risus purus non tellus. Maecenas ut\n auctor justo, sit amet maximus elit. Nunc finibus, erat at accumsan\n pellentesque, ante mauris faucibus magna, ut malesuada felis leo ut\n nulla. Fusce dignissim ac elit eget condimentum. Nulla euismod\n fermentum mauris, quis viverra nulla sollicitudin sollicitudin. Sed\n eget orci vitae ligula blandit rutrum et in eros. Sed at justo\n felis. Nulla at lacus congue lectus finibus luctus non id purus."
   },
   {
     "date": "1960s",
     "srcColor": "../../assets/images/color/udem.png",
     "srcBW": "../../assets/images/bw/udem-bw.png",
-    "page": "./moments/1950s.html"
+    "page": "./moment.html?id=1960s",
+    "text": "Page 1960s"
   },
   {
     "date": "1970s",
     "srcColor": "../../assets/images/color/udem.png",
     "srcBW": "../../assets/images/bw/udem-bw.png",
-    "page": "./moments/1950s.html"
+    "page": "./moment.html?id=1970s",
+    "text": "Page 1970s"
   },
   {
     "date": "1970s",
     "srcColor": "../../assets/images/color/udem.png",
     "srcBW": "../../assets/images/bw/udem-bw.png",
-    "page": "./moments/1950s.html"
+    "page": "./moment.html?id=1970s",
+    "text": "Page 1970s"
   }
 ]
