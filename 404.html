@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="https://software-performing.art/" target="_blank" />
     <title>404</title>
     <link rel="stylesheet" href="../../css/style.css" />
 
@@ -14,6 +13,26 @@
     <script src="../../libraries/rhill-voronoi-core.js"></script>
   </head>
   <body>
+    <script>
+      // 1. On force l'URL à revenir à la racine du site
+      history.replaceState({}, "", "https://software-performing.art/");
+
+      // 2. On convertit tous les liens relatifs en liens absolus
+      const domain = "https://software-performing.art";
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("a[href]").forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href && !href.startsWith("http") && !href.startsWith("#")) {
+            // On corrige le lien
+            link.setAttribute(
+              "href",
+              domain + (href.startsWith("/") ? href : "/" + href)
+            );
+          }
+        });
+      });
+    </script>
+
     <main>
       <nav id="nav">
         <ul>
@@ -93,10 +112,6 @@
 
       function draw() {
         background(251, 46, 15);
-        /* fill(0, 0, 0);
-  for (let i = 0; i < points.length; i++) {
-    ellipse(points[i].x, points[i].y, 10, 10);
-  } */
         for (let i = 0; i < cols; i++) {
           for (let j = 0; j < rows; j++) {
             boxes[i][j].isLetter = isLetterTab[i][j];
