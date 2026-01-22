@@ -189,7 +189,6 @@
             el.addEventListener("mouseover", () => {
               isDisplayed = false;
               executeArtwork(artwork);
-              updateActiveArtwork(artwork.name);
             });
             
             el.addEventListener("click", () => {
@@ -207,9 +206,27 @@
               }
             });
           }
+          
+          // Add scroll indicators
+          function updateScrollIndicators() {
+            const container = document.getElementById("artwork-name-container");
+            const hasScroll = container.scrollHeight > container.clientHeight;
+            const isAtTop = container.scrollTop <= 5;
+            const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
+            
+            if (hasScroll) {
+              container.classList.toggle('scrollable-top', !isAtTop);
+              container.classList.toggle('scrollable-bottom', !isAtBottom);
+            } else {
+              container.classList.remove('scrollable-top', 'scrollable-bottom');
+            }
+          }
+          
           function showArtworks(artworks) {
             artworks.sort(() => Math.random() - 0.5);
             artworks.forEach((artwork) => showArtwork(artwork));
+            // Update scroll indicators after artworks are added
+            setTimeout(updateScrollIndicators, 100);
           }
           function updateActiveFilter(activeFilter) {
             // Remove active class from all filters
@@ -239,6 +256,7 @@
           function filterSelection(filter) {
             container.innerHTML = "";
             artworkContainer.innerHTML = "";
+            
             const filteredArtworks =
               filter === "all"
                 ? artworks
@@ -265,9 +283,17 @@
             }
           }
 
+          // Update scroll indicators on scroll
+          container.addEventListener('scroll', updateScrollIndicators);
+          container.addEventListener('mouseenter', updateScrollIndicators);
+          
+          // Initial check
+          setTimeout(updateScrollIndicators, 100);
+
           if (isFiltered == false) {
             showArtworks(artworks);
             executeArtwork(artworks[0]);
+            setTimeout(updateScrollIndicators, 200);
           }
 
           document

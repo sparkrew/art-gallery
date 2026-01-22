@@ -25,13 +25,15 @@ src: url('../assets/fonts/Kolbano-regularItalic.otf') format('opentype');
 }
 
 body {
-width: 100vw;
-height: 100vh;
-overflow-y: scroll;
-scroll-snap-type: y mandatory;
-margin: 0;
-padding: 0;
-background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  scroll-behavior: smooth;
 }
 main {
   width: 100vw;
@@ -41,6 +43,7 @@ main {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 footer {
 background-color: var(--white);
@@ -51,30 +54,30 @@ nav{
   margin-top: 2vh;
   margin-bottom: 1vh;
   display: flex;
-  height: 6vh;
-  align-items: center;
-  justify-content: center;
+height: 6vh;
+align-items: center;
+justify-content: center;
   padding: 0 2rem;
 }
 ul{
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  gap: 3rem;
-  font-family: var(--title-font);
+display: flex;
+justify-content: center;
+list-style-type: none;
+gap: 3rem;
+font-family: var(--title-font);
   font-size: var(--fs-3);
   margin: 0;
   padding: 0;
 }
 a{
-  text-decoration: none;
-  color: var(--grey);
+text-decoration: none;
+color: var(--grey);
   transition: color 0.3s ease;
   position: relative;
   padding: 0.5rem 0;
 }
 a:hover {
-  color: var(--orange);
+color: var(--orange);
 }
 a::after {
   content: '';
@@ -90,8 +93,8 @@ a:hover::after {
   width: 100%;
 }
 #art-container {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
@@ -103,16 +106,20 @@ a:hover::after {
   font-size: var(--fs-4);
   font-family: var(--title-font);
   padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 6px;
   border-left: 3px solid transparent;
   color: var(--grey);
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .artwork:hover {
-  color: var(--orange);
+color: var(--orange);
   background-color: rgba(251, 46, 15, 0.05);
   border-left-color: var(--orange);
   transform: translateX(5px);
@@ -127,9 +134,9 @@ a:hover::after {
 }
 
 #artwork-container {
-  width: 85vh;
+width: 85vh;
   min-width: 400px;
-  height: 85vh;
+height: 85vh;
   max-height: calc(100vh - 15vh);
   overflow: hidden;
   background-color: var(--white);
@@ -190,20 +197,62 @@ a:hover::after {
 }
 
 #artwork-container::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 #artwork-name-container {
   overflow-y: auto;
+  overflow-x: hidden;
   height: 85vh;
   max-height: calc(100vh - 15vh);
   width: 20vw;
   min-width: 200px;
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  overscroll-behavior-x: none;
+  position: relative;
+  will-change: scroll-position;
+  isolation: isolate;
+}
+
+/* Visual indicator for scrollable area */
+#artwork-name-container::before {
+  content: '';
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to bottom, var(--white), transparent);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#artwork-name-container::after {
+  content: '';
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to top, var(--white), transparent);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#artwork-name-container.scrollable-top::before,
+#artwork-name-container.scrollable-bottom::after {
+  opacity: 1;
 }
 
 #artwork-name-container:hover {
@@ -211,34 +260,51 @@ a:hover::after {
 }
 
 #artwork-name-container::-webkit-scrollbar {
-  width: 6px;
+  width: 12px;
 }
 
 #artwork-name-container::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(71, 69, 68, 0.08);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 #artwork-name-container::-webkit-scrollbar-thumb {
-  background: rgba(71, 69, 68, 0.2);
-  border-radius: 3px;
+  background: rgba(71, 69, 68, 0.4);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  min-height: 40px;
 }
 
 #artwork-name-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(71, 69, 68, 0.4);
+  background: rgba(251, 46, 15, 0.6);
+}
+
+#artwork-name-container::-webkit-scrollbar-thumb:active {
+  background: rgba(251, 46, 15, 0.8);
+}
+
+/* Firefox scrollbar */
+#artwork-name-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(71, 69, 68, 0.4) rgba(71, 69, 68, 0.08);
 }
 
 #cartel {
-  height: 85vh;
+    height: 85vh;
   max-height: calc(100vh - 15vh);
-  width: 20vw;
+    width: 20vw;
   min-width: 220px;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
-  font-family: var(--title-font);
-  font-size: var(--fs-4);
+    font-family: var(--title-font);
+    font-size: var(--fs-4);
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -256,7 +322,7 @@ a:hover::after {
     
 }
 #artist-name {
-  font-weight: bold;
+    font-weight: bold;
   color: var(--orange);
   font-size: var(--fs-3);
   margin-bottom: 0.5rem;
@@ -450,7 +516,7 @@ textarea {
   gap: 0.5rem;
   border: 2px solid var(--grey);
   padding: 0.75rem 1.25rem;
-  background-color: var(--white);
+background-color: var(--white);
   color: var(--grey);
   font-family: var(--title-font);
   font-size: var(--fs-5);
@@ -470,9 +536,9 @@ textarea {
 }
 
 .filter-button.active {
-  background-color: var(--orange);
+background-color: var(--orange);
   color: var(--white);
-  border-color: var(--orange);
+border-color: var(--orange);
   font-weight: 600;
 }
 
@@ -646,6 +712,7 @@ textarea {
     width: 100%;
     height: auto;
     max-height: 30vh;
+    min-height: 200px;
   }
   
   nav ul {
