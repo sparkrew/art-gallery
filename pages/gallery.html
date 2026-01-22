@@ -24,21 +24,40 @@
         </ul>
       </nav>
       <div id="filters">
-        <div id="dropdown">
-          <button class="filters-elements">Year</button>
-          <div id="dropdown-content">
-            <div class="year-filter" id="2025-filter">2025</div>
-            <div class="year-filter" id="2024-filter">2024</div>
+        <div id="dropdown" class="filter-group">
+          <button class="filter-button" id="year-button">
+            <span>Year</span>
+            <span class="filter-icon">▼</span>
+          </button>
+          <div id="dropdown-content" class="dropdown-menu">
+            <button class="year-filter filter-option" id="2025-filter">
+              <span>2025</span>
+              <span class="filter-count" id="2025-count"></span>
+            </button>
+            <button class="year-filter filter-option" id="2024-filter">
+              <span>2024</span>
+              <span class="filter-count" id="2024-count"></span>
+            </button>
           </div>
         </div>
 
-        <button class="filters-elements" id="genuary-filter">Genuary</button>
-        <button class="filters-elements" id="algorithm-filter">
-          Algorithm
+        <button class="filter-button" id="genuary-filter">
+          <span>Genuary</span>
+          <span class="filter-count" id="genuary-count"></span>
         </button>
-        <button class="filters-elements" id="data-filter">Data</button>
+        <button class="filter-button" id="algorithm-filter">
+          <span>Algorithm</span>
+          <span class="filter-count" id="algorithm-count"></span>
+        </button>
+        <button class="filter-button" id="data-filter">
+          <span>Data</span>
+          <span class="filter-count" id="data-count"></span>
+        </button>
 
-        <button class="filters-elements" id="show-all-filter">Show all</button>
+        <button class="filter-button active" id="show-all-filter">
+          <span>Show all</span>
+          <span class="filter-count" id="all-count"></span>
+        </button>
       </div>
       <div id="art-container">
         <div id="cartel">
@@ -97,9 +116,21 @@
             const response = await fetch("../art/artworks.json");
             artworks = await response.json();
             artworksNumber = artworks.length;
-            document.getElementById(
-              "show-all-filter"
-            ).innerHTML += ` (${artworksNumber})`;
+            
+            // Calculate counts for each filter
+            const genuaryCount = artworks.filter(a => a.type === "Genuary").length;
+            const algorithmCount = artworks.filter(a => a.type === "Algorithm Based").length;
+            const dataCount = artworks.filter(a => a.type === "Data Based").length;
+            const year2024Count = artworks.filter(a => a.year === "2024").length;
+            const year2025Count = artworks.filter(a => a.year === "2025").length;
+            
+            // Update filter counts
+            document.getElementById("all-count").textContent = artworksNumber;
+            document.getElementById("genuary-count").textContent = genuaryCount;
+            document.getElementById("algorithm-count").textContent = algorithmCount;
+            document.getElementById("data-count").textContent = dataCount;
+            document.getElementById("2024-count").textContent = year2024Count;
+            document.getElementById("2025-count").textContent = year2025Count;
           } catch (error) {
             console.error("Erreur lors du chargement des données :", error);
           }
@@ -160,6 +191,31 @@
             artworks.sort(() => Math.random() - 0.5);
             artworks.forEach((artwork) => showArtwork(artwork));
           }
+          function updateActiveFilter(activeFilter) {
+            // Remove active class from all filters
+            document.querySelectorAll('.filter-button').forEach(btn => {
+              btn.classList.remove('active');
+            });
+            document.querySelectorAll('.year-filter').forEach(btn => {
+              btn.classList.remove('active');
+            });
+            
+            // Add active class to the selected filter
+            if (activeFilter === "all") {
+              document.getElementById("show-all-filter").classList.add('active');
+            } else if (activeFilter === "genuary") {
+              document.getElementById("genuary-filter").classList.add('active');
+            } else if (activeFilter === "algorithm") {
+              document.getElementById("algorithm-filter").classList.add('active');
+            } else if (activeFilter === "data") {
+              document.getElementById("data-filter").classList.add('active');
+            } else if (activeFilter === "2024") {
+              document.getElementById("2024-filter").classList.add('active');
+            } else if (activeFilter === "2025") {
+              document.getElementById("2025-filter").classList.add('active');
+            }
+          }
+
           function filterSelection(filter) {
             container.innerHTML = "";
             artworkContainer.innerHTML = "";
@@ -176,6 +232,7 @@
                     if (filter === "2025") return artwork.year === "2025";
                   });
 
+            updateActiveFilter(filter);
             showArtworks(filteredArtworks);
             executeArtwork(filteredArtworks[0]);
           }
@@ -200,15 +257,34 @@
             .addEventListener("click", () => {
               filterSelection("algorithm");
             });
+          // Year dropdown toggle
+          document.getElementById("year-button").addEventListener("click", (e) => {
+            e.stopPropagation();
+            const dropdown = document.getElementById("dropdown-content");
+            dropdown.classList.toggle("show");
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener("click", (e) => {
+            const dropdown = document.getElementById("dropdown");
+            if (!dropdown.contains(e.target)) {
+              document.getElementById("dropdown-content").classList.remove("show");
+            }
+          });
+
           document
             .getElementById("2024-filter")
-            .addEventListener("click", () => {
+            .addEventListener("click", (e) => {
+              e.stopPropagation();
               filterSelection("2024");
+              document.getElementById("dropdown-content").classList.remove("show");
             });
           document
             .getElementById("2025-filter")
-            .addEventListener("click", () => {
+            .addEventListener("click", (e) => {
+              e.stopPropagation();
               filterSelection("2025");
+              document.getElementById("dropdown-content").classList.remove("show");
             });
           document
             .getElementById("data-filter")
