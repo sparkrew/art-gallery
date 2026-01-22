@@ -136,49 +136,68 @@
           }
         }
         loadData().then(() => {
+          let isExecuting = false;
+          
           function executeArtwork(artwork) {
-            artworkContainer.innerHTML = "";
-            dataButton.style.display = "none";
-
-            artworkPath = artwork.src;
-            artworkName = artwork.name;
-            artistName = artwork.artist;
-            year = artwork.year;
-            repo = artwork.repo;
-            type = artwork.type;
-            data = artwork.data;
-
-            artistNameContainer.innerHTML = artistName || "—";
-            artworkNameContainer.innerHTML = artworkName || "—";
-            artworkTypeContainer.innerHTML = type || "—";
-            artworkYearContainer.innerHTML = year || "—";
+            // Prevent rapid execution
+            if (isExecuting && artwork.name === artworkName) {
+              return;
+            }
             
-            // Update active artwork in list
-            updateActiveArtwork(artworkName);
+            isExecuting = true;
+            
+            // Use requestAnimationFrame for smoother updates
+            requestAnimationFrame(() => {
+              artworkContainer.innerHTML = "";
+              dataButton.style.display = "none";
 
-            if (type === "Data Based" && data != " ") {
-              dataButton.style.display = "block";
-            }
+              artworkPath = artwork.src;
+              artworkName = artwork.name;
+              artistName = artwork.artist;
+              year = artwork.year;
+              repo = artwork.repo;
+              type = artwork.type;
+              data = artwork.data;
 
-            if (artworkInstance) {
-              artworkInstance.remove();
-              artworkInstance = null;
-            }
+              artistNameContainer.innerHTML = artistName || "—";
+              artworkNameContainer.innerHTML = artworkName || "—";
+              artworkTypeContainer.innerHTML = type || "—";
+              artworkYearContainer.innerHTML = year || "—";
+              
+              // Update active artwork in list
+              updateActiveArtwork(artworkName);
 
-            const oldScript = document.getElementById("current-script");
-            if (oldScript) oldScript.remove();
-
-            const script = document.createElement("script");
-            script.src = artworkPath;
-            script.id = "current-script";
-            script.onload = () => {
-              if (typeof sketch === "function") {
-                artworkInstance = new p5(sketch, artworkContainer);
+              if (type === "Data Based" && data != " ") {
+                dataButton.style.display = "block";
               }
-            };
 
-            document.body.appendChild(script);
+              if (artworkInstance) {
+                artworkInstance.remove();
+                artworkInstance = null;
+              }
+
+              const oldScript = document.getElementById("current-script");
+              if (oldScript) oldScript.remove();
+
+              const script = document.createElement("script");
+              script.src = artworkPath;
+              script.id = "current-script";
+              script.onload = () => {
+                if (typeof sketch === "function") {
+                  artworkInstance = new p5(sketch, artworkContainer);
+                }
+                isExecuting = false;
+              };
+              script.onerror = () => {
+                isExecuting = false;
+              };
+
+              document.body.appendChild(script);
+            });
           }
+          let hoverTimeout = null;
+          let currentHoveredArtwork = null;
+          
           function showArtwork(artwork) {
             const el = document.createElement("p");
             el.className = "artwork";
@@ -187,11 +206,38 @@
             container.appendChild(el);
 
             el.addEventListener("mouseover", () => {
-              isDisplayed = false;
-              executeArtwork(artwork);
+              // Clear any pending hover execution
+              if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+              }
+              
+              // Only execute if it's a different artwork
+              if (currentHoveredArtwork !== artwork.name) {
+                currentHoveredArtwork = artwork.name;
+                // Debounce hover execution to prevent rapid firing
+                hoverTimeout = setTimeout(() => {
+                  isDisplayed = false;
+                  executeArtwork(artwork);
+                  hoverTimeout = null;
+                }, 150);
+              }
+            });
+            
+            el.addEventListener("mouseout", () => {
+              // Clear timeout if user moves away quickly
+              if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+              }
             });
             
             el.addEventListener("click", () => {
+              // Clear any pending hover execution
+              if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+              }
               isDisplayed = false;
               executeArtwork(artwork);
               updateActiveArtwork(artwork.name);
@@ -207,19 +253,26 @@
             });
           }
           
-          // Add scroll indicators
+          // Add scroll indicators with throttling
+          let scrollIndicatorTimeout = null;
           function updateScrollIndicators() {
-            const container = document.getElementById("artwork-name-container");
-            const hasScroll = container.scrollHeight > container.clientHeight;
-            const isAtTop = container.scrollTop <= 5;
-            const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
+            // Throttle scroll indicator updates using requestAnimationFrame
+            if (scrollIndicatorTimeout) return;
             
-            if (hasScroll) {
-              container.classList.toggle('scrollable-top', !isAtTop);
-              container.classList.toggle('scrollable-bottom', !isAtBottom);
-            } else {
-              container.classList.remove('scrollable-top', 'scrollable-bottom');
-            }
+            scrollIndicatorTimeout = requestAnimationFrame(() => {
+              const container = document.getElementById("artwork-name-container");
+              const hasScroll = container.scrollHeight > container.clientHeight;
+              const isAtTop = container.scrollTop <= 5;
+              const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
+              
+              if (hasScroll) {
+                container.classList.toggle('scrollable-top', !isAtTop);
+                container.classList.toggle('scrollable-bottom', !isAtBottom);
+              } else {
+                container.classList.remove('scrollable-top', 'scrollable-bottom');
+              }
+              scrollIndicatorTimeout = null;
+            });
           }
           
           function showArtworks(artworks) {

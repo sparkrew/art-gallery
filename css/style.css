@@ -108,7 +108,7 @@ justify-content: center;
   padding: 0.75rem 1rem;
   margin: 0.25rem 0;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-left-color 0.2s ease, transform 0.2s ease, padding-left 0.2s ease;
   border-radius: 6px;
   border-left: 3px solid transparent;
   color: var(--grey);
@@ -116,13 +116,16 @@ justify-content: center;
   -webkit-user-select: none;
   pointer-events: auto;
   touch-action: manipulation;
+  will-change: transform, background-color;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .artwork:hover {
-color: var(--orange);
+  color: var(--orange);
   background-color: rgba(251, 46, 15, 0.05);
   border-left-color: var(--orange);
-  transform: translateX(5px);
+  transform: translateX(5px) translateZ(0);
   padding-left: 1.25rem;
 }
 
@@ -131,12 +134,13 @@ color: var(--orange);
   background-color: rgba(251, 46, 15, 0.1);
   border-left-color: var(--orange);
   font-weight: 600;
+  transform: translateZ(0);
 }
 
 #artwork-container {
-width: 85vh;
+  width: 85vh;
   min-width: 400px;
-height: 85vh;
+  height: 85vh;
   max-height: calc(100vh - 15vh);
   overflow: hidden;
   background-color: var(--white);
@@ -146,7 +150,8 @@ height: 85vh;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
+  contain: layout style paint;
 }
 
 #artwork-container:hover {
@@ -211,14 +216,14 @@ display: none;
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
   overscroll-behavior-x: none;
   position: relative;
-  will-change: scroll-position;
   isolation: isolate;
+  contain: layout style paint;
 }
 
 /* Visual indicator for scrollable area */
@@ -294,23 +299,24 @@ display: none;
 }
 
 #cartel {
-    height: 85vh;
+  height: 85vh;
   max-height: calc(100vh - 15vh);
-    width: 20vw;
+  width: 20vw;
   min-width: 220px;
   padding: 2rem;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
-    font-family: var(--title-font);
-    font-size: var(--fs-4);
+  font-family: var(--title-font);
+  font-size: var(--fs-4);
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 2rem;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
+  contain: layout style paint;
 }
 
 #cartel:hover {
@@ -516,22 +522,25 @@ textarea {
   gap: 0.5rem;
   border: 2px solid var(--grey);
   padding: 0.75rem 1.25rem;
-background-color: var(--white);
+  background-color: var(--white);
   color: var(--grey);
   font-family: var(--title-font);
   font-size: var(--fs-5);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   border-radius: 8px;
   position: relative;
   white-space: nowrap;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .filter-button:hover {
   background-color: var(--orange);
   color: var(--white);
   border-color: var(--orange);
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(0);
   box-shadow: 0 4px 8px rgba(251, 46, 15, 0.2);
 }
 
@@ -750,17 +759,20 @@ border-color: var(--orange);
   font-family: var(--title-font);
   font-size: var(--fs-5);
   border-radius: 6px;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   width: fit-content;
   min-width: 100px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .metadata-button:hover {
   color: var(--white);
   background-color: var(--orange);
   border-color: var(--orange);
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(0);
   box-shadow: 0 4px 8px rgba(251, 46, 15, 0.3);
 }
 
