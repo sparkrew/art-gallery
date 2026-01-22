@@ -148,10 +148,13 @@
             type = artwork.type;
             data = artwork.data;
 
-            artistNameContainer.innerHTML = artistName;
-            artworkNameContainer.innerHTML = artworkName;
-            artworkTypeContainer.innerHTML = type;
-            artworkYearContainer.innerHTML = year;
+            artistNameContainer.innerHTML = artistName || "—";
+            artworkNameContainer.innerHTML = artworkName || "—";
+            artworkTypeContainer.innerHTML = type || "—";
+            artworkYearContainer.innerHTML = year || "—";
+            
+            // Update active artwork in list
+            updateActiveArtwork(artworkName);
 
             if (type === "Data Based" && data != " ") {
               dataButton.style.display = "block";
@@ -180,11 +183,28 @@
             const el = document.createElement("p");
             el.className = "artwork";
             el.innerHTML = artwork.name;
+            el.dataset.artworkName = artwork.name;
             container.appendChild(el);
 
             el.addEventListener("mouseover", () => {
               isDisplayed = false;
               executeArtwork(artwork);
+              updateActiveArtwork(artwork.name);
+            });
+            
+            el.addEventListener("click", () => {
+              isDisplayed = false;
+              executeArtwork(artwork);
+              updateActiveArtwork(artwork.name);
+            });
+          }
+          
+          function updateActiveArtwork(artworkName) {
+            document.querySelectorAll('.artwork').forEach(item => {
+              item.classList.remove('active');
+              if (item.dataset.artworkName === artworkName) {
+                item.classList.add('active');
+              }
             });
           }
           function showArtworks(artworks) {
@@ -233,8 +253,16 @@
                   });
 
             updateActiveFilter(filter);
-            showArtworks(filteredArtworks);
-            executeArtwork(filteredArtworks[0]);
+            if (filteredArtworks.length > 0) {
+              showArtworks(filteredArtworks);
+              executeArtwork(filteredArtworks[0]);
+            } else {
+              artworkContainer.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--grey); font-family: var(--title-font); font-size: var(--fs-4); opacity: 0.6;">No artworks found</div>';
+              artistNameContainer.innerHTML = "—";
+              artworkNameContainer.innerHTML = "—";
+              artworkTypeContainer.innerHTML = "—";
+              artworkYearContainer.innerHTML = "—";
+            }
           }
 
           if (isFiltered == false) {
