@@ -118,6 +118,24 @@ a:hover::after {
   white-space: nowrap;
 }
 
+#theme-toggle {
+    border: 2px solid var(--grey);
+    background-color: var(--white);
+    color: var(--grey);
+    font-family: var(--title-font);
+    font-size: var(--fs-5);
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+#theme-toggle:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+}
+
+
 .theme-toggle:hover {
   background-color: var(--orange);
   color: var(--white);
