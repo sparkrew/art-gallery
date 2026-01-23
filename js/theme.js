@@ -24,15 +24,15 @@
 
   applyTheme(getPreferredTheme());
 
-  const initToggle = () => {
-    const toggle = document.getElementById("theme-toggle");
-    if (!toggle) return;
-    toggle.addEventListener("click", () => {
-      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-      localStorage.setItem(storageKey, nextTheme);
-      applyTheme(nextTheme);
+    document.addEventListener("click", (e) => {
+        const toggle = e.target.closest("#theme-toggle");
+        if (!toggle) return;
+
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", nextTheme);
+        applyTheme(nextTheme);
     });
-  };
+
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initToggle);
