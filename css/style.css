@@ -37,7 +37,7 @@ rgba(71, 69, 68, 0.1);
 body {
   width: 100vw;
   height: 100vh;
-  overflow-y: auto;
+  overflow: hidden;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   margin: 0;
@@ -47,7 +47,7 @@ body {
 }
 main {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   padding: 0;
   margin: 0;
   scroll-snap-align: start;
@@ -61,14 +61,14 @@ text-align: center;
 padding: 1rem;
 }
 nav{
-  margin-top: 2vh;
-  margin-bottom: 1vh;
+  margin: 1vh 0;
   display: flex;
 height: 6vh;
 align-items: center;
 justify-content: center;
   padding: 0 2rem;
   gap: 1.5rem;
+  flex-shrink: 0;
 }
 ul{
 display: flex;
@@ -146,11 +146,12 @@ a:hover::after {
 #art-container {
 display: flex;
 justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
   padding: 2rem;
   max-width: 100%;
-  min-height: calc(100vh - 15vh);
+  flex: 1;
+  min-height: 0;
 }
 
 .artwork {
@@ -191,8 +192,8 @@ justify-content: center;
 #artwork-container {
   width: 85vh;
   min-width: 400px;
-  height: 85vh;
-  max-height: calc(100vh - 15vh);
+  height: 100%;
+  max-height: 100%;
   overflow: hidden;
   background-color: var(--white);
   border-radius: 12px;
@@ -259,8 +260,8 @@ display: none;
 #artwork-name-container {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 85vh;
-  max-height: calc(100vh - 15vh);
+  height: 100%;
+  max-height: 100%;
   width: 20vw;
   min-width: 200px;
   padding: 0.5rem 1rem 1rem 1rem;
@@ -350,8 +351,8 @@ display: none;
 }
 
 #cartel {
-  height: 85vh;
-  max-height: calc(100vh - 15vh);
+  height: 100%;
+  max-height: 100%;
   width: 20vw;
   min-width: 220px;
   padding: 2rem;
@@ -368,6 +369,7 @@ display: none;
   top: 2rem;
   transition: box-shadow 0.2s ease;
   contain: layout style paint;
+  overflow: auto;
 }
 
 #cartel:hover {
@@ -561,6 +563,7 @@ textarea {
   flex-wrap: wrap;
   background-color: var(--white);
   border-bottom: 2px solid var(--panel-border);
+  flex-shrink: 0;
 }
 
 .filter-group {
@@ -706,8 +709,10 @@ border-color: var(--orange);
 /* Responsive design for filters and layout */
 @media (max-width: 1200px) {
   #art-container {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: minmax(0, 0.9fr) minmax(0, 1.2fr) minmax(0, 0.9fr);
     gap: 1.5rem;
+    height: 100%;
   }
   
   #cartel {
@@ -716,26 +721,24 @@ border-color: var(--orange);
     min-width: auto;
     position: relative;
     top: 0;
-    order: 1;
   }
   
   #artwork-container {
     width: 100%;
-    max-width: 85vh;
-    order: 2;
+    max-width: 100%;
+    min-width: 0;
   }
   
   #artwork-name-container {
     width: 100%;
     max-width: 100%;
     min-width: auto;
-    order: 3;
   }
 }
 
 @media (max-width: 768px) {
   #filters {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     gap: 0.75rem;
     justify-content: center;
   }
@@ -753,7 +756,8 @@ border-color: var(--orange);
   
   #art-container {
     padding: 1rem;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 0.8fr);
   }
   
   #cartel {
@@ -764,15 +768,12 @@ border-color: var(--orange);
   
   #artwork-container {
     width: 100%;
-    height: 60vh;
     min-width: auto;
   }
   
   #artwork-name-container {
     width: 100%;
-    height: auto;
-    max-height: 30vh;
-    min-height: 200px;
+    min-height: 0;
   }
   
   nav ul {
