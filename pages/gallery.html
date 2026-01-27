@@ -101,6 +101,7 @@
         let isDisplayed = false;
         let artworkInstance;
         let artworkPath;
+        let codePath;
         let artistName;
         let year;
         let repo;
@@ -110,6 +111,7 @@
         let artworksNumber = 0;
         let isFiltered = false;
         let filter;
+        let currentArtwork = null;
 
         const artworkContainer = document.getElementById("artwork-container");
         const artistContainer = document.getElementById(
@@ -122,20 +124,187 @@
         const artworkTypeContainer = document.getElementById("artwork-type");
         const artworkYearContainer = document.getElementById("artwork-year");
 
+        const RUST_WASM_RUNTIME = "rust-wasm";
+        let rustRuntimeState = null;
+
+        function isRustWasmArtwork(artwork) {
+          return artwork && artwork.runtime === RUST_WASM_RUNTIME;
+        }
+
+        function stopRustRuntime() {
+          if (!rustRuntimeState) {
+            return;
+          }
+
+          rustRuntimeState.cancelled = true;
+
+          if (rustRuntimeState.frameId) {
+            cancelAnimationFrame(rustRuntimeState.frameId);
+          }
+
+          if (rustRuntimeState.onResize) {
+            window.removeEventListener("resize", rustRuntimeState.onResize);
+          }
+
+          if (rustRuntimeState.canvas && rustRuntimeState.canvas.parentNode) {
+            rustRuntimeState.canvas.parentNode.removeChild(rustRuntimeState.canvas);
+          }
+
+          rustRuntimeState = null;
+        }
+
+        function stopP5Runtime() {
+          if (artworkInstance) {
+            artworkInstance.remove();
+            artworkInstance = null;
+          }
+        }
+
+        function removeCurrentScript() {
+          const oldScript = document.getElementById("current-script");
+          if (oldScript) {
+            oldScript.remove();
+          }
+        }
+
+        function stopCurrentArtwork() {
+          stopRustRuntime();
+          stopP5Runtime();
+          removeCurrentScript();
+        }
+
+        async function runRustWasmArtwork(artwork) {
+          stopCurrentArtwork();
+          artworkContainer.innerHTML = "";
+
+          if (!artwork.module || !artwork.wasm) {
+            artworkContainer.innerHTML =
+              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Rust Wasm artwork is missing module/wasm paths</div>';
+            return;
+          }
+
+          const state = {
+            cancelled: false,
+            frameId: 0,
+            canvas: null,
+            onResize: null,
+          };
+          rustRuntimeState = state;
+
+          const canvas = document.createElement("canvas");
+          canvas.style.width = "100%";
+          canvas.style.height = "100%";
+          artworkContainer.appendChild(canvas);
+          state.canvas = canvas;
+
+          const ctx = canvas.getContext("2d", { alpha: true });
+
+          const resizeCanvas = () => {
+            const width = Math.max(1, artworkContainer.offsetWidth);
+            const height = Math.max(1, artworkContainer.offsetHeight);
+
+            if (canvas.width !== width || canvas.height !== height) {
+              canvas.width = width;
+              canvas.height = height;
+            }
+
+            return { width, height };
+          };
+
+          state.onResize = () => {
+            resizeCanvas();
+          };
+          window.addEventListener("resize", state.onResize);
+
+          let wasmModule;
+          try {
+            wasmModule = await import(artwork.module);
+          } catch (error) {
+            console.error("Failed to import Rust Wasm module:", error);
+            artworkContainer.innerHTML =
+              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Failed to import Rust Wasm module</div>';
+            stopRustRuntime();
+            return;
+          }
+
+          const initWasm = wasmModule.default || wasmModule.init;
+          if (typeof initWasm !== "function") {
+            artworkContainer.innerHTML =
+              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Rust Wasm module has no init function</div>';
+            stopRustRuntime();
+            return;
+          }
+
+          try {
+            await initWasm(artwork.wasm);
+          } catch (error) {
+            console.error("Failed to initialize Rust Wasm module:", error);
+            artworkContainer.innerHTML =
+              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Failed to initialize Rust Wasm module</div>';
+            stopRustRuntime();
+            return;
+          }
+
+          const exportName = artwork.exportName || "render";
+          const renderFn = wasmModule[exportName];
+          if (typeof renderFn !== "function") {
+            artworkContainer.innerHTML =
+              '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Rust Wasm module is missing a render export</div>';
+            stopRustRuntime();
+            return;
+          }
+
+          const renderFrame = (timestampMs) => {
+            if (state.cancelled) {
+              return;
+            }
+
+            const { width, height } = resizeCanvas();
+            const timeSeconds = timestampMs / 1000;
+
+            let rgba;
+            try {
+              rgba = renderFn(width, height, timeSeconds);
+            } catch (error) {
+              console.error("Rust Wasm render failed:", error);
+              stopRustRuntime();
+              artworkContainer.innerHTML =
+                '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Rust Wasm render failed</div>';
+              return;
+            }
+
+            if (!rgba || rgba.length !== width * height * 4) {
+              artworkContainer.innerHTML =
+                '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--grey);font-family:var(--title-font);font-size:var(--fs-4);opacity:0.8;">Rust Wasm render returned an unexpected buffer</div>';
+              stopRustRuntime();
+              return;
+            }
+
+            const imageData = new ImageData(
+              new Uint8ClampedArray(rgba),
+              width,
+              height
+            );
+            ctx.putImageData(imageData, 0, 0);
+
+            state.frameId = requestAnimationFrame(renderFrame);
+          };
+
+          state.frameId = requestAnimationFrame(renderFrame);
+        }
+
         async function loadData() {
           try {
             const response = await fetch("../art/artworks.json");
             artworks = await response.json();
             artworksNumber = artworks.length;
-            
-            // Calculate counts for each filter
-            const genuaryCount = artworks.filter(a => a.type === "Genuary").length;
-            const algorithmCount = artworks.filter(a => a.type === "Algorithm Based").length;
-            const dataCount = artworks.filter(a => a.type === "Data Based").length;
-            const year2024Count = artworks.filter(a => a.year === "2024").length;
-            const year2025Count = artworks.filter(a => a.year === "2025").length;
-            
-            // Update filter counts
+
+            const genuaryCount = artworks.filter((a) => a.type === "Genuary").length;
+            const algorithmCount = artworks.filter((a) => a.type === "Algorithm Based").length;
+            const dataCount = artworks.filter((a) => a.type === "Data Based").length;
+            const year2024Count = artworks.filter((a) => a.year === "2024").length;
+            const year2025Count = artworks.filter((a) => a.year === "2025").length;
+
             document.getElementById("all-count").textContent = artworksNumber;
             document.getElementById("genuary-count").textContent = genuaryCount;
             document.getElementById("algorithm-count").textContent = algorithmCount;
@@ -143,26 +312,26 @@
             document.getElementById("2024-count").textContent = year2024Count;
             document.getElementById("2025-count").textContent = year2025Count;
           } catch (error) {
-            console.error("Erreur lors du chargement des données :", error);
+            console.error("Erreur lors du chargement des donnAces :", error);
           }
         }
         loadData().then(() => {
           let isExecuting = false;
-          
+
           function executeArtwork(artwork) {
-            // Prevent rapid execution
             if (isExecuting && artwork.name === artworkName) {
               return;
             }
-            
+
             isExecuting = true;
-            
-            // Use requestAnimationFrame for smoother updates
+            currentArtwork = artwork;
+
             requestAnimationFrame(() => {
               artworkContainer.innerHTML = "";
               dataButton.style.display = "none";
 
               artworkPath = artwork.src;
+              codePath = artwork.codeSrc || artwork.src;
               artworkName = artwork.name;
               artistName = artwork.artist;
               year = artwork.year;
@@ -170,25 +339,25 @@
               type = artwork.type;
               data = artwork.data;
 
-              artistNameContainer.innerHTML = artistName || "—";
-              artworkNameContainer.innerHTML = artworkName || "—";
-              artworkTypeContainer.innerHTML = type || "—";
-              artworkYearContainer.innerHTML = year || "—";
-              
-              // Update active artwork in list
+              artistNameContainer.innerHTML = artistName || "";
+              artworkNameContainer.innerHTML = artworkName || "";
+              artworkTypeContainer.innerHTML = type || "";
+              artworkYearContainer.innerHTML = year || "";
+
               updateActiveArtwork(artworkName);
 
               if (type === "Data Based" && data != " ") {
                 dataButton.style.display = "block";
               }
 
-              if (artworkInstance) {
-                artworkInstance.remove();
-                artworkInstance = null;
-              }
+              stopCurrentArtwork();
 
-              const oldScript = document.getElementById("current-script");
-              if (oldScript) oldScript.remove();
+              if (isRustWasmArtwork(artwork)) {
+                runRustWasmArtwork(artwork).finally(() => {
+                  isExecuting = false;
+                });
+                return;
+              }
 
               const script = document.createElement("script");
               script.src = artworkPath;
@@ -208,7 +377,7 @@
           }
           let hoverTimeout = null;
           let currentHoveredArtwork = null;
-          
+
           function showArtwork(artwork) {
             const el = document.createElement("p");
             el.className = "artwork";
@@ -217,16 +386,13 @@
             container.appendChild(el);
 
             el.addEventListener("mouseover", () => {
-              // Clear any pending hover execution
               if (hoverTimeout) {
                 clearTimeout(hoverTimeout);
                 hoverTimeout = null;
               }
-              
-              // Only execute if it's a different artwork
+
               if (currentHoveredArtwork !== artwork.name) {
                 currentHoveredArtwork = artwork.name;
-                // Debounce hover execution to prevent rapid firing
                 hoverTimeout = setTimeout(() => {
                   isDisplayed = false;
                   executeArtwork(artwork);
@@ -234,17 +400,15 @@
                 }, 150);
               }
             });
-            
+
             el.addEventListener("mouseout", () => {
-              // Clear timeout if user moves away quickly
               if (hoverTimeout) {
                 clearTimeout(hoverTimeout);
                 hoverTimeout = null;
               }
             });
-            
+
             el.addEventListener("click", () => {
-              // Clear any pending hover execution
               if (hoverTimeout) {
                 clearTimeout(hoverTimeout);
                 hoverTimeout = null;
@@ -254,73 +418,70 @@
               updateActiveArtwork(artwork.name);
             });
           }
-          
+
           function updateActiveArtwork(artworkName) {
-            document.querySelectorAll('.artwork').forEach(item => {
-              item.classList.remove('active');
+            document.querySelectorAll(".artwork").forEach((item) => {
+              item.classList.remove("active");
               if (item.dataset.artworkName === artworkName) {
-                item.classList.add('active');
+                item.classList.add("active");
               }
             });
           }
-          
-          // Add scroll indicators with throttling
+
           let scrollIndicatorTimeout = null;
           function updateScrollIndicators() {
-            // Throttle scroll indicator updates using requestAnimationFrame
             if (scrollIndicatorTimeout) return;
-            
+
             scrollIndicatorTimeout = requestAnimationFrame(() => {
               const container = document.getElementById("artwork-name-container");
               const hasScroll = container.scrollHeight > container.clientHeight;
               const isAtTop = container.scrollTop <= 5;
-              const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
-              
+              const isAtBottom =
+                container.scrollTop + container.clientHeight >=
+                container.scrollHeight - 5;
+
               if (hasScroll) {
-                container.classList.toggle('scrollable-top', !isAtTop);
-                container.classList.toggle('scrollable-bottom', !isAtBottom);
+                container.classList.toggle("scrollable-top", !isAtTop);
+                container.classList.toggle("scrollable-bottom", !isAtBottom);
               } else {
-                container.classList.remove('scrollable-top', 'scrollable-bottom');
+                container.classList.remove("scrollable-top", "scrollable-bottom");
               }
               scrollIndicatorTimeout = null;
             });
           }
-          
+
           function showArtworks(artworks) {
             artworks.sort(() => Math.random() - 0.5);
             artworks.forEach((artwork) => showArtwork(artwork));
-            // Update scroll indicators after artworks are added
             setTimeout(updateScrollIndicators, 100);
           }
           function updateActiveFilter(activeFilter) {
-            // Remove active class from all filters
-            document.querySelectorAll('.filter-button').forEach(btn => {
-              btn.classList.remove('active');
+            document.querySelectorAll(".filter-button").forEach((btn) => {
+              btn.classList.remove("active");
             });
-            document.querySelectorAll('.year-filter').forEach(btn => {
-              btn.classList.remove('active');
+            document.querySelectorAll(".year-filter").forEach((btn) => {
+              btn.classList.remove("active");
             });
-            
-            // Add active class to the selected filter
+
             if (activeFilter === "all") {
-              document.getElementById("show-all-filter").classList.add('active');
+              document.getElementById("show-all-filter").classList.add("active");
             } else if (activeFilter === "genuary") {
-              document.getElementById("genuary-filter").classList.add('active');
+              document.getElementById("genuary-filter").classList.add("active");
             } else if (activeFilter === "algorithm") {
-              document.getElementById("algorithm-filter").classList.add('active');
+              document.getElementById("algorithm-filter").classList.add("active");
             } else if (activeFilter === "data") {
-              document.getElementById("data-filter").classList.add('active');
+              document.getElementById("data-filter").classList.add("active");
             } else if (activeFilter === "2024") {
-              document.getElementById("2024-filter").classList.add('active');
+              document.getElementById("2024-filter").classList.add("active");
             } else if (activeFilter === "2025") {
-              document.getElementById("2025-filter").classList.add('active');
+              document.getElementById("2025-filter").classList.add("active");
             }
           }
 
           function filterSelection(filter) {
             container.innerHTML = "";
             artworkContainer.innerHTML = "";
-            
+
             const filteredArtworks =
               filter === "all"
                 ? artworks
@@ -339,19 +500,18 @@
               showArtworks(filteredArtworks);
               executeArtwork(filteredArtworks[0]);
             } else {
-              artworkContainer.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--grey); font-family: var(--title-font); font-size: var(--fs-4); opacity: 0.6;">No artworks found</div>';
-              artistNameContainer.innerHTML = "—";
-              artworkNameContainer.innerHTML = "—";
-              artworkTypeContainer.innerHTML = "—";
-              artworkYearContainer.innerHTML = "—";
+              artworkContainer.innerHTML =
+                '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--grey); font-family: var(--title-font); font-size: var(--fs-4); opacity: 0.6;">No artworks found</div>';
+              artistNameContainer.innerHTML = "";
+              artworkNameContainer.innerHTML = "";
+              artworkTypeContainer.innerHTML = "";
+              artworkYearContainer.innerHTML = "";
             }
           }
 
-          // Update scroll indicators on scroll
-          container.addEventListener('scroll', updateScrollIndicators);
-          container.addEventListener('mouseenter', updateScrollIndicators);
-          
-          // Initial check
+          container.addEventListener("scroll", updateScrollIndicators);
+          container.addEventListener("mouseenter", updateScrollIndicators);
+
           setTimeout(updateScrollIndicators, 100);
 
           if (isFiltered == false) {
@@ -360,29 +520,21 @@
             setTimeout(updateScrollIndicators, 200);
           }
 
-          document
-            .getElementById("show-all-filter")
-            .addEventListener("click", () => {
-              filterSelection("all");
-            });
-          document
-            .getElementById("genuary-filter")
-            .addEventListener("click", () => {
-              filterSelection("genuary");
-            });
-          document
-            .getElementById("algorithm-filter")
-            .addEventListener("click", () => {
-              filterSelection("algorithm");
-            });
-          // Year dropdown toggle
+          document.getElementById("show-all-filter").addEventListener("click", () => {
+            filterSelection("all");
+          });
+          document.getElementById("genuary-filter").addEventListener("click", () => {
+            filterSelection("genuary");
+          });
+          document.getElementById("algorithm-filter").addEventListener("click", () => {
+            filterSelection("algorithm");
+          });
           document.getElementById("year-button").addEventListener("click", (e) => {
             e.stopPropagation();
             const dropdown = document.getElementById("dropdown-content");
             dropdown.classList.toggle("show");
           });
 
-          // Close dropdown when clicking outside
           document.addEventListener("click", (e) => {
             const dropdown = document.getElementById("dropdown");
             if (!dropdown.contains(e.target)) {
@@ -390,78 +542,65 @@
             }
           });
 
-          document
-            .getElementById("2024-filter")
-            .addEventListener("click", (e) => {
-              e.stopPropagation();
-              filterSelection("2024");
-              document.getElementById("dropdown-content").classList.remove("show");
-            });
-          document
-            .getElementById("2025-filter")
-            .addEventListener("click", (e) => {
-              e.stopPropagation();
-              filterSelection("2025");
-              document.getElementById("dropdown-content").classList.remove("show");
-            });
-          document
-            .getElementById("data-filter")
-            .addEventListener("click", () => {
-              filterSelection("data");
-            });
+          document.getElementById("2024-filter").addEventListener("click", (e) => {
+            e.stopPropagation();
+            filterSelection("2024");
+            document.getElementById("dropdown-content").classList.remove("show");
+          });
+          document.getElementById("2025-filter").addEventListener("click", (e) => {
+            e.stopPropagation();
+            filterSelection("2025");
+            document.getElementById("dropdown-content").classList.remove("show");
+          });
+          document.getElementById("data-filter").addEventListener("click", () => {
+            filterSelection("data");
+          });
 
-          document
-            .getElementById("artwork-repo")
-            .addEventListener("click", () => {
-              window.location.href = repo;
-            });
-          document
-            .getElementById("artwork-dataset")
-            .addEventListener("click", () => {
-              window.location.href = data;
-            });
-          document
-            .getElementById("artwork-code")
-            .addEventListener("click", () => {
-              if (!artworkPath) {
-                alert("Aucune œuvre sélectionnée !");
+          document.getElementById("artwork-repo").addEventListener("click", () => {
+            window.location.href = repo;
+          });
+          document.getElementById("artwork-dataset").addEventListener("click", () => {
+            window.location.href = data;
+          });
+          document.getElementById("artwork-code").addEventListener("click", () => {
+            if (!currentArtwork) {
+              alert("No artwork selected!");
+              return;
+            }
+
+            if (!isDisplayed) {
+              fetch(codePath)
+                .then((res) => res.text())
+                .then((code) => {
+                  stopCurrentArtwork();
+                  artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
+                });
+              isDisplayed = true;
+            } else {
+              artworkContainer.innerHTML = "";
+
+              if (isRustWasmArtwork(currentArtwork)) {
+                runRustWasmArtwork(currentArtwork);
+                isDisplayed = false;
                 return;
               }
 
-              if (!isDisplayed) {
-                fetch(artworkPath)
-                  .then((res) => res.text())
-                  .then((code) => {
-                    if (artworkInstance) {
-                      artworkInstance.remove();
-                      artworkInstance = null;
-                    }
-                    artworkContainer.innerHTML = `<pre><code>${code}</code></pre>`;
-                  });
-                isDisplayed = true;
-              } else {
-                artworkContainer.innerHTML = "";
+              removeCurrentScript();
 
-                const oldScript = document.getElementById("current-script");
-                if (oldScript) oldScript.remove();
-
-                const script = document.createElement("script");
-                script.src = artworkPath;
-                script.id = "current-script";
-                script.onload = () => {
-                  if (typeof sketch === "function") {
-                    artworkInstance = new p5(sketch, artworkContainer);
-                  }
-                  isDisplayed = false;
-                };
-                document.body.appendChild(script);
-              }
-            });
+              const script = document.createElement("script");
+              script.src = artworkPath;
+              script.id = "current-script";
+              script.onload = () => {
+                if (typeof sketch === "function") {
+                  artworkInstance = new p5(sketch, artworkContainer);
+                }
+                isDisplayed = false;
+              };
+              document.body.appendChild(script);
+            }
+          });
         });
       </script>
     </main>
-    <!-- <footer>
-      <p>Footer</p>
-    </footer> -->
   </body>
 </html>
