@@ -1,5 +1,19 @@
 [
   {
+    "name": "Rust Template",
+    "ref": "rust_template",
+    "artist": "Alireza Nasirianfar",
+    "year": "2026",
+    "type": "Algorithm Based",
+    "repo": "https://github.com/alireza-nasirian",
+    "src": "../art/rust/rust_template/pkg/rust_art_template.js",
+    "codeSrc": "../art/rust/template/src/lib.rs",
+    "runtime": "rust-wasm",
+    "module": "../art/rust/template/pkg/rust_art_template.js",
+    "wasm": "../art/rust/template/pkg/rust_art_template_bg.wasm",
+    "exportName": "render"
+  },
+  {
     "name": "Arrow 2",
     "ref": "arrow2",
     "artist": "Gabriel Beaudoin",
@@ -147,7 +161,6 @@
     "data": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter",
     "src": "../art/js/2025/data/flow_lake.js"
   },
-
   {
     "name": "Synesthesia",
     "ref": "synesthesia",
