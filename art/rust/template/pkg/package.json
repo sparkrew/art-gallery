@@ -1,0 +1,15 @@
+{
+  "name": "rust_art_template",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "rust_art_template_bg.wasm",
+    "rust_art_template.js",
+    "rust_art_template.d.ts"
+  ],
+  "main": "rust_art_template.js",
+  "types": "rust_art_template.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
