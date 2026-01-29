@@ -1,0 +1,13 @@
+[package]
+name = "blue-lines"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nannou = "0.18"
+wasm-bindgen = "0.2"
+getrandom = { version = "0.2", features = ["js"] }
+winit = { version = "0.25", features = ["web-sys"] }
