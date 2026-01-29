@@ -1,0 +1,15 @@
+{
+  "name": "blue-lines",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "blue_lines_bg.wasm",
+    "blue_lines.js",
+    "blue_lines.d.ts"
+  ],
+  "main": "blue_lines.js",
+  "types": "blue_lines.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
