@@ -1,5 +1,20 @@
 /* @ts-self-types="./blue_lines.d.ts" */
 
+/**
+ * Gallery entry point.
+ * Returns RGBA buffer length width*height*4
+ * @param {number} width
+ * @param {number} height
+ * @param {number} time_seconds
+ * @returns {Uint8Array}
+ */
+export function render(width, height, time_seconds) {
+    const ret = wasm.render(width, height, time_seconds);
+    var v1 = getArrayU8FromWasm0(ret[0], ret[1]).slice();
+    wasm.__wbindgen_free(ret[0], ret[1] * 1, 1);
+    return v1;
+}
+
 function __wbg_get_imports() {
     const import0 = {
         __proto__: null,
@@ -19,10 +34,24 @@ function __wbg_get_imports() {
     };
 }
 
+function getArrayU8FromWasm0(ptr, len) {
+    ptr = ptr >>> 0;
+    return getUint8ArrayMemory0().subarray(ptr / 1, ptr / 1 + len);
+}
+
+let cachedUint8ArrayMemory0 = null;
+function getUint8ArrayMemory0() {
+    if (cachedUint8ArrayMemory0 === null || cachedUint8ArrayMemory0.byteLength === 0) {
+        cachedUint8ArrayMemory0 = new Uint8Array(wasm.memory.buffer);
+    }
+    return cachedUint8ArrayMemory0;
+}
+
 let wasmModule, wasm;
 function __wbg_finalize_init(instance, module) {
     wasm = instance.exports;
     wasmModule = module;
+    cachedUint8ArrayMemory0 = null;
     wasm.__wbindgen_start();
     return wasm;
 }

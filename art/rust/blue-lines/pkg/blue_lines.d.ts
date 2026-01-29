@@ -1,11 +1,19 @@
 /* tslint:disable */
 /* eslint-disable */
 
+/**
+ * Gallery entry point.
+ * Returns RGBA buffer length width*height*4
+ */
+export function render(width: number, height: number, time_seconds: number): Uint8Array;
+
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
+    readonly render: (a: number, b: number, c: number) => [number, number];
     readonly __wbindgen_externrefs: WebAssembly.Table;
+    readonly __wbindgen_free: (a: number, b: number, c: number) => void;
     readonly __wbindgen_start: () => void;
 }
 
