@@ -1,0 +1,15 @@
+{
+  "name": "white_circles",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "white_circles_bg.wasm",
+    "white_circles.js",
+    "white_circles.d.ts"
+  ],
+  "main": "white_circles.js",
+  "types": "white_circles.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
