@@ -1,5 +1,19 @@
 [
   {
+    "name": "White Circles",
+    "ref": "white-circles",
+    "artist": "Benoit Baudry",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/bbaudry/swart-studio/tree/main/rust-fragments/white-circles",
+    "src": "../art/rust/white-circles/pkg/white_circles.js",
+    "codeSrc": "../art/rust/white-circles/src/lib.rs",
+    "runtime": "rust-wasm",
+    "module": "../art/rust/white-circles/pkg/white_circles.js",
+    "wasm": "../art/rust/white-circles/pkg/white_circles_bg.wasm",
+    "exportName": "render"
+  },
+  {
     "name": "Rust Template",
     "ref": "rust_template",
     "artist": "Alireza Nasirianfar",
@@ -20,7 +34,7 @@
     "year": "2026",
     "type": "Genuary",
     "repo": "https://github.com/bbaudry/swart-studio/tree/main/rust-fragments/blue-lines",
-    "src": "../art/rust/blue-lines/pkg/blue-lines.js",
+    "src": "../art/rust/blue-lines/pkg/blue_lines.js",
     "codeSrc": "../art/rust/blue-lines/src/lib.rs",
     "runtime": "rust-wasm",
     "module": "../art/rust/blue-lines/pkg/blue_lines.js",
