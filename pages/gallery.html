@@ -41,6 +41,10 @@
             <span class="filter-icon">▼</span>
           </button>
           <div id="dropdown-content" class="dropdown-menu">
+              <button class="year-filter filter-option" id="2026-filter">
+                  <span>2026</span>
+                  <span class="filter-count" id="2026-count"></span>
+              </button>
             <button class="year-filter filter-option" id="2025-filter">
               <span>2025</span>
               <span class="filter-count" id="2025-count"></span>
@@ -304,6 +308,7 @@
             const dataCount = artworks.filter((a) => a.type === "Data Based").length;
             const year2024Count = artworks.filter((a) => a.year === "2024").length;
             const year2025Count = artworks.filter((a) => a.year === "2025").length;
+            const year2026Count = artworks.filter((a) => a.year === "2026").length;
 
             document.getElementById("all-count").textContent = artworksNumber;
             document.getElementById("genuary-count").textContent = genuaryCount;
@@ -311,6 +316,7 @@
             document.getElementById("data-count").textContent = dataCount;
             document.getElementById("2024-count").textContent = year2024Count;
             document.getElementById("2025-count").textContent = year2025Count;
+            document.getElementById("2026-count").textContent = year2026Count;
           } catch (error) {
             console.error("Erreur lors du chargement des donnAces :", error);
           }
@@ -475,6 +481,8 @@
               document.getElementById("2024-filter").classList.add("active");
             } else if (activeFilter === "2025") {
               document.getElementById("2025-filter").classList.add("active");
+            } else if (activeFilter === "2026") {
+                document.getElementById("2026-filter").classList.add("active");
             }
           }
 
@@ -493,6 +501,7 @@
 
                     if (filter === "2024") return artwork.year === "2024";
                     if (filter === "2025") return artwork.year === "2025";
+                    if (filter === "2026") return artwork.year === "2026";
                   });
 
             updateActiveFilter(filter);
@@ -552,6 +561,11 @@
             filterSelection("2025");
             document.getElementById("dropdown-content").classList.remove("show");
           });
+            document.getElementById("2026-filter").addEventListener("click", (e) => {
+                e.stopPropagation();
+                filterSelection("2026");
+                document.getElementById("dropdown-content").classList.remove("show");
+            });
           document.getElementById("data-filter").addEventListener("click", () => {
             filterSelection("data");
           });
