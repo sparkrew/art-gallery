@@ -130,12 +130,10 @@ function draw() {
   if (animationFinished) {
     background(0);
     window.location.href = "pages/gallery.html";
-    return;
   }
 }
 function mousePressed() {
   window.location.href = "pages/gallery.html";
-  return;
 }
 
 class SquareLetter {
