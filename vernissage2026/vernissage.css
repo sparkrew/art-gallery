@@ -30,10 +30,12 @@ h1 {
     padding-bottom: 0pt;
 }
 
+
 h1:hover {
-    color: #f6f7fa;
+    color:hsl(330, 100%, 50%);;
     cursor: default
 }
+
 
 h2 {
     font-family: sans-serif;
