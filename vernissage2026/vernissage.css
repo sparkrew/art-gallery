@@ -1,0 +1,182 @@
+/*
+resources used to design this site:
+- foundation of the 2 column design :https://www.geeksforgeeks.org/create-a-split-layout-template-using-html-and-css/ 
+- https://kyraweb.ca/trigger-link-click-on-hover-guide/
+- for a potential easter egg: use the emoji cursor for a few seconds: https://codepen.io/tholman/pen/rxJpdQ
+- fixed top nav bar: https://www.w3schools.com/howto/howto_css_fixed_menu.asp
+- div inside div: https://stackoverflow.com/questions/17620355/how-to-position-divs-within-another-div
+*/
+
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: hsl(200, 100%, 70%);
+}
+
+@font-face {
+    font-family: "xirod";
+    src: url("Xirod.otf");
+}
+
+h1 {
+    text-align: center;
+    font-family: xirod;
+    font-size: 62pt;
+    font-weight: bold;
+    color: hsl(100, 100%, 50%);
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+}
+
+h1:hover {
+    color: #f6f7fa;
+    cursor: default
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 25pt;
+    font-weight: bold;
+    cursor: default
+}
+
+h2 a {
+    text-decoration: none;
+    cursor: default;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+h2 a:visited {
+    color: black;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+h3 {
+    font-family: sans-serif;
+    text-align: left;
+    margin-left: 10%;
+
+    line-height: 1pt;
+    font-size: 21pt;
+    font-weight: bold;
+    cursor: default
+}
+
+h3 a {
+    text-decoration: none;
+    cursor: default;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+h3 a:visited {
+    color: black;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+p {
+    line-height: 21pt;
+    font-size: 15pt;
+    font-family: monospace;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+
+}
+
+li {
+    line-height: 21pt;
+    font-size: 15pt;
+    font-family: monospace;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+    cursor: default;
+
+    &:hover,
+    &:visited,
+    &:active {
+        color: orangered;
+    }
+}
+
+a:visited {
+    color: black;
+}
+
+p a {
+    text-decoration: underline;
+    cursor: default;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+p a:visited {
+    color: black;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+li a {
+    text-decoration: underline;
+    cursor: default;
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
+
+li a:visited {
+
+    &:hover,
+    &:active {
+        color: orangered;
+    }
+
+    ;
+}
