@@ -1,41 +1,42 @@
-let w,h,cnv,bowie
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.getElementById("gallery");
+    if (!gallery) return;
 
-function preload() {
-//    bowie = loadFont("../p5-experiments/fonts/FreeMono.ttf");
-//    bowie = loadFont("./micrenc.ttf");
-    bowie = loadFont("./Xirod.otf");
-}
+    fetch("artworks.json")
+        .then(function (response) {
+            if (!response.ok) throw new Error("Failed to load artworks");
+            return response.json();
+        })
+        .then(function (artworks) {
+            artworks.forEach(function (artwork) {
+                const card = document.createElement("div");
+                card.className = "artwork-card";
 
-function setup() {
-    w=42
-    h=42
-    cnv = createCanvas(w, h);
-    cnv.parent("left-side");
-    setCanvasSize()
-    colorMode(HSB, 360, 100, 100, 250);
-}
+                const title = document.createElement("h2");
+                title.textContent = artwork.title || "Untitled";
 
-async function setCanvasSize() {
-    var element = await document.getElementById("left-side");
-    var positionInfo = element.getBoundingClientRect();
-    var divh = positionInfo.height;
-    var divw = positionInfo.width;
-    w = divw
-    h = divh
-    resizeCanvas(w, h)
-}
+                const group = document.createElement("p");
+                group.className = "group";
+                group.textContent = artwork.group || "";
 
+                const artists = document.createElement("p");
+                artists.className = "artists";
+                artists.textContent = Array.isArray(artwork.artists)
+                    ? artwork.artists.join(", ")
+                    : (artwork.artists || "");
 
-function draw(){
-    background(100,100,80)
-    console.log("hi")
-    textFont(bowie)
-    textSize(184)
-    stroke(330,100,100)
-    strokeWeight(13)
-    fill(330,100,100)
-    text("20260408",300,300)
-    text("vernissage",300,484)
+                const description = document.createElement("p");
+                description.className = "description";
+                description.textContent = artwork.description || "";
 
-    noLoop()
-}
+                card.appendChild(title);
+                card.appendChild(group);
+                card.appendChild(artists);
+                card.appendChild(description);
+                gallery.appendChild(card);
+            });
+        })
+        .catch(function (err) {
+            gallery.innerHTML = "<p class=\"error\">Could not load artworks. " + err.message + "</p>";
+        });
+});

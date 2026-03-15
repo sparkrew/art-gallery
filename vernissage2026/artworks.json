@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Artwork Title",
+    "group": "Group Name",
+    "artists": ["Artist One", "Artist Two", "Artist Three"],
+    "description": "A short description of the artwork and the creative process behind it."
+  },
+  {
+    "title": "Generative Landscapes",
+    "group": "Pixel Pioneers",
+    "artists": ["Alex Chen", "Samira Patel"],
+    "description": "Procedurally generated terrain using noise functions and L-systems to evoke organic landscapes."
+  },
+  {
+    "title": "Data Portraits",
+    "group": "Code & Canvas",
+    "artists": ["Jordan Lee", "Morgan Kim", "Riley Park"],
+    "description": "Visualizations that transform open datasets into abstract portraits, exploring the boundary between data and identity."
+  },
+  {
+    "title": "Rhythm in Code",
+    "group": "Algo Rhythms",
+    "artists": ["Taylor Wong"],
+    "description": "Interactive audiovisual piece where algorithmic patterns drive both sound and visual output in real time."
+  }
+]
