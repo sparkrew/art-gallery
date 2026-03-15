@@ -1,26 +1,62 @@
 [
   {
-    "title": "Artwork Title",
-    "group": "Group Name",
-    "artists": ["Artist One", "Artist Two", "Artist Three"],
-    "description": "A short description of the artwork and the creative process behind it."
+    "title": "Bouncing Discoveries",
+    "group": "Supernova",
+    "artists": ["Jessey Thach", "Michaël Gugliandolo"],
+    "description": "TODO: add description"
   },
   {
-    "title": "Generative Landscapes",
-    "group": "Pixel Pioneers",
-    "artists": ["Alex Chen", "Samira Patel"],
-    "description": "Procedurally generated terrain using noise functions and L-systems to evoke organic landscapes."
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Papa Moussa Diabate", "Iangola Hajaina Andrianarison"],
+    "description": "TODO: add description"
   },
   {
-    "title": "Data Portraits",
-    "group": "Code & Canvas",
-    "artists": ["Jordan Lee", "Morgan Kim", "Riley Park"],
-    "description": "Visualizations that transform open datasets into abstract portraits, exploring the boundary between data and identity."
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Salma", "Nicolas", "Mariana"],
+    "description": "TODO: add description"
   },
   {
-    "title": "Rhythm in Code",
-    "group": "Algo Rhythms",
-    "artists": ["Taylor Wong"],
-    "description": "Interactive audiovisual piece where algorithmic patterns drive both sound and visual output in real time."
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Imad", "Jean-Christophe", "Mohamed Aziz"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "TODO: add art name",
+    "group": "Banana Mousquetaire",
+    "artists": ["Roxana Pena Mendieta", "Madjda Fares", "Alireza Nasirianfar"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "Mind's Maze",
+    "group": "Nat-Art",
+    "artists": ["Tanguy Sergeant"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Anthony Nguyen"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Jingyue Zhang", "Jiaqi Wu", "Munyeong Kim"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "TODO: add art name",
+    "group": "TODO: add group name",
+    "artists": ["Matthew Georgy", "Jonathon Yallop"],
+    "description": "TODO: add description"
+  },
+  {
+    "title": "Plotted shadow",
+    "group": "DS9",
+    "artists": ["Sara Camila Castiblanco"],
+    "description": "TODO: add description"
   }
 ]
