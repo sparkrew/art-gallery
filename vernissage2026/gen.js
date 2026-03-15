@@ -1,4 +1,46 @@
+function initCountdown() {
+    var startDate = new Date(2026, 0, 1);
+    var endDate = new Date(2026, 3, 8);
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    startDate.setHours(0, 0, 0, 0);
+    endDate.setHours(0, 0, 0, 0);
+
+    var totalMs = endDate - startDate;
+    var elapsedMs = today - startDate;
+    var progress = totalMs <= 0 ? 100 : Math.min(100, Math.max(0, (elapsedMs / totalMs) * 100));
+
+    var labelEl = document.getElementById("countdown-label");
+    var fillEl = document.getElementById("progress-fill");
+    var trackEl = fillEl && fillEl.parentElement;
+
+    if (labelEl) {
+        if (today < endDate) {
+            var daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
+            labelEl.textContent = daysLeft === 1 ? "1 day until vernissage" : daysLeft + " days until vernissage";
+        } else if (today.getTime() === endDate.getTime()) {
+            labelEl.textContent = "Today — Vernissage!";
+        } else {
+            labelEl.textContent = "Vernissage passed";
+        }
+    }
+
+    if (fillEl) {
+        fillEl.style.width = progress + "%";
+    }
+    if (trackEl) {
+        trackEl.setAttribute("aria-valuenow", Math.round(progress));
+        if (progress >= 100) {
+            trackEl.classList.add("progress-complete");
+        } else {
+            trackEl.classList.remove("progress-complete");
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+    initCountdown();
+
     const gallery = document.getElementById("gallery");
     if (!gallery) return;
 
