@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(function (artworks) {
+            for (let i = artworks.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [artworks[i], artworks[j]] = [artworks[j], artworks[i]];
+            }
             artworks.forEach(function (artwork) {
                 const card = document.createElement("div");
                 card.className = "artwork-card";
