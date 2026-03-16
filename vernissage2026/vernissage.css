@@ -14,12 +14,13 @@ body {
     height: 100%;
     overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: hsl(200,100%,0%);;
+    background-color: hsl(200, 100%, 0%);;
     color: #D4E4ED;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
 }
+
 @font-face {
     font-family: "xirod";
     src: url("Xirod.otf");
@@ -29,8 +30,8 @@ body {
     flex-shrink: 0;
     font-family: xirod;
     z-index: 100;
-    background-color: hsl(330,100%,50%);
-    color: hsl(180,100%,50%);
+    background-color: hsl(330, 100%, 50%);
+    color: hsl(180, 100%, 50%);
     padding: 0.75rem 1rem;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -97,6 +98,7 @@ main {
     margin: 0 auto 1.5rem auto;
     color: #ffffff;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .vernissage-intro p {
@@ -114,9 +116,9 @@ main {
 }
 
 .artwork-card {
-    background-color: hsl(330,100%,50%);
+    background-color: hsl(330, 100%, 50%);
     font-family: monospace;
-    color: hsl(180,100%,0%);
+    color: hsl(180, 100%, 0%);
     border-radius: 12px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -126,7 +128,7 @@ main {
 .artwork-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 24px rgba(42, 157, 143, 0.25);
-    color: hsl(180,100%,50%);
+    color: hsl(180, 100%, 50%);
 }
 
 .artwork-card h2 {
@@ -152,7 +154,8 @@ main {
     margin: 0;
     font-size: 0.8rem;
     line-height: 1.6;
- font-weight: 900;}
+    font-weight: 900;
+}
 
 .gallery .error {
     color: #E9C46A;
