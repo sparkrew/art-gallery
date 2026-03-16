@@ -17,7 +17,7 @@ function initCountdown() {
     if (labelEl) {
         if (today < endDate) {
             var daysLeft = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
-            labelEl.textContent = daysLeft === 1 ? "1 day until vernissage" : daysLeft + " days until vernissage";
+            labelEl.textContent = daysLeft === 1 ? "1 jour avant le vernissage" : daysLeft + " jours avant le vernissage";
         } else if (today.getTime() === endDate.getTime()) {
             labelEl.textContent = "Today — Vernissage!";
         } else {

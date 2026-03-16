@@ -1,8 +1,8 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
+} */
 
 html {
     height: 100%;
@@ -60,7 +60,7 @@ body {
 
 .countdown-label {
     margin: 0 0 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     font-weight: 500;
 }
 
