@@ -26,6 +26,7 @@ body {
 }
 
 .site-header {
+    position: relative;
     flex-shrink: 0;
     font-family: xirod;
     z-index: 100;
@@ -34,6 +35,20 @@ body {
     padding: 0.75rem 1rem;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    min-height: 130px;
+}
+
+#header-sketch {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+#header-sketch canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }
 
 .header-title {
@@ -44,6 +59,13 @@ body {
     word-break: break-word;
 }
 
+.site-header .header-title,
+.site-header .header-date,
+.site-header .header-course {
+    position: relative;
+    z-index: 1;
+}
+
 .header-date,
 .header-course {
     margin: 0.25rem 0 0;
@@ -51,11 +73,27 @@ body {
     opacity: 0.95;
 }
 
-.countdown-block {
-    margin-top: 0.5rem;
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
+.countdown-strip {
+    flex-shrink: 0;
+    background-color: hsl(200, 60%, 12%);
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-strip .countdown-label {
+    margin: 0 auto 0.4rem auto;
+    max-width: 320px;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #D4E4ED;
+    letter-spacing: 0.05em;
+}
+
+.countdown-strip .progress-track {
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .countdown-label {
