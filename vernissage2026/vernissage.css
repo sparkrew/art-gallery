@@ -28,7 +28,6 @@ body {
 .site-header {
     flex-shrink: 0;
     font-family: xirod;
-    font-size: 2em;
     z-index: 100;
     background-color: hsl(330,100%,50%);
     color: hsl(180,100%,50%);
@@ -39,9 +38,10 @@ body {
 
 .header-title {
     margin: 0;
-    font-size: 2em;
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
     font-weight: 700;
     letter-spacing: 0.02em;
+    word-break: break-word;
 }
 
 .header-date,
