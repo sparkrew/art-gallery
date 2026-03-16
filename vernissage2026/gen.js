@@ -63,21 +63,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const group = document.createElement("p");
                 group.className = "group";
-                group.textContent = artwork.group || "";
+                group.textContent = "by "+artwork.group || "";
 
-                const artists = document.createElement("p");
-                artists.className = "artists";
-                artists.textContent = Array.isArray(artwork.artists)
-                    ? artwork.artists.join(", ")
-                    : (artwork.artists || "");
+                // const artists = document.createElement("p");
+                // artists.className = "artists";
+                // artists.textContent = Array.isArray(artwork.artists)
+                //     ? artwork.artists.join(", ")
+                //     : (artwork.artists || "");
 
                 const description = document.createElement("p");
                 description.className = "description";
-                description.textContent = artwork.description || "";
+                description.textContent = "code: "+artwork.description || "";
 
                 card.appendChild(title);
                 card.appendChild(group);
-                card.appendChild(artists);
+                // card.appendChild(artists);
                 card.appendChild(description);
                 gallery.appendChild(card);
             });

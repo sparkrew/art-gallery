@@ -28,7 +28,7 @@ body {
 .site-header {
     flex-shrink: 0;
     font-family: xirod;
-    font-size: 62pt;
+    font-size: 2em;
     z-index: 100;
     background-color: hsl(330,100%,50%);
     color: hsl(180,100%,50%);
@@ -39,7 +39,7 @@ body {
 
 .header-title {
     margin: 0;
-    font-size: 62pt;
+    font-size: 2em;
     font-weight: 700;
     letter-spacing: 0.02em;
 }
@@ -103,8 +103,9 @@ main {
 }
 
 .artwork-card {
-    background-color: hsl(200,100%,70%);
+    background-color: hsl(330,100%,50%);
     font-family: monospace;
+    color: hsl(180,100%,0%);
     border-radius: 12px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -114,38 +115,33 @@ main {
 .artwork-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 24px rgba(42, 157, 143, 0.25);
+    color: hsl(180,100%,50%);
 }
 
 .artwork-card h2 {
     margin: 0 0 0.5rem;
     font-size: 1.25rem;
-    color: hsl(100,100%,50%);
     transition: color 0.3s ease;
 }
 
-.artwork-card:hover h2 {
-    color: hsl(330,100%,50%);
-}
 
 .artwork-card .group {
     margin: 0 0 0.25rem;
     font-size: 0.9rem;
-    color: #D4E4ED;
     font-weight: 500;
 }
 
 .artwork-card .artists {
     margin: 0 0 0.75rem;
     font-size: 0.9rem;
-    color: #2A9D8F;
+    font-weight: 900;
 }
 
 .artwork-card .description {
     margin: 0;
-    font-size: 0.95rem;
-    color: #D4E4ED;
+    font-size: 0.8rem;
     line-height: 1.6;
-}
+ font-weight: 900;}
 
 .gallery .error {
     color: #E9C46A;
