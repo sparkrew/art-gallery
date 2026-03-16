@@ -92,6 +92,17 @@ main {
     padding: 1rem;
 }
 
+.vernissage-intro {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.vernissage-intro p {
+    margin: 0;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
