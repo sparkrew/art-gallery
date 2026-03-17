@@ -1,8 +1,8 @@
-/* *,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
-} */
+}
 
 html {
     height: 100%;
@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 @font-face {
     font-family: "xirod";
     src: url("Xirod.otf");
@@ -111,7 +112,7 @@ body {
 
 .progress-fill {
     height: 100%;
-    width: 0%;
+    width: 0;
     background: #2A9D8F;
     border-radius: 4px;
     transition: width 0.4s ease;
@@ -137,14 +138,17 @@ main {
     font-size: 0.95rem;
     text-align: left;
 }
-.vernissage-intro a{
-    color:hsl(330, 100%, 50%)
+
+.vernissage-intro a {
+    color: hsl(330, 100%, 50%)
 }
-.vernissage-intro a:visited{
-    color:hsl(330, 100%, 50%)
+
+.vernissage-intro a:visited {
+    color: hsl(330, 100%, 50%)
 }
-.vernissage-intro a:hover{
-    color:hsl(180, 100%, 50%)
+
+.vernissage-intro a:hover {
+    color: hsl(180, 100%, 50%)
 }
 
 .vernissage-intro p {

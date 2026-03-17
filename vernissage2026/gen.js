@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const group = document.createElement("p");
                 group.className = "group";
-                group.textContent = "by "+artwork.group || "";
+                group.textContent = "by " + artwork.group || "";
 
                 // const artists = document.createElement("p");
                 // artists.className = "artists";
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const description = document.createElement("p");
                 description.className = "description";
-                description.textContent = "code: "+artwork.description || "";
+                description.textContent = "code: " + artwork.description || "";
 
                 card.appendChild(title);
                 card.appendChild(group);

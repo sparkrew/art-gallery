@@ -8,7 +8,7 @@ new p5(function (p) {
     // Palette in HSL: background wash, teal, gold, cyan, magenta
     const COLORS = [
         [160, 80, 65],  // teal
-        [45,  90, 65],  // gold
+        [45, 90, 65],  // gold
         [180, 100, 60], // cyan
         [330, 100, 70], // pink/magenta (matches header CSS)
         [200, 80, 75],  // sky blue
@@ -18,9 +18,9 @@ new p5(function (p) {
 
     function containerSize() {
         const el = document.getElementById("header-sketch");
-        if (!el) return { w: 400, h: 130 };
+        if (!el) return {w: 400, h: 130};
         const r = el.getBoundingClientRect();
-        return { w: r.width || 400, h: r.height || 130 };
+        return {w: r.width || 400, h: r.height || 130};
     }
 
     function resizeCanvasToHeader() {
@@ -166,7 +166,7 @@ new p5(function (p) {
 
         // Compute a readable font size based on canvas width
         const titleSize = p.constrain(w * 0.055, 22, 52);
-        const subSize   = p.constrain(w * 0.026, 13, 22);
+        const subSize = p.constrain(w * 0.026, 13, 22);
 
         // Vertical layout: three lines distributed in the canvas
         const lineSpacing = h / 4;
