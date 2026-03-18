@@ -30,10 +30,10 @@
     "description": ""
   },
   {
-    "title": "place[holder]",
-    "group": "AN",
+    "title": "Decoherence",
+    "group": "ant",
     "artists": ["Anthony Nguyen"],
-    "description": ""
+    "description": "https://github.com/anthonyng041/Decoherence"
   },
   {
     "title": "interaction",
