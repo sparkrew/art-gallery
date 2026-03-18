@@ -59,6 +59,13 @@ new p5(function (p) {
         grd.addColorStop(1, `hsl(${hue2}, 100%, 50%)`);
         p.drawingContext.fillStyle = grd;
         p.drawingContext.fillRect(0, 0, w, h);
+
+        // Fade text: alpha = 0 when hu matches text hue (180 = invisible), 1 when fully contrasting (330)
+        const alpha = (hu - humin) / (humax - humin);
+        const header = document.getElementById("vernissage-header");
+        if (header) {
+            header.style.color = `hsla(180, 100%, 50%, ${alpha.toFixed(3)})`;
+        }
     };
 
 }, "header-sketch");
