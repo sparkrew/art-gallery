@@ -58,5 +58,11 @@
     "group": "DS9",
     "artists": ["Sara Camila Castiblanco"],
     "description": "TODO: add repo link"
+  },
+  {
+    "title": "Echoes in motion",
+    "group": "Les galactiques",
+    "artists": ["Papa Moussa Diabate, Iangola Hajaina Andrianarison"],
+    "description": "https://github.com/MoussaDbt/Echoes-in-motion.git"
   }
 ]
