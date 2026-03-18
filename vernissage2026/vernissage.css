@@ -26,14 +26,35 @@ body {
 }
 
 .site-header {
+    position: relative;
     flex-shrink: 0;
     font-family: xirod;
     z-index: 100;
-    background-color: hsl(330, 100%, 50%);
     color: hsl(180, 100%, 50%);
     padding: 0.75rem 1rem;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+#header-sketch {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+#header-sketch canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+.site-header .header-title,
+.site-header .header-date,
+.site-header .header-course,
+.site-header .countdown-block {
+    position: relative;
+    z-index: 1;
 }
 
 .header-title {
