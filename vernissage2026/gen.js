@@ -73,7 +73,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const description = document.createElement("p");
                 description.className = "description";
-                description.textContent = "code: "+artwork.description || "";
+
+                if (artwork.description) {
+                    const link = document.createElement("a");
+                    link.href = artwork.description;
+                    link.textContent = artwork.description;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+
+                    description.appendChild(document.createTextNode("code: "));
+                    description.appendChild(link);
+                }
 
                 card.appendChild(title);
                 card.appendChild(group);
