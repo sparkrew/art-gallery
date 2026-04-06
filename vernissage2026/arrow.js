@@ -11,11 +11,11 @@ var xinc = 0.0001
 var textx, textspeed, texty, begin, end, nbindex
 
 function preload() {
-    font = loadFont("../fonts/1CamBam_Stick_4.ttf");
+    font = loadFont("./1CamBam_Stick_4.ttf");
 }
 function setup() {
     getsvg()
-    centerCanvas();
+    centerCanvas();https://software-performing.art/vernissage2026/poster.html
     angleMode(DEGREES)
     colorMode(HSB, 360, 100, 100, 250);
 }

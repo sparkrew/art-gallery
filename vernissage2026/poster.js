@@ -11,7 +11,7 @@ var xinc = 0.0001
 var textx, textspeed, texty, begin, end, nbindex
 
 function preload() {
-    font = loadFont("../fonts/1CamBam_Stick_4.ttf");
+    font = loadFont("./1CamBam_Stick_4.ttf");
 }
 function setup() {
     getsvg()
