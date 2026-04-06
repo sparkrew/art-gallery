@@ -80,7 +80,7 @@ function writecode() {
     fSize=42
     textSize(fSize)
     stepy = fSize * 1.5
-    postertext = ["vernissage du cours IFT::6258", "10 oeuvres algorithmiques originales"]
+    postertext = ["vernissage du cours IFT::6258", "10 oeuvres algorithmiques originales", "2026::04::08"]
     for (i in postertext) {
         t = postertext[i]
         x = w * 0.5 - textWidth(t) * 0.5
@@ -113,7 +113,7 @@ function writecode() {
     for(let p=0;p<links.length;p++){
         triangle(links[p].x,links[p].y-fSize,links[p].x-fSize*0.5,links[p].y,links[p].x+fSize*0.5,links[p].y)
     }
-    y += stepy*5
+    y += stepy*4
     fSize=21
     textSize(fSize)
     stepy = fSize *1.5
