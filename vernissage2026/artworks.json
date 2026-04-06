@@ -13,15 +13,15 @@
   },
   {
     "title": "Cascading Echoes",
-    "group": "",
+    "group": "Just Jim",
     "artists": ["Imad", "Jean-Christophe", "Mohamed Aziz"],
-    "description": ""
+    "description": "https://github.com/Seyrawyn/Cascading-Echoes"
   },
   {
     "title": "Brave New World",
     "group": "Banana Mousquetaire",
     "artists": ["Roxana Pena Mendieta", "Madjda Fares", "Alireza Nasirianfar"],
-    "description": ""
+    "description": "https://github.com/alireza-nasirian/brave-new-world"
   },
   {
     "title": "Mind's Maze",
@@ -39,19 +39,19 @@
     "title": "interaction",
     "group": "montrealhci",
     "artists": ["Jingyue Zhang", "Jiaqi Wu", "Munyeong Kim"],
-    "description": ""
+    "description": "https://github.com/JingYue2000/Interaction_vernissage"
   },
   {
     "title": "what the fract!",
     "group": "the tumbling cubes",
     "artists": ["Matthew Georgy", "Jonathon Yallop"],
-    "description": ""
+    "description": "https://github.com/jyallop/fractals"
   },
   {
     "title": "Plotted shadow",
     "group": "DS9",
     "artists": ["Sara Camila Castiblanco"],
-    "description": ""
+    "description": "https://github.com/SaraCamCas/AgorithmicArtCourse/tree/main/Oeuvre%20UDEM/Vernissage"
   },
   {
     "title": "Echoes in motion",
