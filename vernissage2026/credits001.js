@@ -46,13 +46,18 @@ function draw() {
     //     fill(0,100,100); noStroke()
     //     rect(w*0.5-21,0,42,h)
     // }
-    if(count%36000==0){amplify=1;red=false}
-    if(count%36000<1800){updategridcenterikeda()}
-    if(count%36000==1800){white=true;blackh=0;blackw=0}
-    if(count%36000>=1800 && white){space()}
+    // if(count%36000==0){amplify=1;red=false}
+    // if(count%36000<600){updategridcenterikeda()}
+    if(count%36000==600){white=true;blackh=0;blackw=0}
+    if(count%36000>=600 && white){space()}
     showcode()
     count++
-
+    push()
+    fill(0,0,100)
+    rect(42,h-fSize,100,100)
+    stroke(0,0,0)
+    text(frameRate(),42,h)
+    pop()
 //    noLoop()
 }
 
@@ -96,9 +101,9 @@ function updategridcenterikeda(){
     stepx=0
     stepy=0
     while(x<w*0.5-stepx){
-        stepx=Math.abs(Math.floor(random(0.15,amplify)*x)+4)
+        stepx=Math.abs(Math.floor(random(0.25,amplify)*x)+4)
         while(y<h*0.5-stepy){
-            if(random()<Math.abs(amplify-Math.abs(x/w*0.5))){
+            if(random()<0.2){//Math.abs(amplify-Math.abs(x/w*0.5))
                 fill(0,0,100)
                 if(red && random()<0.01){
                     fill(0,100,100)
@@ -110,13 +115,14 @@ function updategridcenterikeda(){
             stepy=Math.abs(Math.floor(random(0.1,0.2)*y)+14)
             quad(x,y,x+stepx,y,x+stepx,y+stepy,x,y+stepy)
             y+=stepy   
+            console.log("y :"+y+"; stepy: "+stepy)
         }
         x+=stepx
         y=-h*0.5
     }
     pop()
-    if(amplify>0.2){amplify-=0.001}
-    else[red=true]
+    if(amplify>0.5){amplify-=0.01}
+    else{red=true}
 }
 
 function space(){
@@ -199,7 +205,7 @@ function showcode(){
     // if still showing one line of code
     if(texty%fSize==0){
         begin++
-        end++
+        end=begin+nbindex
         texty=-1
         console.log("new line "+count+"; begin: "+begin+"; end: "+end+"; texty: "+texty+"; mod: "+texty%fSize)
     }
@@ -236,5 +242,7 @@ function writecode(posx, posy, begin, end) {
 function windowResized() {
   w = document.documentElement.clientWidth;//width of window that is available for drawing
   h = document.documentElement.clientHeight;//width of window that is available for drawing
+  nbindex=Math.floor(h/fSize)+2
+
   resizeCanvas(w, h);
 }
