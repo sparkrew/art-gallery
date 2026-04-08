@@ -55,10 +55,15 @@ function draw() {
     console.log("w: " + w + "; h: " + h)
     noFill()
     stroke(0, 100, 100)
+    rect(42,h*0.9,42,42)
+    rect(42,42,42,42)
+    rect(w*0.9,42,42,42)
+    rect(w*0.9,h*0.9,42,42)
     strokeWeight(11)
-    negativearrow()  
+    //negativearrow()  
     strokeWeight(1)
-    art()
+    // art()
+    noLoop()
 }
 
 function art(){
@@ -66,11 +71,14 @@ function art(){
     translate(w*0.5,h*0.5)
     textFont(font)
     textSize(fSize)
-    t="art algorithmique"
     rotate(270)
-    text(t,-textWidth(t)*0.5,fSize*0.5)
+    t="art algorithmique"
+    text(t,-textWidth(t)*0.5,0)
+    textSize(fSize*0.6)
+    t="salle C-3061 ° 2026.04.08"
+    text(t,-textWidth(t)*0.5,fSize)
     pop()
-    noLoop()
+    
 
 }
 
