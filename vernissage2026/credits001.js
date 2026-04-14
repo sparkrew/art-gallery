@@ -18,8 +18,9 @@ function preload() {
 }
 function setup() {
     w = windowWidth
-    h = windowHeight
+    h = windowHeight*0.8
     cnv = createCanvas(w, h)
+    cnv.position(0,h*0.2);
     angleMode(DEGREES)
     colorMode(HSB, 360, 100, 100, 250);
     resx=21
@@ -46,8 +47,8 @@ function draw() {
     //     fill(0,100,100); noStroke()
     //     rect(w*0.5-21,0,42,h)
     // }
-    // if(count%36000==0){amplify=1;red=false}
-    // if(count%36000<600){updategridcenterikeda()}
+    if(count%36000==0){amplify=1;red=false}
+    if(count%36000<600){updategridcenterikeda()}
     if(count%36000==600){white=true;blackh=0;blackw=0}
     if(count%36000>=600 && white){space()}
     showcode()
@@ -56,7 +57,7 @@ function draw() {
     fill(0,0,100)
     rect(42,h-fSize,100,100)
     stroke(0,0,0)
-    text(frameRate(),42,h)
+//    text(frameRate(),42,h)
     pop()
 //    noLoop()
 }
@@ -134,8 +135,8 @@ function space(){
         w*0.5+blackw,h*0.5+blackh,
         w*0.5-blackw,h*0.5+blackh
     )
-    blackw+=w*0.0001
-    blackh+=h*0.0001
+    blackw+=w*0.0005
+    blackh+=h*0.0005
     if(blackh>h*0.5){white=false}
 }
 

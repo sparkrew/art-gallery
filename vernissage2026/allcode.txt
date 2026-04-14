@@ -7782,3 +7782,475 @@ SceneRoots:
   - {fileID: 1249617921}
   - {fileID: 2030715799}
   - {fileID: 268292621}
+
+  from __future__ import annotations
+
+import numpy as np
+
+from config import Settings
+from influence import InfluenceField
+from palettes import Palette
+
+try:  # Optional CUDA backend.
+    import cupy as cp  # type: ignore
+except Exception:  # pragma: no cover - optional dependency
+    cp = None
+
+
+class ArrayBackend:
+    """Tiny adapter that lets the renderer use NumPy or CuPy."""
+
+    def __init__(self, prefer_cuda: bool = False) -> None:
+        self.xp = np
+        self.use_cuda = False
+        self.label = "CPU / NumPy"
+
+        if not prefer_cuda or cp is None:
+            return
+
+        try:
+            device_count = cp.cuda.runtime.getDeviceCount()
+            if device_count > 0:
+                self.xp = cp
+                self.use_cuda = True
+                self.label = f"CUDA / CuPy ({device_count} device{'s' if device_count != 1 else ''})"
+        except Exception:
+            # Silently fall back to CPU when CuPy is installed but not usable.
+            self.xp = np
+            self.use_cuda = False
+            self.label = "CPU / NumPy"
+
+    def to_device(self, array: np.ndarray):
+        if self.use_cuda:
+            return cp.asarray(array, dtype=cp.float32)
+        return np.asarray(array, dtype=np.float32)
+
+    def to_host(self, array):
+        if self.use_cuda:
+            return cp.asnumpy(array)
+        return np.asarray(array)
+
+
+class WaterfallRenderer:
+    def __init__(
+        self,
+        settings: Settings,
+        render_size: tuple[int, int],
+        palette: Palette,
+        text_palette: Palette | None = None,
+        seed: int = 7,
+        prefer_cuda: bool = False,
+    ) -> None:
+        self.settings = settings
+        self.width, self.height = render_size
+        self.palette = palette
+        self.text_palette = text_palette or palette
+        self.seed = seed
+        self.backend = ArrayBackend(prefer_cuda or settings.prefer_cuda)
+        self.xp = self.backend.xp
+
+        xp = self.xp
+        x = xp.linspace(0.0, 1.0, self.width, dtype=xp.float32)
+        y = xp.linspace(0.0, 1.0, self.height, dtype=xp.float32)
+        self.x, self.y = xp.meshgrid(x, y)
+        self.curtain = 0.82 + 0.18 * xp.exp(-((self.x - 0.5) ** 2) / 0.18)
+
+        rng = np.random.default_rng(seed)
+        grain = rng.random((self.height, self.width), dtype=np.float32)
+        self.grain = self.backend.to_device(grain)
+        self._update_palette_arrays()
+        self._update_text_palette_arrays()
+
+    def _color(self, rgb: tuple[int, int, int]):
+        xp = self.xp
+        return xp.array(rgb, dtype=xp.float32) / 255.0
+
+    def _update_palette_arrays(self) -> None:
+        self.bg_top = self._color(self.palette.bg_top)
+        self.bg_bottom = self._color(self.palette.bg_bottom)
+        self.water_dark = self._color(self.palette.water_dark)
+        self.water_mid = self._color(self.palette.water_mid)
+        self.water_bright = self._color(self.palette.water_bright)
+        self.code_low = self._color(self.palette.code_low)
+        self.code_high = self._color(self.palette.code_high)
+        self.mist = self._color(self.palette.mist)
+        self.base_background = (self.bg_top * (1.0 - self.y[..., None])) + (self.bg_bottom * self.y[..., None])
+
+    def _update_text_palette_arrays(self) -> None:
+        self.text_low = self._color(self.text_palette.code_low)
+        self.text_high = self._color(self.text_palette.code_high)
+        self.text_mist = self._color(self.text_palette.mist)
+        self.text_edge = (self.text_high * 0.66) + (self.text_mist * 0.34)
+
+    def set_palette(self, palette: Palette) -> None:
+        self.palette = palette
+        self._update_palette_arrays()
+
+    def set_text_palette(self, palette: Palette) -> None:
+        self.text_palette = palette
+        self._update_text_palette_arrays()
+
+    def _fields_to_backend(self, fields: InfluenceField):
+        return {
+            "core": self.backend.to_device(fields.core),
+            "spread": self.backend.to_device(fields.spread),
+            "halo": self.backend.to_device(fields.halo),
+            "gx": self.backend.to_device(fields.gx),
+            "gy": self.backend.to_device(fields.gy),
+            "edge": self.backend.to_device(fields.edge),
+            "pressure": self.backend.to_device(fields.pressure),
+        }
+
+    def render_text_layer(self, fields: InfluenceField, t: float) -> np.ndarray:
+        """Render just the scrolling code/halo layer on black.
+
+        This is used when the procedural waterfall background is toggled off so
+        the source code remains visible underneath the reactive droplets.
+        """
+        xp = self.xp
+        f = self._fields_to_backend(fields)
+        core = f["core"]
+        halo = f["halo"]
+        edge = f["edge"]
+        pressure = f["pressure"]
+
+        time = xp.float32(t * self.settings.water_speed)
+        x = self.x
+        y = self.y
+
+        pulse = 0.5 + (0.5 * xp.sin((4.1 * time) + (12.0 * y) + (1.4 * x)))
+        halo_wave = 0.5 + (0.5 * xp.sin((18.0 * x) + (36.0 * y) - (6.2 * time)))
+        edge_wave = 0.5 + (0.5 * xp.sin((24.0 * x) + (54.0 * y) - (7.0 * time)))
+
+        text_mix = xp.clip(0.24 + (0.36 * core) + (0.24 * pressure) + (0.16 * pulse), 0.0, 1.0)
+        text_color = (self.text_low * (1.0 - text_mix[..., None])) + (self.text_high * text_mix[..., None])
+
+        rgb = xp.zeros_like(self.base_background)
+        rgb += halo[..., None] * self.text_low * (0.12 + (0.16 * halo_wave[..., None]))
+        rgb += halo[..., None] * self.text_mist * (0.05 + (0.06 * halo_wave[..., None]))
+        rgb += edge[..., None] * self.text_edge * (0.03 + (0.05 * edge_wave[..., None]))
+        rgb += core[..., None] * text_color * 0.96
+
+        rgb = xp.clip(rgb, 0.0, 1.0)
+        return (self.backend.to_host(rgb) * 255.0).astype(np.uint8)
+
+    def render(self, fields: InfluenceField, t: float) -> np.ndarray:
+        xp = self.xp
+        f = self._fields_to_backend(fields)
+        core = f["core"]
+        spread = f["spread"]
+        halo = f["halo"]
+        gx = f["gx"]
+        gy = f["gy"]
+        edge = f["edge"]
+        pressure = f["pressure"]
+
+        time = xp.float32(t * self.settings.water_speed)
+        x = self.x
+        y = self.y
+
+        # Base downward motion with multiple scales of side-sway.
+        warp = (
+            self.settings.side_sway * xp.sin((6.0 * y) + (1.8 * time))
+            + 0.035 * xp.sin((18.0 * y) - (0.8 * time) + 2.8 * xp.sin((4.4 * x) + (0.24 * time)))
+            + 0.020 * xp.sin((44.0 * y) + (15.0 * x) - (1.22 * time))
+        )
+
+        # The code mask bends the flow more strongly than before, so the letters
+        # feel like submerged obstacles rather than a purely cosmetic overlay.
+        text_warp = self.settings.text_distortion * (
+            (0.82 * gx)
+            + (0.56 * spread * xp.sin((36.0 * y) - (5.7 * time) + (28.0 * x)))
+            + (0.22 * edge * xp.sin((54.0 * y) + (18.0 * x) - (7.1 * time)))
+        )
+        refraction = self.settings.letter_refraction * pressure * (
+            (0.70 * gx * xp.cos((28.0 * y) - (6.2 * time)))
+            - (0.48 * gy * xp.sin((24.0 * x) + (4.9 * time)))
+        )
+
+        xw = x + warp + text_warp + refraction
+        yw = y + (self.settings.text_distortion * 0.42 * gy) - (0.012 * pressure * xp.sin((18.0 * x) - (6.0 * time)))
+        flow = (yw * self.settings.vertical_density) - time
+
+        ribbon_phase = (xw * self.settings.ribbon_frequency) + (0.72 * xp.sin(flow * 1.25))
+        thread_phase = (xw * self.settings.thread_frequency) - (0.44 * xp.sin((flow * 2.1) + (3.2 * x)))
+        micro_phase = (xw * self.settings.micro_frequency) + (0.24 * xp.sin((flow * 4.3) - (2.2 * x)))
+
+        ribbons = xp.exp(-self.settings.ribbon_sharpness * xp.sin(np.pi * ribbon_phase) ** 2)
+        threads = xp.exp(-self.settings.thread_sharpness * xp.sin(np.pi * thread_phase) ** 2)
+        micro = xp.exp(-self.settings.micro_sharpness * xp.sin(np.pi * micro_phase) ** 2)
+
+        mist_wave = 0.5 + (0.5 * xp.sin((flow * 1.55) + 4.8 * xp.sin((4.0 * xw) + (1.35 * time))))
+        foam_wave = 0.5 + (0.5 * xp.sin((35.0 * yw) - (7.0 * time) + 3.0 * xp.sin(10.0 * xw)))
+        shimmer = 0.5 + (0.5 * xp.sin((22.0 * xw) + (48.0 * yw) - (6.8 * time)))
+        collision_wake = pressure * (0.55 + 0.45 * xp.sin((22.0 * x) + (54.0 * y) - (8.6 * time)))
+        agitation = spread * (0.55 + 0.45 * xp.sin((18.0 * x) + (48.0 * y) - (7.4 * time)))
+        turbulence = edge * (0.5 + 0.5 * xp.sin((26.0 * xw) + (30.0 * yw) - (8.5 * time)))
+
+        intensity = (
+            0.10
+            + (0.54 * ribbons)
+            + (0.34 * threads * (0.55 + (0.45 * mist_wave)))
+            + (0.15 * micro * (0.25 + (0.75 * foam_wave)))
+            + (0.06 * mist_wave)
+        )
+        intensity *= self.curtain
+        intensity += self.settings.text_reaction * agitation
+        intensity += self.settings.wake_strength * collision_wake
+        intensity += self.settings.edge_sparkle * turbulence
+        intensity += 0.06 * shimmer
+        intensity = xp.clip(intensity, 0.0, 1.38)
+
+        grad = xp.clip(intensity, 0.0, 1.0)
+        highlight = xp.clip((grad - 0.40) * 2.0, 0.0, 1.0)
+
+        water = (self.water_dark * (1.0 - grad[..., None])) + (self.water_mid * grad[..., None])
+        water = (water * (1.0 - highlight[..., None])) + (self.water_bright * highlight[..., None])
+
+        rgb = self.base_background * (1.0 - (0.88 * grad[..., None]))
+        rgb += water * (0.28 + (0.95 * grad[..., None]))
+        rgb += halo[..., None] * self.mist * (0.08 + (0.10 * mist_wave[..., None]))
+
+        # Sink the text slightly into the water, but flare the edges and local halo.
+        text_mix = (
+            0.20
+            + (0.40 * grad)
+            + (0.24 * pressure)
+            + (0.16 * (0.5 + 0.5 * xp.sin((4.1 * time) + (12.0 * y) + (1.4 * x))))
+        )
+        text_color = (self.text_low * (1.0 - text_mix[..., None])) + (self.text_high * text_mix[..., None])
+        rgb *= 1.0 - (0.10 * core[..., None])
+        rgb = (rgb * (1.0 - (0.40 * core[..., None]))) + (text_color * core[..., None] * 0.92)
+        rgb += halo[..., None] * self.text_high * (0.06 + (0.08 * collision_wake[..., None]))
+        rgb += edge[..., None] * self.text_edge * (0.03 + (0.06 * shimmer[..., None]))
+
+        if self.settings.grain_amount > 0.0:
+            shift_y = int((t * self.settings.water_speed) * 28.0) % self.height
+            shift_x = int((t * self.settings.water_speed) * 9.0) % self.width
+            grain = xp.roll(self.grain, shift=(shift_y, shift_x), axis=(0, 1))
+            rgb += (grain[..., None] - 0.5) * self.settings.grain_amount
+
+        rgb = xp.clip(rgb, 0.0, 1.0)
+        return (self.backend.to_host(rgb) * 255.0).astype(np.uint8)
+
+        from __future__ import annotations
+
+import hashlib
+import math
+from dataclasses import dataclass
+from pathlib import Path
+
+import numpy as np
+import pygame
+
+from config import Settings
+
+
+FALLBACK_CODE = """def blend(a, b, t):
+    return a * (1.0 - t) + b * t
+
+
+def ribbon(x, phase, sharpness=9.0):
+    wave = math.sin(x * math.pi + phase)
+    return math.exp(-(wave * wave) * sharpness)
+
+
+class Pulse:
+    def __init__(self, speed=1.0):
+        self.speed = speed
+        self.time = 0.0
+
+    def step(self, dt):
+        self.time += dt * self.speed
+        return 0.5 + 0.5 * math.sin(self.time)
+"""
+
+
+@dataclass(slots=True)
+class CodeDocument:
+    name: str
+    lines: list[str]
+    rendered_lines: list[pygame.Surface]
+    total_height: int
+    seed: float
+    anchor_x: int
+
+
+class CodeScroller:
+    def __init__(
+        self,
+        settings: Settings,
+        render_size: tuple[int, int],
+        samples_dir: Path,
+    ) -> None:
+        self.settings = settings
+        self.render_width, self.render_height = render_size
+        self.scale = self.render_height / 270.0
+
+        self.margin_x = max(10, int(round(settings.code_margin_x * self.scale)))
+        self.margin_y = max(8, int(round(settings.code_margin_y * self.scale)))
+        self.file_gap = max(12, int(round(settings.code_file_gap * self.scale)))
+        self.scroll_speed = settings.code_scroll_speed * self.scale
+        self.wobble_px = settings.code_wobble_px * self.scale
+        self.edge_fade = max(8, int(round(settings.code_edge_fade * self.scale)))
+
+        font_size = max(10, int(round(settings.code_font_size * self.scale)))
+        font_path = self._find_font_path(settings.mono_font_candidates)
+        self.font = pygame.font.Font(font_path, font_size)
+        self.line_height = self.font.get_linesize() + max(1, int(round(settings.code_line_spacing * self.scale)))
+        self.char_width = max(1, self.font.size("M")[0])
+        self.max_chars = max(24, (self.render_width - self.margin_x * 2) // self.char_width)
+
+        self.samples_dir = Path(samples_dir)
+        self.documents: list[CodeDocument] = []
+        self.index = 0
+        self.scroll_y = float(self.render_height + self.file_gap)
+        self.mask_surface = pygame.Surface(render_size, pygame.SRCALPHA, 32).convert_alpha()
+        self.vertical_fade = self._build_vertical_fade(self.render_height, self.edge_fade)
+
+        self.reload_directory()
+
+    def _find_font_path(self, candidates: tuple[str, ...]) -> str | None:
+        for name in candidates:
+            path = pygame.font.match_font(name)
+            if path:
+                return path
+        return None
+
+    def _build_vertical_fade(self, height: int, fade: int) -> np.ndarray:
+        fade = max(1, fade)
+        y = np.arange(height, dtype=np.float32)
+        top = np.clip(y / fade, 0.0, 1.0)
+        bottom = np.clip((height - 1 - y) / fade, 0.0, 1.0)
+        return np.minimum(top, bottom)[:, None]
+
+    def _document_seed(self, name: str) -> float:
+        digest = hashlib.md5(name.encode("utf-8")).hexdigest()
+        return int(digest[:8], 16) / 1000000.0
+
+    def _scan_files(self) -> list[Path]:
+        if not self.samples_dir.exists():
+            return []
+        files = [
+            path
+            for path in sorted(self.samples_dir.iterdir())
+            if path.is_file() and path.suffix.lower() in self.settings.supported_extensions
+        ]
+        return files
+
+    def _sanitize_and_trim(self, line: str) -> str:
+        line = line.expandtabs(self.settings.code_tab_size).rstrip("\n\r")
+        line = line.rstrip()
+        if len(line) <= self.max_chars:
+            return line
+        if self.max_chars <= 1:
+            return ""
+        return line[: self.max_chars - 1] + "…"
+
+    def _header_lines(self, name: str) -> list[str]:
+        header = f"# file: {name}"
+        rule = "# " + "-" * max(4, min(self.max_chars - 2, len(name) + 6))
+        return [header[: self.max_chars], rule[: self.max_chars], ""]
+
+    def _build_document(self, name: str, text: str) -> CodeDocument:
+        raw_lines = [self._sanitize_and_trim(line) for line in text.splitlines()]
+        if not raw_lines:
+            raw_lines = ["# empty file"]
+
+        # If a code sample is very short, repeat it with separators so the file has
+        # enough visual weight on stage.
+        while len(raw_lines) < 28:
+            raw_lines.extend(["", "# ---", ""] + raw_lines[: min(10, len(raw_lines))])
+            if len(raw_lines) > 80:
+                break
+
+        lines = self._header_lines(name) + raw_lines
+        rendered_lines: list[pygame.Surface] = []
+
+        for line in lines:
+            display_line = line if line else " "
+            surface = self.font.render(display_line, True, (255, 255, 255))
+            rendered_lines.append(surface)
+
+        total_height = len(rendered_lines) * self.line_height + self.margin_y * 2
+        seed = self._document_seed(name)
+        max_width = max(surface.get_width() for surface in rendered_lines) if rendered_lines else 0
+        available = max(0, self.render_width - (self.margin_x * 2) - max_width)
+        anchor_fraction = 0.08 + 0.32 * (seed % 1.0)
+        anchor_x = self.margin_x + int(available * anchor_fraction)
+        return CodeDocument(
+            name=name,
+            lines=lines,
+            rendered_lines=rendered_lines,
+            total_height=total_height,
+            seed=seed,
+            anchor_x=anchor_x,
+        )
+
+    def reload_directory(self) -> None:
+        files = self._scan_files()
+        documents: list[CodeDocument] = []
+
+        for path in files:
+            try:
+                text = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                text = path.read_text(encoding="latin-1")
+            except OSError:
+                continue
+            documents.append(self._build_document(path.name, text))
+
+        if not documents:
+            documents.append(self._build_document("fallback.py", FALLBACK_CODE))
+
+        old_name = self.documents[self.index].name if self.documents else None
+        self.documents = documents
+        self.index = 0
+        if old_name:
+            for i, doc in enumerate(documents):
+                if doc.name == old_name:
+                    self.index = i
+                    break
+        self.restart_current()
+
+    @property
+    def current(self) -> CodeDocument:
+        return self.documents[self.index]
+
+    def restart_current(self) -> None:
+        self.scroll_y = float(self.render_height + self.file_gap)
+
+    def update(self, dt: float) -> None:
+        self.scroll_y -= self.scroll_speed * dt
+        if self.scroll_y + self.current.total_height < -self.file_gap:
+            self.next_file()
+
+    def next_file(self) -> None:
+        self.index = (self.index + 1) % len(self.documents)
+        self.restart_current()
+
+    def previous_file(self) -> None:
+        self.index = (self.index - 1) % len(self.documents)
+        self.restart_current()
+
+    def render_mask(self, t: float) -> np.ndarray:
+        self.mask_surface.fill((0, 0, 0, 0))
+        doc = self.current
+        base_x = doc.anchor_x
+
+        for i, line_surface in enumerate(doc.rendered_lines):
+            y = int(round(self.scroll_y + i * self.line_height))
+            if y + line_surface.get_height() < -2:
+                continue
+            if y > self.render_height + 2:
+                continue
+
+            x_wave = self.wobble_px * math.sin((t * 1.55) + (i * 0.37) + doc.seed)
+            x_wave += self.wobble_px * 0.6 * math.sin((t * 3.2) + (y * 0.045))
+            x = int(round(base_x + x_wave))
+            self.mask_surface.blit(line_surface, (x, y))
+
+        alpha = pygame.surfarray.array_alpha(self.mask_surface).swapaxes(0, 1).astype(np.float32)
+        alpha *= self.vertical_fade
+        alpha /= 255.0
+        return alpha
