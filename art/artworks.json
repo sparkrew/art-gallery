@@ -42,6 +42,168 @@
     "exportName": "render"
   },
   {
+    "name": "Sara",
+    "ref": "sara",
+    "artist": "Sara Castiblanco",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/SaraCamCas/AgorithmicArtCourse/tree/main/HW1-Oeuvre%20UDEM",
+    "src": "../art/js/2026/genuary/sara.js"
+  },
+  {
+    "name": "Jean-Christophe",
+    "ref": "jean-christophe",
+    "artist": "Jean-Christophe",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/Seyrawyn/Art-algorithmique-et-logiciel-libre/tree/main/Art1",
+    "src": "../art/js/2026/genuary/jean_christophe.js"
+  },
+  {
+    "name": "Papa Moussa",
+    "ref": "papa-moussa",
+    "artist": "Papa Moussa Diabate",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/MoussaDbt/presentationArt",
+    "src": "../art/js/2026/genuary/papa_moussa.js"
+  },
+  {
+    "name": "Order and Chaos",
+    "ref": "order-and-chaos",
+    "artist": "Tanguy Sergeant",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/Natugy/ArtAlgo/tree/main/first-art",
+    "src": "../art/js/2026/genuary/order_and_chaos.js"
+  },
+  {
+    "name": "Mariana",
+    "ref": "mariana",
+    "artist": "Mariana",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/MarianaFrancoO22/IFT-6256-Art-algorithmique/tree/main/1st_Assigment",
+    "src": "../art/js/2026/genuary/mariana.js"
+  },
+  {
+    "name": "Pond of Reflections",
+    "ref": "pond-of-reflections",
+    "artist": "Salma",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/salmanassri/algorithmic-art/tree/main/Project1",
+    "src": "../art/js/2026/genuary/pond_of_reflections.js"
+  },
+  {
+    "name": "Imad",
+    "ref": "imad",
+    "artist": "Imad Benahmed",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/ImadBen03/IFT6256-Artworks/tree/main/Art1_UDEM_Inspo",
+    "src": "../art/js/2026/genuary/imad.js"
+  },
+  {
+    "name": "Twisted",
+    "ref": "twisted",
+    "artist": "Jessey Thach",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/jesseythach/IFT6256-Art-Udem",
+    "src": "../art/js/2026/genuary/twisted.js"
+  },
+  {
+    "name": "Flowing Landscape",
+    "ref": "flowing-landscape",
+    "artist": "Michaël Gugliandolo",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/Mika24boss/IFT6256-Assignment1",
+    "src": "../art/js/2026/genuary/flowing_landscape.js"
+  },
+  {
+    "name": "Jiaqi",
+    "ref": "jiaqi",
+    "artist": "Jiaqi Wu",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/KolvacS-W/algorithmic_art_udemart",
+    "src": "../art/js/2026/genuary/jiaqi.js"
+  },
+  {
+    "name": "Blue Artwork",
+    "ref": "blue-artwork",
+    "artist": "Anthony Nguyen",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/anthonyng041/Blue-Artwork",
+    "src": "../art/js/2026/genuary/blue_artwork.js"
+  },
+  {
+    "name": "Roxana",
+    "ref": "roxana",
+    "artist": "Roxana Pena Mendieta",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/Selleen/algorithmic-art-course-Winter2026/tree/main/project_1",
+    "src": "../art/js/2026/genuary/roxana.js"
+  },
+  {
+    "name": "Iangola",
+    "ref": "iangola",
+    "artist": "Iangola",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/IangolaAndri/AlgorithmicArtCourse/tree/main/A1",
+    "src": "../art/js/2026/genuary/iangola.js"
+  },
+  {
+    "name": "Tile Art",
+    "ref": "tile-art",
+    "artist": "Félix Cormier",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/0fil0/TileArt",
+    "src": "../art/js/2026/genuary/tile_art.js"
+  },
+  {
+    "name": "Jingyue",
+    "ref": "jingyue",
+    "artist": "Jingyue Zhang",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/JingYue2000/IFT6256-Artwork",
+    "src": "../art/js/2026/genuary/jingyue.js"
+  },
+  {
+    "name": "Nicolas",
+    "ref": "nicolas",
+    "artist": "Nicolas Demers-Neuwirth",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/NicDN/IFT6256/tree/main/udem-campus-art",
+    "src": "../art/js/2026/genuary/nicolas.js"
+  },
+  {
+    "name": "Drouj",
+    "ref": "drouj",
+    "artist": "Madjda",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/Madjda32-del/AlgoritmicArt/tree/main/drouj",
+    "src": "../art/js/2026/genuary/drouj.js"
+  },
+  {
+    "name": "Munyeong",
+    "ref": "munyeong",
+    "artist": "Munyeong Kim",
+    "year": "2026",
+    "type": "Genuary",
+    "repo": "https://github.com/MunyeongKim/26H-ift6256-algorithmic_art-Munyeong-Kim/tree/main/HW1",
+    "src": "../art/js/2026/genuary/munyeong.js"
+  },
+  {
     "name": "Arrow 2",
     "ref": "arrow2",
     "artist": "Gabriel Beaudoin",
