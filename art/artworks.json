@@ -42,12 +42,12 @@
     "exportName": "render"
   },
   {
-    "name": "Sara",
+    "name": "Statue Jean Brillant",
     "ref": "sara",
     "artist": "Sara Castiblanco",
     "year": "2026",
     "type": "Genuary",
-    "repo": "https://github.com/SaraCamCas/AgorithmicArtCourse/tree/main/HW1-Oeuvre%20UDEM",
+    "repo": "https://github.com/SaraCamCas/AgorithmicArtCourse/tree/main/Oeuvre%20UDEM/HW1",
     "src": "../art/js/2026/genuary/sara.js"
   },
   {
